@@ -1,0 +1,79 @@
+﻿@using WebBanDienThoai.Models
+@model List<LOAISANPHAM>
+
+<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav menu__list">
+        <li class="active">
+            <a class="nav-stylehead" href="@Url.Action("Index", "Home")">
+                Trang chủ
+                <span class="sr-only">(current)</span>
+            </a>
+        </li>
+        <li class="">
+            @Html.ActionLink("Thông tin", "Index", "Abouts", null, new { @class = "nav-stylehead" })
+        </li>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var group in Model.GroupBy(row => row.DANHMUC))
+            {
+                if (group.Key != null)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle nav-stylehead" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            @group.Key.TenDanhMuc
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu multi-column columns-3">
+                            <div class="agile_inner_drop_nav_info">
+                                <div class="col-sm-4 multi-gd-img">
+                                    <ul class="multi-column-dropdown">
+                                        @{
+                                            int count = (int)Math.Ceiling((double)group.Count() / 2);
+                                            for (int i = 0; i < count; i++)
+                                            {
+                                                <li>
+                                                    @*@Html.ActionLink(group.ElementAt(i).TenLoaiSP, "Products", new { MaLoaiSP = group.ElementAt(i).MaLoaiSP, controller = "Products" })*@
+                                                    @Html.ActionLink(group.ElementAt(i).TenLoaiSP, "Products", "Products", new { MaLoaiSP = group.ElementAt(i).MaLoaiSP }, null)
+                                                </li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4 multi-gd-img">
+                                    <ul class="multi-column-dropdown">
+                                        @for (int i = count; i < (int)group.Count(); i++)
+                                        {
+                                            <li>
+                                                @*<a href="@Url.Action("Products", "Products", new {MaLoaiSP = group.ElementAt(i).MaLoaiSP})">@group.ElementAt(i).TenLoaiSP</a>*@
+                                                @Html.ActionLink(group.ElementAt(i).TenLoaiSP, "Products", "Products", new { MaLoaiSP = group.ElementAt(i).MaLoaiSP }, null)
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                                @if (group.Key.TenDanhMuc == "Điện thoại")
+                                {
+                                    <div class="col-sm-4 multi-gd-img">
+                                        <img style="width: 194px" src="@Url.Content("~/Content/Images/ProductTypes/dien-thoai.jpg")" />
+                                    </div>
+                                }
+                                @if (group.Key.TenDanhMuc == "Phụ kiện")
+                                {
+                                    <div class="col-sm-4 multi-gd-img">
+                                        <img style="width: 194px" src="@Url.Content("~/Content/Images/ProductTypes/phu-kien.png")" />
+                                    </div>
+                                }
+                                <div class="clearfix"></div>
+                            </div>
+                        </ul>
+                    </li>
+                }
+            }
+        }
+        <li class="">
+            @Html.ActionLink("Câu hỏi", "Index", "Questions", null, new { @class = "nav-stylehead" })
+        </li>
+        <li class="">
+            @Html.ActionLink("Liên hệ", "Index", "Contacts", null, new { @class = "nav-stylehead" })
+        </li>
+    </ul>
+</div>

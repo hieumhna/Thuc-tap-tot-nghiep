@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Sản phẩm";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<style>
+    .container-outOfStock {
+        margin: 100px 0;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+        .container-outOfStock h1 {
+            text-align: center;
+            color: red;
+        }
+
+        .container-outOfStock p {
+            text-align: justify;
+            color: #000;
+            font-size: 18px;
+        }
+</style>
+
+<div class="container">
+    <div class="container-outOfStock">
+        <h1>KHÔNG ĐỦ SỐ LƯỢNG !!!</h1>
+        <p>Xin lỗi, sản phẩm bạn đang quan tâm có số lượng không đủ.</p>
+        <p>Quý khách có thể chọn số lượng phù hợp hoặc quay trở lại sau.</p>
+        <p>Xin cảm ơn.</p>
+        <p style="font-weight: bold">Đội ngũ Mai Nguyen</p>
+    </div>
+</div>

@@ -1,0 +1,201 @@
+﻿@using WebBanDienThoai.Models;
+@model CHITIETSANPHAM
+
+@{
+    ViewBag.Title = "Sửa chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .tables {
+        overflow-x: auto;
+    }
+
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_ListProductDetails", "Admin", new {MaLoaiSP = ViewBag.CategoryID})" style="text-decoration: none;">Chi tiết sản phẩm</a> / <a href="#">Sửa</a></h3>
+
+<div class="container_Products">
+    <div class="container">
+        @using (Html.BeginForm("EditPhoneProductDetails", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <h2 style="display: flex; justify-content: center;"><strong>@Model.SANPHAM.TenSP</strong></h2>
+            @Html.Hidden("MaChiTietSP", Model.MaChiTietSP)
+            <div class="form-group">
+                <label for="MaSP">Mã sản phẩm</label>
+                <input type="text" id="MaSP" name="MaSP" class="form-control" value="@ViewBag.ProductsID">
+            </div>
+            <div class="form-group">
+                <label for="KICHTHUOCMANHINH">Kích thước màn hình</label>
+                @Html.TextBoxFor(row => row.KICHTHUOCMANHINH, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CONGNGHEMANHINH">Công nghệ màn hình</label>
+                @Html.TextBoxFor(row => row.CONGNGHEMANHINH, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="DOPHANGIAI">Độ phân giải</label>
+                @Html.TextBoxFor(row => row.DOPHANGIAI, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="TINHNANGMANGHINH">Tính năng màn hình</label>
+                @Html.TextBoxFor(row => row.TINHNANGMANGHINH, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="TANSOQUET">Tần số quét</label>
+                @Html.TextBoxFor(row => row.TANSOQUET, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CAMERASAU">Camera sau</label>
+                @Html.TextBoxFor(row => row.CAMERASAU, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="QUAYPHIM">Quay phim</label>
+                @Html.TextBoxFor(row => row.QUAYPHIM, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CAMERATRUOC">Camera trước</label>
+                @Html.TextBoxFor(row => row.CAMERATRUOC, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="TINHNANGCAMERA">Tính năng camera</label>
+                @Html.TextAreaFor(row => row.TINHNANGCAMERA, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="HEDIEUHANH">Hệ điều hành</label>
+                @Html.TextBoxFor(row => row.HEDIEUHANH, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CHIP">Chip xử lý (CPU)</label>
+                @Html.TextBoxFor(row => row.CHIP, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="TOCDOCPU">Tốc độ CPU</label>
+                @Html.TextBoxFor(row => row.TOCDOCPU, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CHIPDOHOA">Chip đồ họa (GPU)</label>
+                @Html.TextBoxFor(row => row.CHIPDOHOA, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="RAM">Ram</label>
+                @Html.TextBoxFor(row => row.RAM, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="DUNGLUONG">Dung lượng</label>
+                @Html.TextBoxFor(row => row.DUNGLUONG, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="MANGDIDONG">Mạng di động</label>
+                @Html.TextBoxFor(row => row.MANGDIDONG, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="SIM">Sim</label>
+                @Html.TextBoxFor(row => row.SIM, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="WIFI">Wifi</label>
+                @Html.TextBoxFor(row => row.WIFI, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CONGKETNOI">Cổng kết nối</label>
+                @Html.TextBoxFor(row => row.CONGKETNOI, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="DUNGLUONGPIN">Dung lượng pin</label>
+                @Html.TextBoxFor(row => row.DUNGLUONGPIN, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="LOAIPIN">Loại pin</label>
+                @Html.TextBoxFor(row => row.LOAIPIN, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="HOTROSAC">Hổ trợ sạc</label>
+                @Html.TextBoxFor(row => row.HOTROSAC, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="BAOMAT">Bảo mật</label>
+                @Html.TextBoxFor(row => row.BAOMAT, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="TINHNANGDACBIET">Tính năng đặc biệt</label>
+                @Html.TextAreaFor(row => row.TINHNANGDACBIET, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="KHANGNUOC">Kích thước màn hình</label>
+                @Html.TextBoxFor(row => row.KHANGNUOC, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="THIETKE">Thiết kế</label>
+                @Html.TextBoxFor(row => row.THIETKE, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CHATLIEU">Chất liệu</label>
+                @Html.TextBoxFor(row => row.CHATLIEU, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="KICHTHUOC">Kích thước</label>
+                @Html.TextBoxFor(row => row.KICHTHUOC, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="BAOHANH">Bảo hành</label>
+                @Html.TextBoxFor(row => row.BAOHANH, new { @class = "form-control", type = "number" })
+            </div>
+            <div class="form-group">
+                <label for="RAMAT">Ra mắt</label>
+                @Html.TextBoxFor(row => row.RAMAT, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+            </div>
+
+            <div style="padding-top: 12px;">
+                <a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = ViewBag.CategoryID})" class="btn btn-danger">Trở lại</a>
+                <button type="submit" class="btn btn-primary">Lưu chỉnh sửa</button>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("form").submit(function (event) {
+            var requiredFields = [
+                "MaSP", "KICHTHUOCMANHINH", "CONGNGHEMANHINH", "DOPHANGIAI", "TINHNANGMANGHINH",
+                "TANSOQUET", "CAMERASAU", "QUAYPHIM", "CAMERATRUOC", "TINHNANGCAMERA",
+                "HEDIEUHANH", "CHIP", "TOCDOCPU", "CHIPDOHOA", "RAM", "DUNGLUONG",
+                "MANGDIDONG", "SIM", "WIFI", "CONGKETNOI", "DUNGLUONGPIN",
+                "LOAIPIN", "HOTROSAC", "BAOMAT", "TINHNANGDACBIET", "KHANGNUOC",
+                "THIETKE", "CHATLIEU", "KICHTHUOC", "BAOHANH", "RAMAT"
+            ];
+
+            var hasEmptyFields = false;
+
+            for (var i = 0; i < requiredFields.length; i++) {
+                var field = requiredFields[i];
+                var value = $("#" + field).val();
+
+                if (value.trim() === '') {
+                    hasEmptyFields = true;
+                    break;
+                }
+            }
+
+            if (hasEmptyFields) {
+                alert("Vui lòng điền đầy đủ thông tin.");
+                event.preventDefault();
+            }
+        });
+    });
+</script>

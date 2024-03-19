@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Liên hệ";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@section Banner {
+    <!-- banner-2 -->
+    <div class="page-head_agile_info_w3l">
+
+    </div>
+}
+
+<!-- page -->
+<div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+        <div class="container">
+            <ul class="w3_short">
+                <li>
+                    @Html.ActionLink("Trang chủ", "Index", "Home")
+                    <i>|</i>
+                </li>
+                <li>Liên hệ</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- //page -->
+<!-- contact page -->
+<div class="contact-w3l">
+    <div class="container">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l">
+            Liên hệ chúng tôi
+            <span class="heading-style">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </h3>
+        <!-- //tittle heading -->
+        <!-- contact -->
+        <div class="contact agileits">
+            <div class="contact-agileinfo">
+                <div class="contact-form wthree">
+                    <form action="#" method="post">
+                        <div class="">
+                            <input type="text" name="name" placeholder="Tên" required="">
+                        </div>
+                        <div class="">
+                            <input class="text" type="text" name="subject" placeholder="Chủ đề" required="">
+                        </div>
+                        <div class="">
+                            <input class="email" type="email" name="email" placeholder="Email" required="">
+                        </div>
+                        <div class="">
+                            <textarea placeholder="Thông tin" name="message" required=""></textarea>
+                        </div>
+                        <input type="submit" value="Gửi">
+                    </form>
+                </div>
+                <div class="contact-right wthree">
+                    <div class="col-xs-7 contact-text w3-agileits">
+                        <h4>Liên lạc:</h4>
+                        <p>
+                            <i class="fa fa-map-marker"></i>Địa chỉ: 11, đường số 27, Sơn Kỳ, Tân Phú, TP. HCM
+                        </p>
+                        <p>
+                            <i class="fa fa-phone"></i> Số điện thoại : 0342 937 692
+                        </p>
+                        <p>
+                            <i class="fa fa-fax"></i> FAX : +84 (8) 3979 3979
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope-o"></i> Email :
+                            <a href="tonyit2003@gmail.com">tonyit2003@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="col-xs-5 contact-agile">
+                        <img src="@Url.Content("~/Content/Images/Downloads/contact2.jpg")" alt="">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- //contact -->
+    </div>
+</div>
+<!-- map -->
+<div class="map w3layouts">
+    <iframe src="https://maps.google.com/maps?q=11,%20%C4%91%C6%B0%E1%BB%9Dng%20s%E1%BB%91%2027,%20S%C6%A1n%20K%E1%BB%B3,%20T%C3%A2n%20Ph%C3%BA,%20TP.%20HCM&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+            allowfullscreen></iframe>
+</div>
+<!-- //map -->

@@ -1,0 +1,128 @@
+﻿@using WebBanDienThoai.Models;
+@model CHITIETPHUKIENSACDUPHONG
+@{
+    ViewBag.Title = "Thêm chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 24px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = ViewBag.CategoryID })" style="text-decoration: none;">Sản phẩm</a> / <a href="#" style="text-decoration: none;">Thêm chi tiết</a></h3>
+
+@if (Model != null)
+{
+    <div class="container_Products">
+        <div>
+            <h3 style="display: flex; justify-content: center;"><strong>Sản phẩm @ViewBag.ProductsName đã có thông tin chi tiết</strong></h3>
+            <div style="display: flex; justify-content: center;">
+                <a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = ViewBag.CategoryID })" class="btn btn-danger" style="margin-top: 12px">
+                    Trở lại
+                </a>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container_Products">
+        <div class="container">
+            <h2 style="display: flex; justify-content: center;"><strong>@ViewBag.ProductsName</strong></h2>
+            @using (Html.BeginForm("CreateBackupchargerProductDetails", "Admin", FormMethod.Post, new { id = "myForm" }))
+            {
+                <div class="form-group">
+                    <label for="MaSP">Mã sản phẩm</label>
+                    <input type="text" id="MaSP" name="MaSP" class="form-control" value="@ViewBag.ProductsID">
+                </div>
+                <div class="form-group">
+                    <label for="HIEUSUAT">Hiệu xuất</label>
+                    @Html.TextBoxFor(row => row.HIEUSUAT, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="DUNGLUONGPIN">Dung lượng pin</label>
+                    @Html.TextBoxFor(row => row.DUNGLUONGPIN, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="THOIGIANSAC">Thời lượng sạc</label>
+                    @Html.TextBoxFor(row => row.THOIGIANSAC, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="NGUONVAO">Nguồn vào</label>
+                    @Html.TextBoxFor(row => row.NGUONVAO, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="NGUONRA">Nguồn ra</label>
+                    @Html.TextBoxFor(row => row.NGUONRA, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="CONGNGHE">Công nghệ</label>
+                    @Html.TextBoxFor(row => row.CONGNGHE, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="KICHTHUOC">Kích thước</label>
+                    @Html.TextBoxFor(row => row.KICHTHUOC, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="BAOHANH">Bảo hành</label>
+                    @Html.TextBoxFor(row => row.BAOHANH, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="KHOILUONG">Khối lượng</label>
+                    @Html.TextBoxFor(row => row.KHOILUONG, new { @class = "form-control" })
+                </div>
+
+                <form onsubmit="return kiemTraDuLieu();" action="CreateBackupchargerProductDetails" method="post">
+                    <!-- Các trường nhập liệu ở đây -->
+                    <div class="form-group">
+                        <a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = 1 })" class="btn btn-danger">Trở lại</a>
+                        <input type="submit" value="Lưu" class="btn btn-primary" />
+                    </div>
+                </form>
+
+            }
+        </div>
+    </div>
+}
+<script>
+    function kiemTraDuLieu() {
+        // Lấy giá trị từ các trường nhập liệu
+        var maSP = document.getElementById("MaSP").value;
+        var hieuSuat = document.getElementById("HIEUSUAT").value;
+        var dungLuongPin = document.getElementById("DUNGLUONGPIN").value;
+        var thoiGianSac = document.getElementById("THOIGIANSAC").value;
+        var nguonVao = document.getElementById("NGUONVAO").value;
+        var nguonRa = document.getElementById("NGUONRA").value;
+        var congNghe = document.getElementById("CONGNGHE").value;
+        var kichThuoc = document.getElementById("KICHTHUOC").value;
+        var baoHanh = document.getElementById("BAOHANH").value;
+        var khoiLuong = document.getElementById("KHOILUONG").value;
+
+        // Kiểm tra xem có trường nào để trống không
+        if (maSP === "" || hieuSuat === "" || dungLuongPin === "" || thoiGianSac === "" ||
+            nguonVao === "" || nguonRa === "" || congNghe === "" || kichThuoc === "" ||
+            baoHanh === "" || khoiLuong === "") {
+            alert("Vui lòng điền đầy đủ thông tin.");
+            return false; // Ngăn chặn việc gửi biểu mẫu nếu có trường để trống
+        }
+        return true; // Cho phép gửi biểu mẫu nếu tất cả các trường đã được điền đầy đủ
+    }
+    // Khi biểu mẫu được gửi, kiểm tra dữ liệu trước khi gửi.
+    document.getElementById("myForm").onsubmit = function () {
+        return kiemTraDuLieu();
+    };
+</script>

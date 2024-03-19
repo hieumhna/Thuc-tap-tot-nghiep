@@ -1,0 +1,35 @@
+﻿<style>
+    .total-money {
+        display: flex;
+        justify-content: left;
+        margin: 10px 10px 10px 0;
+        color: #000;
+        font-size: 16px;
+    }
+
+        .total-money ul {
+            list-style-type: none;
+            border: 2px solid orange; /* Viền màu cam xung quanh */
+            padding: 10px; /* Khoảng cách giữa nội dung và viền */
+        }
+
+            .total-money ul li {
+                line-height: 1.6;
+                margin: 10px 0px;
+            }
+
+            /* Áp dụng CSS tùy chỉnh cho phần "Tổng thanh toán" */
+            .total-money ul .total-amount {
+                font-size: 22px;
+                font-weight: bold;
+                color: #ff0000; /* Màu khác biệt */
+            }
+</style>
+
+<div class="total-money">
+    <ul>
+        <li>Tổng tiền hàng: @string.Format("{0:N0} \u20ab", ViewBag.TotalMoney)</li>
+        <li>Phí vận chuyển: @string.Format("{0:N0} \u20ab", 0)</li>
+        <li style="font-weight: bold">Tổng thanh toán: <strong class="total-amount">@string.Format("{0:N0} \u20ab", ViewBag.TotalMoney)</strong></li>
+    </ul>
+</div>

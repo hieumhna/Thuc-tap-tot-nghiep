@@ -1,0 +1,285 @@
+﻿@using WebBanDienThoai.Models;
+@model List<CartItem>
+
+@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@section Banner {
+    <!-- banner-2 -->
+    <div class="page-head_agile_info_w3l">
+
+    </div>
+}
+
+@{
+    int index = 1;
+}
+
+<style>
+    .close {
+        float: none;
+        opacity: 1;
+        background: url('../../content/images/icons/close.png') no-repeat 0px 0px;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        -webkit-transition: color 0.2s ease-in-out;
+        -moz-transition: color 0.2s ease-in-out;
+        -o-transition: color 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out;
+        margin: auto auto;
+    }
+
+    .btnQuantityMax {
+        background-color: #1accfd; /* Màu nền nút */
+        color: #fff; /* Màu chữ nút */
+        border-color: #1accfd;
+    }
+
+        .btnQuantityMax:focus {
+            outline: none;
+        }
+
+        .btnQuantityMax:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+</style>
+
+<div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+        <div class="container">
+            <ul class="w3_short">
+                <li>
+                    @Html.ActionLink("Trang chủ", "Index", "Home")
+                    <i>|</i>
+                </li>
+                <li>Giỏ hàng</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- checkout page -->
+<div class="privacy">
+    <div class="container">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l">
+            GIỎ HÀNG
+            <span class="heading-style">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </h3>
+        <div class="checkout-right">
+            @if (Model != null)
+            {
+                <h4>
+                    Giỏ hàng của bạn có:
+                    <span> <span class="cart-quantity-count">@ViewBag.Count</span> sản phẩm.</span>
+                </h4>
+                <div class="table-responsive">
+                    <table class="timetable_sub">
+                        <thead>
+                            <tr>
+                                <th>Số thứ tự</th>
+                                <th>Sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                                <th>Xóa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var cart in Model)
+                            {
+                                <tr class="rem">
+                                    <td class="invert">@index</td>
+                                    <td class="invert-image">
+                                        <a href="@Url.Action("ProductDetails", "Products", new { MaSP = cart.MaSP })">
+                                            <img style="width: 86px" src="@Url.Content("~/Content/Images/Products/" + cart.HinhAnh)" alt=" " class="img-responsive">
+                                        </a>
+                                    </td>
+                                    <td class="invert">
+                                        <div class="quantity">
+                                            <div class="quantity-select">
+                                                <div class="entry value-minus" data-product-id="@cart.MaSP" data-color-id="@cart.MaMau">&nbsp;</div>
+                                                <div class="entry value" data-quantity="@cart.SoLuong">
+                                                    <span>@cart.SoLuong</span>
+                                                </div>
+                                                <div class="entry value-plus active" data-product-id="@cart.MaSP" data-color-id="@cart.MaMau">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="invert">@cart.TenSP</td>
+                                    <td class="invert">@string.Format("{0:N0} \u20ab", cart.DonGia)</td>
+                                    <td class="invert product-total">@string.Format("{0:N0} \u20ab", cart.ThanhTien)</td>
+                                    <td class="invert">
+                                        <div class="rem">
+                                            <div data-product-id="@cart.MaSP" data-color-id="@cart.MaMau" class="close"> </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                index++;
+                            }
+                            <tr>
+                                <td colspan="5" class="text-right"><strong>Tổng thành tiền:</strong></td>
+                                <td><strong class="total-amount">@string.Format("{0:N0} \u20ab", Model.Sum(cart => cart.ThanhTien))</strong></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                @Html.Action("CustomerInformation", "Cart")
+            }
+            else
+            {
+                <h4>
+                    Hiện tại, giỏ hàng của bạn không có sản phẩm nào.
+                </h4>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="quantityAlertModal" tabindex="-1" role="dialog" aria-labelledby="quantityAlertModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div style="text-align: center; background-color: #1accfd; border: none; color: #fff;" class="modal-header">
+                <h4 style="font-weight: bold;" class="modal-title" id="quantityAlertModalLabel">Thông báo</h4>
+            </div>
+            <div class="modal-body">
+                <div style="text-align: center">
+                    <img style="width: 100px; height: 100px" src="@Url.Content("~/Content/Images/Members/default.png")" alt="" />
+                </div>
+                <div>
+                    <p style="color: black">Số lượng sản phẩm đã đạt đến mức tối đa.</p>
+                    <p style="color: black">Đơn hàng của Quý khách sẽ được phòng bán hàng doanh nghiệp Mai Nguyen Team tiếp nhận và hỗ trợ. Liên hệ nhanh:</p>
+                    <p style="color: black">Mr. Tony: <a href="tel:0342937692">034 29 37692</a></p>
+                    <p style="color: black">Email: <a href="mailto:mainguyentelephone@gmail.com">mainguyentelephone@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btnQuantityMax" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--quantity-->
+<script>
+    $('.value-plus').on('click', function () {
+        var productId = $(this).data('product-id');
+        var colorId = $(this).data('color-id');
+        var divUpd = $(this).parent().find('.value');
+        var newVal = parseInt(divUpd.text(), 10) + 1;
+
+        // Lưu trữ ngữ cảnh của sự kiện click ban đầu
+        var clickedButton = this;
+
+        if (newVal <= 5) {
+            // Gửi yêu cầu AJAX để cập nhật số lượng
+            $.ajax({
+                url: '@Url.Action("UpdateCart", "Cart")',
+                method: 'POST',
+                data: { MaSP: productId, MaMau: colorId, SoLuong: newVal },
+                success: function (data) {
+                    if (data.success) {
+                        // Cập nhật số lượng hiển thị trên trang
+                        divUpd.text(newVal);
+
+                        // Sử dụng ngữ cảnh của sự kiện click ban đầu
+                        var productTotalElement = $(clickedButton).closest('tr').find('.product-total');
+                        productTotalElement.text(data.newProductTotal);
+
+                        // Cập nhật tổng thành tiền
+                        var totalAmountElement = $('.total-amount');
+                        totalAmountElement.text(data.newTotalAmount);
+
+                        var itemCount = $('.cart-quantity-count');
+                        itemCount.text(data.itemCount);
+                    }
+                }
+            });
+        }
+        else {
+            $('#quantityAlertModal').modal('show');
+        }
+    });
+
+    $('.value-minus').on('click', function () {
+        var productId = $(this).data('product-id');
+        var colorId = $(this).data('color-id');
+        var divUpd = $(this).parent().find('.value');
+        var newVal = parseInt(divUpd.text(), 10) - 1;
+
+        // Lưu trữ ngữ cảnh của sự kiện click ban đầu
+        var clickedButton = this;
+
+        if (newVal >= 1) {
+            // Gửi yêu cầu AJAX để cập nhật số lượng
+            $.ajax({
+                url: '@Url.Action("UpdateCart", "Cart")',
+                method: 'POST',
+                data: { MaSP: productId, MaMau: colorId, SoLuong: newVal },
+                success: function (data) {
+                    if (data.success) {
+                        // Cập nhật số lượng hiển thị trên trang
+                        divUpd.text(newVal);
+
+                        // Cập nhật thành tiền của sản phẩm
+                        var productTotalElement = $(clickedButton).closest('tr').find('.product-total');
+                        productTotalElement.text(data.newProductTotal);
+
+                        // Cập nhật tổng thành tiền
+                        var totalAmountElement = $('.total-amount');
+                        totalAmountElement.text(data.newTotalAmount);
+
+                        var itemCount = $('.cart-quantity-count');
+                        itemCount.text(data.itemCount);
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Bắt sự kiện click trên nút xóa với lớp CSS "delete-button"
+        $('.rem .close').on('click', function () {
+            // Lấy hàng (tr) chứa nút xóa
+            var row = $(this).closest('tr');
+
+            // Lấy thông tin sản phẩm từ các thuộc tính data-*
+            var productId = $(this).data('product-id');
+            var colorId = $(this).data('color-id');
+
+            // Gửi yêu cầu AJAX để xóa sản phẩm
+            $.ajax({
+                url: '@Url.Action("DeleteCart", "Cart")', // Địa chỉ URL của action xóa
+                method: 'POST',
+                data: { MaSP: productId, MaMau: colorId },
+                success: function (data) {
+                    if (data.success) {
+                        // Sau khi xóa sản phẩm thành công, ẩn hoặc xóa hàng (tr) này
+                        row.fadeOut('slow', function () {
+                            row.remove();
+                        });
+
+                        // Cập nhật tổng thành tiền
+                        var totalAmountElement = $('.total-amount');
+                        totalAmountElement.text(data.newTotalAmount);
+
+                        var itemCount = $('.cart-quantity-count');
+                        itemCount.text(data.itemCount);
+                    }
+                }
+            });
+        });
+    });
+</script>

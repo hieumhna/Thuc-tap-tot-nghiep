@@ -1,0 +1,110 @@
+﻿@using WebBanDienThoai.Models
+@model IEnumerable<SANPHAM>
+
+<style>
+    /* CSS cho nút "Gửi" */
+    #submitBtn, .sort-price {
+        background-color: #1accfd; /* Màu nền nút */
+        color: #fff; /* Màu chữ nút */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        width: 100%;
+    }
+
+        #submitBtn:hover, .sort-price:hover {
+            background-color: #FF5722; /* Màu nền nút khi di chuột qua */
+        }
+
+    /* Canh giữa nút trong phần "Phạm vi giá" */
+    .range {
+        text-align: center;
+    }
+
+    /* Để nút hiển thị giữa theo chiều ngang, bạn có thể sử dụng margin: 0 auto; */
+    #submitBtn {
+        display: inline-block;
+        margin: 10px auto 0;
+    }
+</style>
+
+
+<div class="side-bar col-md-3">
+    <div class="search-hotel">
+        <h3 class="agileits-sear-head">Tìm kiếm ở đây...</h3>
+        @using (Html.BeginForm("GetKeyWord", "Products", FormMethod.Post))
+        {
+            <input type="search" placeholder="Tên sản phẩm" name="keyWord" required="">
+            <input type="submit" value=" ">
+        }
+    </div>
+
+    <!-- price range -->
+    <div class="range">
+        <h3 style="text-align: left" class="agileits-sear-head">Phạm vi giá</h3>
+        <ul class="dropdown-menu6">
+            <li>
+                <div id="slider-range"></div>
+                <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal; width: 200px" />
+            </li>
+        </ul>
+        <button id="submitBtn">Lọc giá</button>
+    </div>
+
+    @* Nút giá giảm dần  *@
+    <div style="margin: 20px 0" class="sort-by-price">
+        <h3 class="agileits-sear-head">Sắp xếp theo giá</h3>
+        <button class="sort-price" id="descBtn" onclick="location.href='@Url.Action("Products", "Products", new { @MaLoaiSP = ViewBag.CategoryId, @keyWord = ViewBag.KeyWord, @page = 1, @sort = false, @minPrice = ViewBag.MinPriceSelect, @maxPrice = ViewBag.MaxPriceSelect })'">Giá giảm dần</button>
+    </div>
+
+    @* Nút giá tăng dần *@
+    <div class="sort-by-price">
+        <button class="sort-price" id="ascBtn" onclick="location.href='@Url.Action("Products", "Products", new { @MaLoaiSP = ViewBag.CategoryId, @keyWord = ViewBag.KeyWord, @page = 1, @sort = true, @minPrice = ViewBag.MinPriceSelect, @maxPrice = ViewBag.MaxPriceSelect })'">Giá tăng dần</button>
+    </div>
+
+    <hr />
+
+    <!-- deals -->
+    <div class="deal-leftmk left-side">
+        <h3 class="agileits-sear-head">Ưu đãi đặc biệt</h3>
+        @if (Model != null)
+        {
+            foreach (var product in Model)
+            {
+                if (product != null)
+                {
+                    <div class="special-sec1">
+                        <div class="col-xs-4 img-deals">
+                            <img style="width: 70px" src="@Url.Content("~/Content/Images/Products/" + product.HinhAnh)" alt="">
+                        </div>
+                        <div class="col-xs-8 img-deal1">
+                            <h3>@product.TenSP</h3>
+                            @Html.ActionLink(string.Format("{0:N0} \u20ab", product.DonGia), "ProductDetails", "Products", new { MaSP = product.MaSP }, null)
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                }
+            }
+        }
+    </div>
+</div>
+
+@*<script>
+        //<![CDATA[
+        $(window).load(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 52000000,
+                values: [0, 52000000],
+                slide: function (event, ui) {
+                    $("#amount").val(ui.values[0] + "\u20ab" + " - " + ui.values[1] + "\u20ab");
+                }
+            });
+            $("#amount").val($("#slider-range").slider("values", 0) + "\u20ab" + " - " + $("#slider-range").slider("values", 1) + "\u20ab");
+
+        }); //]]>
+    </script>*@

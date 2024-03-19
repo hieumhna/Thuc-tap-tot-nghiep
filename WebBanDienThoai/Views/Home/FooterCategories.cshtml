@@ -1,0 +1,27 @@
+﻿@using WebBanDienThoai.Models
+@model List<LOAISANPHAM>
+
+
+<div class="col-sm-5 address-right">
+    @if (Model != null && Model.Count > 0)
+    {
+        foreach (var group in Model.GroupBy(row => row.DANHMUC))
+        {
+            if (group.Key != null)
+            {
+                <div class="col-xs-6 footer-grids">
+                    <h3>@group.Key.TenDanhMuc</h3>
+                    <ul>
+                        @foreach (var item in group)
+                        {
+                            <li>
+                                @*<a href="@Url.Action("Products", "Products", new { MaLoaiSP = item.MaLoaiSP })">@item.TenLoaiSP</a>*@
+                                @Html.ActionLink(item.TenLoaiSP, "Products", new { MaLoaiSP = item.MaLoaiSP, controller = "Products" })
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+        }
+    }
+</div>    

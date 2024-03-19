@@ -1,0 +1,154 @@
+﻿@using WebBanDienThoai.Models;
+@model PHIEUNHAP
+
+@{
+    ViewBag.Title = "Thêm phiếu nhập";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow-x: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th {
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .text-weight {
+        font-weight: bold; /* In đậm chữ */
+        font-size: 16px; /* Cỡ chữ */
+    }
+
+    .container {
+        text-align: left;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP=ViewBag.CategoryID})" style="text-decoration: none;">Sản phẩm</a> / <a href="#">Thêm phiếu nhập</a></h3>
+
+@using (Html.BeginForm("ImportProduct", "Admin", FormMethod.Post))
+{
+    <div class="container_Products">
+        @*Header*@
+        <h3 class="text-center"><strong>@ViewBag.TenSP</strong></h3>
+        <hr />
+        <div class="container">
+            <table>
+                @{IEnumerable<NHACUNGCAP> lstNCC = ViewBag.ListNCC as IEnumerable<NHACUNGCAP>; }
+                <tr>
+                    <th style="width: 145px; max-width: 100% ">Nhà cung cấp:</th>
+                    <td>
+                        <select class="form-control" name="MaNCC" id="selectNCC">
+                            @foreach (var item in ViewBag.ListNCC)
+                            {
+                                <option value="@item.MaNCC">@item.TenNCC</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Ngày nhập hàng:</th>
+                    <td>
+                        @Html.TextBoxFor(row => row.NgayNhap, new { @class = "form-control", type = "date" })
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr />
+        @*End Header*@
+
+        @*Container*@
+        <div class="container">
+            <table class="table tblChiTietPhieuNhap">
+                @{IEnumerable<SANPHAM> lstSanPham = ViewBag.ListSanPham as IEnumerable<SANPHAM>; }
+                @*Tạo ra 1tr với nội dung nhập hàng*@
+
+                <tr class="trFirstChild" data-id="-1">
+                    <td class="text-weight">Sản phẩm</td>
+                    <td class="text-weight">Đơn giá nhập</td>
+                    <td class="text-weight">Số lượng nhập</td>
+                </tr>
+                <tr class="trAppend">
+                    <td>
+                        <select class="ddlSanPham form-control" name="MaSP">
+                            @foreach (var item in ViewBag.ListSanPham)
+                            {
+                                <option value="@item.MaSP">@item.TenSP</option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <input name="DonGiaNhap" class="txtDonGia form-control" value="0" type="number" />
+                    </td>
+                    <td>
+                        <input name="SoLuongNhap" class="txtSoLuong form-control" value="0" type="number" />
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Nhập hàng" class="btn btn-primary" id="btnNhapHang" />
+        </div>
+        @*End Container*@
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        // Khi form được submit
+        $("form").submit(function () {
+            // Kiểm tra ngày nhập hàng
+            var ngayNhap = $("input[name='NgayNhap']").val();
+            if (ngayNhap === "") {
+                alert("Vui lòng nhập ngày nhập hàng.");
+                return false;
+            }
+
+            // Kiểm tra đơn giá nhập
+            var donGiaNhap = parseFloat($("input[name='DonGiaNhap']").val());
+            if (isNaN(donGiaNhap) || donGiaNhap <= 0) {
+                alert("Vui lòng nhập đúng đơn giá nhập hàng.");
+                return false;
+            }
+
+            // Kiểm tra số lượng nhập
+            var soLuongNhap = parseInt($("input[name='SoLuongNhap']").val());
+            if (isNaN(soLuongNhap) || soLuongNhap <= 0) {
+                alert("Vui lòng nhập số lượng nhập hàng hợp lệ.");
+                return false;
+            }
+
+            // Kiểm tra ngày nhập phải nhỏ hơn hoặc bằng ngày hiện tại
+            var ngayHienTai = new Date().toISOString().split('T')[0];
+            if (ngayNhap > ngayHienTai) {
+                alert("Ngày nhập không được lớn hơn ngày hiện tại.");
+                return false;
+            }
+        });
+    });
+</script>
+

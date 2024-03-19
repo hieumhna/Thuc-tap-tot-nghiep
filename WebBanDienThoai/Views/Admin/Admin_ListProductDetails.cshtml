@@ -1,0 +1,298 @@
+﻿
+@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .img-product {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .center-text {
+        width: 200px;
+        text-align: justify;
+        text-indent: 16px;
+    }
+
+    .btn-content {
+        width: 80px; /* Độ rộng của nút */
+        text-align: center; /* Căn giữa nội dung của nút */
+        margin: 4px;
+    }
+
+    .btn-container {
+        text-align: center; /* Căn giữa nội dung của td */
+        vertical-align: middle; /* Căn giữa theo chiều dọc */
+        padding: 0 !important;
+    }
+
+    .container_Products {
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        white-space: nowrap;
+        width: 100%;
+        border-collapse: collapse;
+        overflow-x: auto; /* Cho phép cuộn ngang khi cần thiết */
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    thead {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    th:first-child,
+    td:first-child {
+        left: 0;
+        background-color: #f2f2f2;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+<h3 class="title2"><a href="#" style="text-decoration: none;">Chi tiết sản phẩm</a> / <a href="#" style="text-decoration: none;">@ViewBag.CategoryName</a></h3>
+
+<div class="container_Products">
+    @if (ViewBag.CategoryID == 1 || ViewBag.CategoryID == 2 || ViewBag.CategoryID == 3 || ViewBag.CategoryID == 4 || ViewBag.CategoryID == 5)
+    {
+        <h1>@ViewBag.CategoryName</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã chi tiết</th>
+                    <th>Mã sản phẩm</th>
+                    <th>Tên</th>
+                    <th>Kích thước màn hình</th>
+                    <th>Công nghệ màn hình</th>
+                    <th>Độ phân giải</th>
+                    <th>Tính năng</th>
+                    <th>Tần số quét</th>
+                    <th>Camera sau</th>
+                    <th>Quay phim</th>
+                    <th>Camera trước</th>
+                    <th>Tính năg</th>
+                    <th>Hệ điều hành</th>
+                    <th>Chip xử lý (CPU)</th>
+                    <th>Tốc độ CPU</th>
+                    <th>Chip đồ họa (GPU)</th>
+                    <th>Ram</th>
+                    <th>Dung lượng</th>
+                    <th>Mạng di động</th>
+                    <th>Sim</th>
+                    <th>Wifi</th>
+                    <th>Cổng kết nối/sạc</th>
+                    <th>Dung lượng pin</th>
+                    <th>Loại pin</th>
+                    <th>Hỗ trợ sạc tối đa</th>
+                    <th>Bảo mật nâng cao</th>
+                    <th>Tính năng đặc biệt</th>
+                    <th>Kháng nước, bụi</th>
+                    <th>Thiết kế</th>
+                    <th>Chất liệu</th>
+                    <th>Kích thước, khối lượng</th>
+                    <th>Bảo hành</th>
+                    <th>Thời điểm ra mắt</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.Phone)
+                {
+                    <tr>
+                        <td>@item.MaChiTietSP</td>
+                        <td>@item.MaSP</td>
+                        <td style="text-align: left!important;">@item.SANPHAM.TenSP</td>
+                        <td>@item.KICHTHUOCMANHINH</td>
+                        <td>@item.CONGNGHEMANHINH</td>
+                        <td>@item.DOPHANGIAI</td>
+                        <td>@item.TINHNANGMANGHINH</td>
+                        <td>@item.TANSOQUET</td>
+                        <td style="text-align: left!important;">@item.CAMERASAU</td>
+                        <td>@item.QUAYPHIM</td>
+                        <td>@item.CAMERATRUOC</td>
+                        <td style="text-align: left!important;">@item.TINHNANGCAMERA</td>
+                        <td>@item.HEDIEUHANH</td>
+                        <td>@item.CHIP</td>
+                        <td>@item.TOCDOCPU</td>
+                        <td>@item.CHIPDOHOA</td>
+                        <td>@item.RAM</td>
+                        <td>@item.DUNGLUONG</td>
+                        <td>@item.MANGDIDONG</td>
+                        <td>@item.SIM</td>
+                        <td>@item.WIFI</td>
+                        <td>@item.CONGKETNOI</td>
+                        <td>@item.DUNGLUONGPIN</td>
+                        <td>@item.LOAIPIN</td>
+                        <td>@item.HOTROSAC</td>
+                        <td>@item.BAOMAT</td>
+                        <td style="text-align: left!important;">@item.TINHNANGDACBIET</td>
+                        <td>@item.KHANGNUOC</td>
+                        <td>@item.THIETKE</td>
+                        <td style="text-align: left!important;">@item.CHATLIEU</td>
+                        <td>@item.KICHTHUOC</td>
+                        <td>@item.BAOHANH</td>
+                        <td>@item.RAMAT.ToString("dd/MM/yyyy")</td>
+                        <td class="btn-container">
+                            <a href="@Url.Action("Admin_ProductDetails", "Admin", new {MaSP = item.MaSP})" class="btn btn-info btn-content">
+                                <i class="fa fa-eye"></i> Xem
+                            </a>
+                            <a href="@Url.Action("DeletePhoneProductDetails", "Admin", new {MaChiTietSP = item.MaChiTietSP})" class="btn btn-danger btn-content">
+                                <i class="fa fa-trash"></i> Xóa
+                            </a>
+                            <a href="@Url.Action("EditPhoneProductDetails", "Admin", new {MaSP = item.MaSP})" class="btn btn-primary btn-content">
+                                <i class="fa fa-edit"></i> Sửa
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        if (ViewBag.CategoryID == 6)
+        {
+            <h1>@ViewBag.CategoryName</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã chi tiết</th>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên</th>
+                        <th>Hiệu suất sạc</th>
+                        <th>Dung lượng pin</th>
+                        <th>Thời gian sạc</th>
+                        <th>Nguồn vào</th>
+                        <th>Nguồn ra</th>
+                        <th>Công nghệ/Tiện ích</th>
+                        <th>Kích thước</th>
+                        <th>Bảo hành</th>
+                        <th>Khối lượng</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.Backupcharger)
+                    {
+                        <tr>
+
+                            <td>@item.MaCTPKSac</td>
+                            <td>@item.MaSP</td>
+                            <td style="text-align: left!important;">@item.SANPHAM.TenSP</td>
+                            <td>@item.HIEUSUAT</td>
+                            <td>@item.DUNGLUONGPIN</td>
+                            <td>@item.THOIGIANSAC</td>
+                            <td>@item.NGUONVAO</td>
+                            <td>@item.NGUONRA</td>
+                            <td style="text-align: left!important;">@item.CONGNGHE</td>
+                            <td>@item.KICHTHUOC</td>
+                            <td>@item.BAOHANH</td>
+                            <td>@item.KHOILUONG</td>
+                            <td class="btn-container">
+                                <a href="@Url.Action("Admin_ProductDetails", "Admin", new {MaSP = item.MaSP})" class="btn btn-info btn-content">
+                                    <i class="fa fa-eye"></i> Xem
+                                </a>
+                                <a href="@Url.Action("DeleteBackupchargerProductDetails", "Admin", new {MaCTPKSac = item.MaCTPKSac})" class="btn btn-danger btn-content">
+                                    <i class="fa fa-trash"></i> Xóa
+                                </a>
+                                <a href="@Url.Action("EditBackupchargerProductDetails", "Admin", new {MaSP = item.MaSP})" class="btn btn-primary btn-content">
+                                    <i class="fa fa-edit"></i> Sửa
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            if (ViewBag.CategoryID == 7)
+            {
+                <h1>@ViewBag.CategoryName</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã chi tiết</th>
+                            <th>Mã sản phẩm</th>
+                            <th>Tên</th>
+                            <th>Thời lượng pin</th>
+                            <th>Thời lượng sạc</th>
+                            <th>Cổng sạc</th>
+                            <th>Công nghệ âm thanh</th>
+                            <th>Tiện ích</th>
+                            <th>Tương thích</th>
+                            <th>Công nghệ kết nối</th>
+                            <th>Phím điều khiển</th>
+                            <th>Kích thước</th>
+                            <th>Bảo hành</th>
+                            <th>Khối lượng</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.Earphone)
+                        {
+                            <tr>
+
+                                <td>@item.MaPKTaiNghe</td>
+                                <td>@item.MaSP</td>
+                                <td style="text-align: left!important;">@item.SANPHAM.TenSP</td>
+                                <td>@item.DUNGLUONGPIN</td>
+                                <td>@item.THOILUONGSAC</td>
+                                <td>@item.CONGSAC</td>
+                                <td>@item.CONGNGHEAMTHANH</td>
+                                <td>@item.TIENICH</td>
+                                <td style="text-align: left!important;">@item.TUONGTHICH</td>
+                                <td>@item.CONGNGHEKETNOT</td>
+                                <td>@item.PHIMDIEUKHIEN</td>
+                                <td>@item.KICHTHUOC</td>
+                                <td>@item.BAOHANH</td>
+                                <td>@item.KHOILUONG</td>
+                                <td class="btn-container">
+                                    <a href="@Url.Action("Admin_ProductDetails", "Admin", new {MaSP = item.MaSP})" class="btn btn-info btn-content">
+                                        <i class="fa fa-eye"></i> Xem
+                                    </a>
+                                    <a href="@Url.Action("DeleteEarPhoneProductDetails", "Admin", new {MaPKTaiNghe = item.MaPKTaiNghe})" class="btn btn-danger btn-content">
+                                        <i class="fa fa-trash"></i> Xóa
+                                    </a>
+                                    <a href="@Url.Action("EditEarPhoneProductDetails", "Admin", new {MaSP = item.MaSP})" class="btn btn-primary btn-content">
+                                        <i class="fa fa-edit"></i> Sửa
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        }
+    }
+</div>

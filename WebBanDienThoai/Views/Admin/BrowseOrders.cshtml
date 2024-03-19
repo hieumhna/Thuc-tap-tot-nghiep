@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Đơn hàng";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .center-text {
+        text-align: justify;
+        text-indent: 16px;
+    }
+
+    .btn-content {
+        width: 80px;
+        text-align: center;
+        margin: 6px;
+    }
+
+    .btn-container {
+        text-align: center;
+        vertical-align: middle;
+        padding: 12px 0px !important;
+    }
+
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow-x: auto;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    thead {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    th:first-child,
+    td:first-child {
+        left: 0;
+        background-color: #f2f2f2;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+
+    .scrollbar1 {
+        height: 736px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Index", "Admin")" style="text-decoration: none;">Thống kê</a> / <a href="#" style="text-decoration: none;">Danh sách đơn hàng</a></h3>
+
+<div class="container_Products">
+    <div class="col-md-12 grids-right widget-shadow">
+        <ul id="myTabs" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class=""><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="false">Chưa duyệt</a></li>
+            <li role="presentation" class="active"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="true">Đã duyệt</a></li>
+            <li role="presentation" class=""><a href="#DelivereAndPaid" role="tab" id="DelivereAndPaid-tab" data-toggle="tab" aria-controls="DelivereAndPaid" aria-expanded="true">Đã giao</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content scrollbar1">
+            <div role="tabpanel" class="tab-pane fade" id="home" aria-labelledby="home-tab">
+                @Html.Action("Unpaid", "Admin")
+            </div>
+            <div role="tabpanel" class="tab-pane fade active in" id="profile" aria-labelledby="profile-tab">
+                @Html.Action("NotDelivery", "Admin")
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="DelivereAndPaid" aria-labelledby="DelivereAndPaid-tab">
+                @Html.Action("DelivereAndPaid", "Admin")
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#myTabs a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>

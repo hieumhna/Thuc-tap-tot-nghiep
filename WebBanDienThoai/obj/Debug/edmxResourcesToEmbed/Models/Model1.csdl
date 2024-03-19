@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Web_BanDienThoai_TCShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Web_BanDienThoai_TCShopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BINHLUAN" EntityType="Web_BanDienThoai_TCShopModel.BINHLUAN" />
+    <EntitySet Name="CONGNO" EntityType="Web_BanDienThoai_TCShopModel.CONGNO" />
+    <EntitySet Name="CHITIETDONDATHANG" EntityType="Web_BanDienThoai_TCShopModel.CHITIETDONDATHANG" />
+    <EntitySet Name="CHITIETGIOHANG" EntityType="Web_BanDienThoai_TCShopModel.CHITIETGIOHANG" />
+    <EntitySet Name="CHITIETPHIEUNHAP" EntityType="Web_BanDienThoai_TCShopModel.CHITIETPHIEUNHAP" />
+    <EntitySet Name="CHITIETPHUKIENSACDUPHONG" EntityType="Web_BanDienThoai_TCShopModel.CHITIETPHUKIENSACDUPHONG" />
+    <EntitySet Name="CHITIETPHUKIENTAINGHE" EntityType="Web_BanDienThoai_TCShopModel.CHITIETPHUKIENTAINGHE" />
+    <EntitySet Name="CHITIETSANPHAM" EntityType="Web_BanDienThoai_TCShopModel.CHITIETSANPHAM" />
+    <EntitySet Name="DANHMUC" EntityType="Web_BanDienThoai_TCShopModel.DANHMUC" />
+    <EntitySet Name="DONDATHANG" EntityType="Web_BanDienThoai_TCShopModel.DONDATHANG" />
+    <EntitySet Name="GIOHANG" EntityType="Web_BanDienThoai_TCShopModel.GIOHANG" />
+    <EntitySet Name="KHACHHANG" EntityType="Web_BanDienThoai_TCShopModel.KHACHHANG" />
+    <EntitySet Name="KHUYENMAI" EntityType="Web_BanDienThoai_TCShopModel.KHUYENMAI" />
+    <EntitySet Name="LOAISANPHAM" EntityType="Web_BanDienThoai_TCShopModel.LOAISANPHAM" />
+    <EntitySet Name="LOAITHANHVIEN" EntityType="Web_BanDienThoai_TCShopModel.LOAITHANHVIEN" />
+    <EntitySet Name="LOAITHANHVIEN_QUYEN" EntityType="Web_BanDienThoai_TCShopModel.LOAITHANHVIEN_QUYEN" />
+    <EntitySet Name="MAU" EntityType="Web_BanDienThoai_TCShopModel.MAU" />
+    <EntitySet Name="NHACUNGCAP" EntityType="Web_BanDienThoai_TCShopModel.NHACUNGCAP" />
+    <EntitySet Name="NHASANXUAT" EntityType="Web_BanDienThoai_TCShopModel.NHASANXUAT" />
+    <EntitySet Name="PHIEUNHAP" EntityType="Web_BanDienThoai_TCShopModel.PHIEUNHAP" />
+    <EntitySet Name="QUYEN" EntityType="Web_BanDienThoai_TCShopModel.QUYEN" />
+    <EntitySet Name="SANPHAM" EntityType="Web_BanDienThoai_TCShopModel.SANPHAM" />
+    <EntitySet Name="SANPHAM_MAU" EntityType="Web_BanDienThoai_TCShopModel.SANPHAM_MAU" />
+    <EntitySet Name="sysdiagrams" EntityType="Web_BanDienThoai_TCShopModel.sysdiagrams" />
+    <EntitySet Name="THANHVIEN" EntityType="Web_BanDienThoai_TCShopModel.THANHVIEN" />
+    <AssociationSet Name="FK_BL_SP" Association="Web_BanDienThoai_TCShopModel.FK_BL_SP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="BINHLUAN" EntitySet="BINHLUAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BL_TV" Association="Web_BanDienThoai_TCShopModel.FK_BL_TV">
+      <End Role="THANHVIEN" EntitySet="THANHVIEN" />
+      <End Role="BINHLUAN" EntitySet="BINHLUAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CongNo_NCC" Association="Web_BanDienThoai_TCShopModel.FK_CongNo_NCC">
+      <End Role="NHACUNGCAP" EntitySet="NHACUNGCAP" />
+      <End Role="CONGNO" EntitySet="CONGNO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTDDH_DDH" Association="Web_BanDienThoai_TCShopModel.FK_CTDDH_DDH">
+      <End Role="DONDATHANG" EntitySet="DONDATHANG" />
+      <End Role="CHITIETDONDATHANG" EntitySet="CHITIETDONDATHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTDDH_SP" Association="Web_BanDienThoai_TCShopModel.FK_CTDDH_SP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETDONDATHANG" EntitySet="CHITIETDONDATHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTGH_GH" Association="Web_BanDienThoai_TCShopModel.FK_CTGH_GH">
+      <End Role="GIOHANG" EntitySet="GIOHANG" />
+      <End Role="CHITIETGIOHANG" EntitySet="CHITIETGIOHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTGH_SP" Association="Web_BanDienThoai_TCShopModel.FK_CTGH_SP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETGIOHANG" EntitySet="CHITIETGIOHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPN_PN" Association="Web_BanDienThoai_TCShopModel.FK_CTPN_PN">
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+      <End Role="CHITIETPHIEUNHAP" EntitySet="CHITIETPHIEUNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPN_SP" Association="Web_BanDienThoai_TCShopModel.FK_CTPN_SP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETPHIEUNHAP" EntitySet="CHITIETPHIEUNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPKSAC_SANPHAM" Association="Web_BanDienThoai_TCShopModel.FK_CTPKSAC_SANPHAM">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETPHUKIENSACDUPHONG" EntitySet="CHITIETPHUKIENSACDUPHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPKTAINGHE_SANPHAM" Association="Web_BanDienThoai_TCShopModel.FK_CTPKTAINGHE_SANPHAM">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETPHUKIENTAINGHE" EntitySet="CHITIETPHUKIENTAINGHE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTSP_SANPHAM" Association="Web_BanDienThoai_TCShopModel.FK_CTSP_SANPHAM">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETSANPHAM" EntitySet="CHITIETSANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LSP_DM" Association="Web_BanDienThoai_TCShopModel.FK_LSP_DM">
+      <End Role="DANHMUC" EntitySet="DANHMUC" />
+      <End Role="LOAISANPHAM" EntitySet="LOAISANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DDH_KH" Association="Web_BanDienThoai_TCShopModel.FK_DDH_KH">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="DONDATHANG" EntitySet="DONDATHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GIOHANG_TV" Association="Web_BanDienThoai_TCShopModel.FK_GIOHANG_TV">
+      <End Role="THANHVIEN" EntitySet="THANHVIEN" />
+      <End Role="GIOHANG" EntitySet="GIOHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KH_TV" Association="Web_BanDienThoai_TCShopModel.FK_KH_TV">
+      <End Role="THANHVIEN" EntitySet="THANHVIEN" />
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SP_KM" Association="Web_BanDienThoai_TCShopModel.FK_SP_KM">
+      <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SP_LSP" Association="Web_BanDienThoai_TCShopModel.FK_SP_LSP">
+      <End Role="LOAISANPHAM" EntitySet="LOAISANPHAM" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LTVQ_TV" Association="Web_BanDienThoai_TCShopModel.FK_LTVQ_TV">
+      <End Role="LOAITHANHVIEN" EntitySet="LOAITHANHVIEN" />
+      <End Role="LOAITHANHVIEN_QUYEN" EntitySet="LOAITHANHVIEN_QUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TV_LTV" Association="Web_BanDienThoai_TCShopModel.FK_TV_LTV">
+      <End Role="LOAITHANHVIEN" EntitySet="LOAITHANHVIEN" />
+      <End Role="THANHVIEN" EntitySet="THANHVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LTVQ_Q" Association="Web_BanDienThoai_TCShopModel.FK_LTVQ_Q">
+      <End Role="QUYEN" EntitySet="QUYEN" />
+      <End Role="LOAITHANHVIEN_QUYEN" EntitySet="LOAITHANHVIEN_QUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SPMAU_MAU" Association="Web_BanDienThoai_TCShopModel.FK_SPMAU_MAU">
+      <End Role="MAU" EntitySet="MAU" />
+      <End Role="SANPHAM_MAU" EntitySet="SANPHAM_MAU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PN_NCC" Association="Web_BanDienThoai_TCShopModel.FK_PN_NCC">
+      <End Role="NHACUNGCAP" EntitySet="NHACUNGCAP" />
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SP_NCC" Association="Web_BanDienThoai_TCShopModel.FK_SP_NCC">
+      <End Role="NHACUNGCAP" EntitySet="NHACUNGCAP" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SP_NSX" Association="Web_BanDienThoai_TCShopModel.FK_SP_NSX">
+      <End Role="NHASANXUAT" EntitySet="NHASANXUAT" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SPMAU_SP" Association="Web_BanDienThoai_TCShopModel.FK_SPMAU_SP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="SANPHAM_MAU" EntitySet="SANPHAM_MAU" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BINHLUAN">
+    <Key>
+      <PropertyRef Name="MaBinhLuan" />
+    </Key>
+    <Property Name="MaBinhLuan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaTV" Type="Int32" Nullable="false" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="NoiDungBL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_BL_SP" FromRole="BINHLUAN" ToRole="SANPHAM" />
+    <NavigationProperty Name="THANHVIEN" Relationship="Web_BanDienThoai_TCShopModel.FK_BL_TV" FromRole="BINHLUAN" ToRole="THANHVIEN" />
+  </EntityType>
+  <EntityType Name="CONGNO">
+    <Key>
+      <PropertyRef Name="MaCongNo" />
+    </Key>
+    <Property Name="MaCongNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaNCC" Type="Int32" Nullable="false" />
+    <Property Name="SoTienNo" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NgayCongNo" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="NHACUNGCAP" Relationship="Web_BanDienThoai_TCShopModel.FK_CongNo_NCC" FromRole="CONGNO" ToRole="NHACUNGCAP" />
+  </EntityType>
+  <EntityType Name="CHITIETDONDATHANG">
+    <Key>
+      <PropertyRef Name="MaChiTietDDH" />
+    </Key>
+    <Property Name="MaChiTietDDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaDDH" Type="Int32" Nullable="false" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="TenSP" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <NavigationProperty Name="DONDATHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_CTDDH_DDH" FromRole="CHITIETDONDATHANG" ToRole="DONDATHANG" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_CTDDH_SP" FromRole="CHITIETDONDATHANG" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="CHITIETGIOHANG">
+    <Key>
+      <PropertyRef Name="MaChiTietGH" />
+    </Key>
+    <Property Name="MaChiTietGH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaGioHang" Type="Int32" Nullable="false" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="MaMau" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="GIOHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_CTGH_GH" FromRole="CHITIETGIOHANG" ToRole="GIOHANG" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_CTGH_SP" FromRole="CHITIETGIOHANG" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="CHITIETPHIEUNHAP">
+    <Key>
+      <PropertyRef Name="MaCTPN" />
+    </Key>
+    <Property Name="MaCTPN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaPN" Type="Int32" Nullable="false" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="DonGiaNhap" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="SoLuongNhap" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PHIEUNHAP" Relationship="Web_BanDienThoai_TCShopModel.FK_CTPN_PN" FromRole="CHITIETPHIEUNHAP" ToRole="PHIEUNHAP" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_CTPN_SP" FromRole="CHITIETPHIEUNHAP" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="CHITIETPHUKIENSACDUPHONG">
+    <Key>
+      <PropertyRef Name="MaCTPKSac" />
+    </Key>
+    <Property Name="MaCTPKSac" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="HIEUSUAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DUNGLUONGPIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="THOIGIANSAC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGUONVAO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGUONRA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CONGNGHE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KICHTHUOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BAOHANH" Type="Int32" />
+    <Property Name="KHOILUONG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_CTPKSAC_SANPHAM" FromRole="CHITIETPHUKIENSACDUPHONG" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="CHITIETPHUKIENTAINGHE">
+    <Key>
+      <PropertyRef Name="MaPKTaiNghe" />
+    </Key>
+    <Property Name="MaPKTaiNghe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="DUNGLUONGPIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="THOILUONGSAC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CONGSAC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CONGNGHEAMTHANH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TIENICH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TUONGTHICH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CONGNGHEKETNOT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PHIMDIEUKHIEN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KICHTHUOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BAOHANH" Type="Int32" />
+    <Property Name="KHOILUONG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_CTPKTAINGHE_SANPHAM" FromRole="CHITIETPHUKIENTAINGHE" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="CHITIETSANPHAM">
+    <Key>
+      <PropertyRef Name="MaChiTietSP" />
+    </Key>
+    <Property Name="MaChiTietSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="KICHTHUOCMANHINH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CONGNGHEMANHINH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DOPHANGIAI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TINHNANGMANGHINH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TANSOQUET" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CAMERASAU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="QUAYPHIM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CAMERATRUOC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TINHNANGCAMERA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HEDIEUHANH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CHIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TOCDOCPU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CHIPDOHOA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RAM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DUNGLUONG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MANGDIDONG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SIM" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WIFI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CONGKETNOI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DUNGLUONGPIN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LOAIPIN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="HOTROSAC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BAOMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TINHNANGDACBIET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KHANGNUOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="THIETKE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CHATLIEU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KICHTHUOC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BAOHANH" Type="Int32" />
+    <Property Name="RAMAT" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_CTSP_SANPHAM" FromRole="CHITIETSANPHAM" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="DANHMUC">
+    <Key>
+      <PropertyRef Name="MaDanhMuc" />
+    </Key>
+    <Property Name="MaDanhMuc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDanhMuc" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LOAISANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_LSP_DM" FromRole="DANHMUC" ToRole="LOAISANPHAM" />
+  </EntityType>
+  <EntityType Name="DONDATHANG">
+    <Key>
+      <PropertyRef Name="MaDDH" />
+    </Key>
+    <Property Name="MaDDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaKH" Type="Int32" />
+    <Property Name="NgayDatHang" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayGiao" Type="DateTime" Precision="3" />
+    <Property Name="DaThanhToan" Type="Boolean" Nullable="false" />
+    <Property Name="QuaTang" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DaXoa" Type="Boolean" />
+    <NavigationProperty Name="CHITIETDONDATHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_CTDDH_DDH" FromRole="DONDATHANG" ToRole="CHITIETDONDATHANG" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_DDH_KH" FromRole="DONDATHANG" ToRole="KHACHHANG" />
+  </EntityType>
+  <EntityType Name="GIOHANG">
+    <Key>
+      <PropertyRef Name="MaGioHang" />
+    </Key>
+    <Property Name="MaGioHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaTV" Type="Int32" />
+    <NavigationProperty Name="CHITIETGIOHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_CTGH_GH" FromRole="GIOHANG" ToRole="CHITIETGIOHANG" />
+    <NavigationProperty Name="THANHVIEN" Relationship="Web_BanDienThoai_TCShopModel.FK_GIOHANG_TV" FromRole="GIOHANG" ToRole="THANHVIEN" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaTV" Type="Int32" />
+    <Property Name="TenKH" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DONDATHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_DDH_KH" FromRole="KHACHHANG" ToRole="DONDATHANG" />
+    <NavigationProperty Name="THANHVIEN" Relationship="Web_BanDienThoai_TCShopModel.FK_KH_TV" FromRole="KHACHHANG" ToRole="THANHVIEN" />
+  </EntityType>
+  <EntityType Name="KHUYENMAI">
+    <Key>
+      <PropertyRef Name="MaKhuyenMai" />
+    </Key>
+    <Property Name="MaKhuyenMai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenKhuyenMai" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhanTramGiamGia" Type="Int32" Nullable="false" />
+    <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_SP_KM" FromRole="KHUYENMAI" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="LOAISANPHAM">
+    <Key>
+      <PropertyRef Name="MaLoaiSP" />
+    </Key>
+    <Property Name="MaLoaiSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaDanhMuc" Type="Int32" Nullable="false" />
+    <Property Name="TenLoaiSP" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BiDanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DANHMUC" Relationship="Web_BanDienThoai_TCShopModel.FK_LSP_DM" FromRole="LOAISANPHAM" ToRole="DANHMUC" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_SP_LSP" FromRole="LOAISANPHAM" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="LOAITHANHVIEN">
+    <Key>
+      <PropertyRef Name="MaLoaiTV" />
+    </Key>
+    <Property Name="MaLoaiTV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoai" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UuDai" Type="Int32" />
+    <NavigationProperty Name="LOAITHANHVIEN_QUYEN" Relationship="Web_BanDienThoai_TCShopModel.FK_LTVQ_TV" FromRole="LOAITHANHVIEN" ToRole="LOAITHANHVIEN_QUYEN" />
+    <NavigationProperty Name="THANHVIEN" Relationship="Web_BanDienThoai_TCShopModel.FK_TV_LTV" FromRole="LOAITHANHVIEN" ToRole="THANHVIEN" />
+  </EntityType>
+  <EntityType Name="LOAITHANHVIEN_QUYEN">
+    <Key>
+      <PropertyRef Name="MaLoaiTV" />
+      <PropertyRef Name="MaQuyen" />
+    </Key>
+    <Property Name="MaLoaiTV" Type="Int32" Nullable="false" />
+    <Property Name="MaQuyen" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LOAITHANHVIEN" Relationship="Web_BanDienThoai_TCShopModel.FK_LTVQ_TV" FromRole="LOAITHANHVIEN_QUYEN" ToRole="LOAITHANHVIEN" />
+    <NavigationProperty Name="QUYEN" Relationship="Web_BanDienThoai_TCShopModel.FK_LTVQ_Q" FromRole="LOAITHANHVIEN_QUYEN" ToRole="QUYEN" />
+  </EntityType>
+  <EntityType Name="MAU">
+    <Key>
+      <PropertyRef Name="MaMau" />
+    </Key>
+    <Property Name="MaMau" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenMau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SANPHAM_MAU" Relationship="Web_BanDienThoai_TCShopModel.FK_SPMAU_MAU" FromRole="MAU" ToRole="SANPHAM_MAU" />
+  </EntityType>
+  <EntityType Name="NHACUNGCAP">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+    </Key>
+    <Property Name="MaNCC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNCC" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CONGNO" Relationship="Web_BanDienThoai_TCShopModel.FK_CongNo_NCC" FromRole="NHACUNGCAP" ToRole="CONGNO" />
+    <NavigationProperty Name="PHIEUNHAP" Relationship="Web_BanDienThoai_TCShopModel.FK_PN_NCC" FromRole="NHACUNGCAP" ToRole="PHIEUNHAP" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_SP_NCC" FromRole="NHACUNGCAP" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="NHASANXUAT">
+    <Key>
+      <PropertyRef Name="MaNSX" />
+    </Key>
+    <Property Name="MaNSX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNSX" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ThongTin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_SP_NSX" FromRole="NHASANXUAT" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="PHIEUNHAP">
+    <Key>
+      <PropertyRef Name="MaPN" />
+    </Key>
+    <Property Name="MaPN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaNCC" Type="Int32" Nullable="false" />
+    <Property Name="NgayNhap" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DaXoa" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CHITIETPHIEUNHAP" Relationship="Web_BanDienThoai_TCShopModel.FK_CTPN_PN" FromRole="PHIEUNHAP" ToRole="CHITIETPHIEUNHAP" />
+    <NavigationProperty Name="NHACUNGCAP" Relationship="Web_BanDienThoai_TCShopModel.FK_PN_NCC" FromRole="PHIEUNHAP" ToRole="NHACUNGCAP" />
+  </EntityType>
+  <EntityType Name="QUYEN">
+    <Key>
+      <PropertyRef Name="MaQuyen" />
+    </Key>
+    <Property Name="MaQuyen" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LOAITHANHVIEN_QUYEN" Relationship="Web_BanDienThoai_TCShopModel.FK_LTVQ_Q" FromRole="QUYEN" ToRole="LOAITHANHVIEN_QUYEN" />
+  </EntityType>
+  <EntityType Name="SANPHAM">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaNCC" Type="Int32" Nullable="false" />
+    <Property Name="MaNSX" Type="Int32" Nullable="false" />
+    <Property Name="MaLoaiSP" Type="Int32" Nullable="false" />
+    <Property Name="MaKhuyenMai" Type="Int32" />
+    <Property Name="TenSP" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuongTon" Type="Int32" Nullable="false" />
+    <Property Name="LuotXem" Type="Int32" />
+    <Property Name="LuotBinhChon" Type="Int32" />
+    <Property Name="LuotBinhLuan" Type="Int32" />
+    <Property Name="SoLanMua" Type="Int32" />
+    <Property Name="Moi" Type="Boolean" Nullable="false" />
+    <Property Name="DaXoa" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BINHLUAN" Relationship="Web_BanDienThoai_TCShopModel.FK_BL_SP" FromRole="SANPHAM" ToRole="BINHLUAN" />
+    <NavigationProperty Name="CHITIETDONDATHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_CTDDH_SP" FromRole="SANPHAM" ToRole="CHITIETDONDATHANG" />
+    <NavigationProperty Name="CHITIETGIOHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_CTGH_SP" FromRole="SANPHAM" ToRole="CHITIETGIOHANG" />
+    <NavigationProperty Name="CHITIETPHIEUNHAP" Relationship="Web_BanDienThoai_TCShopModel.FK_CTPN_SP" FromRole="SANPHAM" ToRole="CHITIETPHIEUNHAP" />
+    <NavigationProperty Name="CHITIETPHUKIENSACDUPHONG" Relationship="Web_BanDienThoai_TCShopModel.FK_CTPKSAC_SANPHAM" FromRole="SANPHAM" ToRole="CHITIETPHUKIENSACDUPHONG" />
+    <NavigationProperty Name="CHITIETPHUKIENTAINGHE" Relationship="Web_BanDienThoai_TCShopModel.FK_CTPKTAINGHE_SANPHAM" FromRole="SANPHAM" ToRole="CHITIETPHUKIENTAINGHE" />
+    <NavigationProperty Name="CHITIETSANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_CTSP_SANPHAM" FromRole="SANPHAM" ToRole="CHITIETSANPHAM" />
+    <NavigationProperty Name="KHUYENMAI" Relationship="Web_BanDienThoai_TCShopModel.FK_SP_KM" FromRole="SANPHAM" ToRole="KHUYENMAI" />
+    <NavigationProperty Name="LOAISANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_SP_LSP" FromRole="SANPHAM" ToRole="LOAISANPHAM" />
+    <NavigationProperty Name="NHACUNGCAP" Relationship="Web_BanDienThoai_TCShopModel.FK_SP_NCC" FromRole="SANPHAM" ToRole="NHACUNGCAP" />
+    <NavigationProperty Name="NHASANXUAT" Relationship="Web_BanDienThoai_TCShopModel.FK_SP_NSX" FromRole="SANPHAM" ToRole="NHASANXUAT" />
+    <NavigationProperty Name="SANPHAM_MAU" Relationship="Web_BanDienThoai_TCShopModel.FK_SPMAU_SP" FromRole="SANPHAM" ToRole="SANPHAM_MAU" />
+  </EntityType>
+  <EntityType Name="SANPHAM_MAU">
+    <Key>
+      <PropertyRef Name="MaSP_Mau" />
+    </Key>
+    <Property Name="MaSP_Mau" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="MaMau" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MAU" Relationship="Web_BanDienThoai_TCShopModel.FK_SPMAU_MAU" FromRole="SANPHAM_MAU" ToRole="MAU" />
+    <NavigationProperty Name="SANPHAM" Relationship="Web_BanDienThoai_TCShopModel.FK_SPMAU_SP" FromRole="SANPHAM_MAU" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="THANHVIEN">
+    <Key>
+      <PropertyRef Name="MaTV" />
+    </Key>
+    <Property Name="MaTV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaLoaiTV" Type="Int32" />
+    <Property Name="TaiKhoan" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HoTen" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CauHoi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauTraLoi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaToken" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiGianMaToken" Type="DateTime" Precision="3" />
+    <Property Name="HinhDaiDien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BINHLUAN" Relationship="Web_BanDienThoai_TCShopModel.FK_BL_TV" FromRole="THANHVIEN" ToRole="BINHLUAN" />
+    <NavigationProperty Name="GIOHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_GIOHANG_TV" FromRole="THANHVIEN" ToRole="GIOHANG" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Web_BanDienThoai_TCShopModel.FK_KH_TV" FromRole="THANHVIEN" ToRole="KHACHHANG" />
+    <NavigationProperty Name="LOAITHANHVIEN" Relationship="Web_BanDienThoai_TCShopModel.FK_TV_LTV" FromRole="THANHVIEN" ToRole="LOAITHANHVIEN" />
+  </EntityType>
+  <Association Name="FK_BL_SP">
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.BINHLUAN" Role="BINHLUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="BINHLUAN">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BL_TV">
+    <End Type="Web_BanDienThoai_TCShopModel.THANHVIEN" Role="THANHVIEN" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.BINHLUAN" Role="BINHLUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THANHVIEN">
+        <PropertyRef Name="MaTV" />
+      </Principal>
+      <Dependent Role="BINHLUAN">
+        <PropertyRef Name="MaTV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CongNo_NCC">
+    <End Type="Web_BanDienThoai_TCShopModel.NHACUNGCAP" Role="NHACUNGCAP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Web_BanDienThoai_TCShopModel.CONGNO" Role="CONGNO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACUNGCAP">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="CONGNO">
+        <PropertyRef Name="MaNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTDDH_DDH">
+    <End Type="Web_BanDienThoai_TCShopModel.DONDATHANG" Role="DONDATHANG" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.CHITIETDONDATHANG" Role="CHITIETDONDATHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONDATHANG">
+        <PropertyRef Name="MaDDH" />
+      </Principal>
+      <Dependent Role="CHITIETDONDATHANG">
+        <PropertyRef Name="MaDDH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTDDH_SP">
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.CHITIETDONDATHANG" Role="CHITIETDONDATHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETDONDATHANG">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTGH_GH">
+    <End Type="Web_BanDienThoai_TCShopModel.GIOHANG" Role="GIOHANG" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.CHITIETGIOHANG" Role="CHITIETGIOHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GIOHANG">
+        <PropertyRef Name="MaGioHang" />
+      </Principal>
+      <Dependent Role="CHITIETGIOHANG">
+        <PropertyRef Name="MaGioHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTGH_SP">
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.CHITIETGIOHANG" Role="CHITIETGIOHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETGIOHANG">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPN_PN">
+    <End Type="Web_BanDienThoai_TCShopModel.PHIEUNHAP" Role="PHIEUNHAP" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.CHITIETPHIEUNHAP" Role="CHITIETPHIEUNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUNHAP">
+        <PropertyRef Name="MaPN" />
+      </Principal>
+      <Dependent Role="CHITIETPHIEUNHAP">
+        <PropertyRef Name="MaPN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPN_SP">
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.CHITIETPHIEUNHAP" Role="CHITIETPHIEUNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETPHIEUNHAP">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPKSAC_SANPHAM">
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.CHITIETPHUKIENSACDUPHONG" Role="CHITIETPHUKIENSACDUPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETPHUKIENSACDUPHONG">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPKTAINGHE_SANPHAM">
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.CHITIETPHUKIENTAINGHE" Role="CHITIETPHUKIENTAINGHE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETPHUKIENTAINGHE">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTSP_SANPHAM">
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.CHITIETSANPHAM" Role="CHITIETSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETSANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LSP_DM">
+    <End Type="Web_BanDienThoai_TCShopModel.DANHMUC" Role="DANHMUC" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.LOAISANPHAM" Role="LOAISANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DANHMUC">
+        <PropertyRef Name="MaDanhMuc" />
+      </Principal>
+      <Dependent Role="LOAISANPHAM">
+        <PropertyRef Name="MaDanhMuc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DDH_KH">
+    <End Type="Web_BanDienThoai_TCShopModel.KHACHHANG" Role="KHACHHANG" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Web_BanDienThoai_TCShopModel.DONDATHANG" Role="DONDATHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="DONDATHANG">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GIOHANG_TV">
+    <End Type="Web_BanDienThoai_TCShopModel.THANHVIEN" Role="THANHVIEN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Web_BanDienThoai_TCShopModel.GIOHANG" Role="GIOHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THANHVIEN">
+        <PropertyRef Name="MaTV" />
+      </Principal>
+      <Dependent Role="GIOHANG">
+        <PropertyRef Name="MaTV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KH_TV">
+    <End Type="Web_BanDienThoai_TCShopModel.THANHVIEN" Role="THANHVIEN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Web_BanDienThoai_TCShopModel.KHACHHANG" Role="KHACHHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THANHVIEN">
+        <PropertyRef Name="MaTV" />
+      </Principal>
+      <Dependent Role="KHACHHANG">
+        <PropertyRef Name="MaTV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SP_KM">
+    <End Type="Web_BanDienThoai_TCShopModel.KHUYENMAI" Role="KHUYENMAI" Multiplicity="0..1" />
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHUYENMAI">
+        <PropertyRef Name="MaKhuyenMai" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="MaKhuyenMai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SP_LSP">
+    <End Type="Web_BanDienThoai_TCShopModel.LOAISANPHAM" Role="LOAISANPHAM" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAISANPHAM">
+        <PropertyRef Name="MaLoaiSP" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="MaLoaiSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LTVQ_TV">
+    <End Type="Web_BanDienThoai_TCShopModel.LOAITHANHVIEN" Role="LOAITHANHVIEN" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.LOAITHANHVIEN_QUYEN" Role="LOAITHANHVIEN_QUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAITHANHVIEN">
+        <PropertyRef Name="MaLoaiTV" />
+      </Principal>
+      <Dependent Role="LOAITHANHVIEN_QUYEN">
+        <PropertyRef Name="MaLoaiTV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TV_LTV">
+    <End Type="Web_BanDienThoai_TCShopModel.LOAITHANHVIEN" Role="LOAITHANHVIEN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Web_BanDienThoai_TCShopModel.THANHVIEN" Role="THANHVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAITHANHVIEN">
+        <PropertyRef Name="MaLoaiTV" />
+      </Principal>
+      <Dependent Role="THANHVIEN">
+        <PropertyRef Name="MaLoaiTV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LTVQ_Q">
+    <End Type="Web_BanDienThoai_TCShopModel.QUYEN" Role="QUYEN" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.LOAITHANHVIEN_QUYEN" Role="LOAITHANHVIEN_QUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUYEN">
+        <PropertyRef Name="MaQuyen" />
+      </Principal>
+      <Dependent Role="LOAITHANHVIEN_QUYEN">
+        <PropertyRef Name="MaQuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SPMAU_MAU">
+    <End Type="Web_BanDienThoai_TCShopModel.MAU" Role="MAU" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM_MAU" Role="SANPHAM_MAU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAU">
+        <PropertyRef Name="MaMau" />
+      </Principal>
+      <Dependent Role="SANPHAM_MAU">
+        <PropertyRef Name="MaMau" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PN_NCC">
+    <End Type="Web_BanDienThoai_TCShopModel.NHACUNGCAP" Role="NHACUNGCAP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Web_BanDienThoai_TCShopModel.PHIEUNHAP" Role="PHIEUNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACUNGCAP">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="PHIEUNHAP">
+        <PropertyRef Name="MaNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SP_NCC">
+    <End Type="Web_BanDienThoai_TCShopModel.NHACUNGCAP" Role="NHACUNGCAP" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACUNGCAP">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="MaNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SP_NSX">
+    <End Type="Web_BanDienThoai_TCShopModel.NHASANXUAT" Role="NHASANXUAT" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHASANXUAT">
+        <PropertyRef Name="MaNSX" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="MaNSX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SPMAU_SP">
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM" Role="SANPHAM" Multiplicity="1" />
+    <End Type="Web_BanDienThoai_TCShopModel.SANPHAM_MAU" Role="SANPHAM_MAU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="SANPHAM_MAU">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

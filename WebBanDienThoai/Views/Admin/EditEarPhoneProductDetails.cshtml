@@ -1,0 +1,117 @@
+﻿@using WebBanDienThoai.Models;
+@model CHITIETPHUKIENTAINGHE
+
+@{
+    ViewBag.Title = "Sửa chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .tables {
+        overflow-x: auto;
+    }
+
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_ListProductDetails", "Admin", new {MaLoaiSP = ViewBag.CategoryID})" style="text-decoration: none;">Chi tiết sản phẩm</a> / <a href="#">Sửa</a></h3>
+
+<div class="container_Products">
+    <div class="container">
+        @using (Html.BeginForm("EditEarPhoneProductDetails", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <h2 style="display: flex; justify-content: center;"><strong>@ViewBag.ProductName</strong></h2>
+            @Html.Hidden("MaPKTaiNghe", Model.MaPKTaiNghe)
+            <div class="form-group">
+                <label for="MaSP">Mã sản phẩm</label>
+                <input type="text" id="MaSP" name="MaSP" class="form-control" value="@ViewBag.ProductsID">
+            </div>
+            <div class="form-group">
+                <label for="DUNGLUONGPIN">Dung lượng pin</label>
+                @Html.TextBoxFor(row => row.DUNGLUONGPIN, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="THOILUONGSAC">Thời lượng sạc</label>
+                @Html.TextBoxFor(row => row.THOILUONGSAC, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CONGSAC">Cổng sạc</label>
+                @Html.TextBoxFor(row => row.CONGSAC, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CONGNGHEAMTHANH">Công nghệ âm thanh</label>
+                @Html.TextBoxFor(row => row.CONGNGHEAMTHANH, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="TIENICH">Tiện ích</label>
+                @Html.TextBoxFor(row => row.TIENICH, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="TUONGTHICH">Tương thích</label>
+                @Html.TextBoxFor(row => row.TUONGTHICH, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CONGNGHEKETNOT">Cổng kết nối</label>
+                @Html.TextBoxFor(row => row.CONGNGHEKETNOT, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="PHIMDIEUKHIEN">Phím điều khiển</label>
+                @Html.TextBoxFor(row => row.PHIMDIEUKHIEN, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="KICHTHUOC">Kích thước</label>
+                @Html.TextBoxFor(row => row.KICHTHUOC, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="BAOHANH">Bảo hành</label>
+                @Html.TextBoxFor(row => row.BAOHANH, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="KHOILUONG">Khối lượng</label>
+                @Html.TextBoxFor(row => row.KHOILUONG, new { @class = "form-control" })
+            </div>
+
+            <div style="padding-top: 12px;">
+                <a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = ViewBag.CategoryID})" class="btn btn-danger">Trở lại</a>
+                <button type="submit" class="btn btn-primary">Lưu chỉnh sửa</button>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("form").submit(function (event) {
+            var maSP = $("#MaSP").val();
+            var dungLuongPin = $("#DUNGLUONGPIN").val();
+            var thoiLuongSac = $("#THOILUONGSAC").val();
+            var congSac = $("#CONGSAC").val();
+            var congNgheAmThanh = $("#CONGNGHEAMTHANH").val();
+            var tienIch = $("#TIENICH").val();
+            var tuongThich = $("#TUONGTHICH").val();
+            var congNgheKetNoi = $("#CONGNGHEKETNOT").val();
+            var phimDieuKhien = $("#PHIMDIEUKHIEN").val();
+            var kichThuoc = $("#KICHTHUOC").val();
+            var baoHanh = $("#BAOHANH").val();
+            var khoiLuong = $("#KHOILUONG").val();
+
+            if (maSP === '' || dungLuongPin === '' || thoiLuongSac === '' || congSac === '' || congNgheAmThanh === '' || tienIch === '' || tuongThich === '' || congNgheKetNoi === '' || phimDieuKhien === '' || kichThuoc === '' || baoHanh === '' || khoiLuong === '') {
+                alert("Vui lòng điền đầy đủ thông tin.");
+                event.preventDefault();
+            }
+        });
+    });
+</script>

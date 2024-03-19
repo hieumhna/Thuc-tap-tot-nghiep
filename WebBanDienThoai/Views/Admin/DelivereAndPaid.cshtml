@@ -1,0 +1,40 @@
+﻿@using WebBanDienThoai.Models;
+@model List<DONDATHANG>
+
+<h1 style="margin-top: 12px;">Danh sách đơn hàng đã giao</h1>
+<table class="table mx-auto">
+    <thead>
+        <tr>
+            <th>Mã hóa đơn</th>
+            <th>Tên khách hàng</th>
+            <th>Ngày đặt hàng</th>
+            <th>Trạng thái</th>
+            <th>Ngày nhận hàng</th>
+            <th>Thanh toán</th>
+            <th>Quà tặng</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.MaDDH</td>
+                <td>@order.KHACHHANG.TenKH</td>
+                <td>@order.NgayDatHang</td>
+                <td>@order.TinhTrang</td>
+                @if (order.NgayGiao.HasValue)
+                {
+                    <td>@order.NgayGiao.Value.ToString("dd/MM/yyyy")</td>
+                }
+                else
+                {
+                    <td>Trống</td>
+                }
+                <td class="status-@(order.DaThanhToan ? "true" : "false")">@(order.DaThanhToan ? "Đã thanh toán" : "Chưa thanh toán")</td>
+                <td>@order.QuaTang</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

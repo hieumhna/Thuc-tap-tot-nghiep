@@ -1,0 +1,178 @@
+﻿@using WebBanDienThoai.Models;
+@model List<KHUYENMAI>
+@{
+    ViewBag.Title = "Khuyến mãi";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .img-product {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .center-text {
+        text-align: justify;
+        text-indent: 16px;
+    }
+
+    .btn-content {
+        width: 80px; /* Độ rộng của nút */
+        text-align: center; /* Căn giữa nội dung của nút */
+        margin: 6px;
+    }
+
+    .btn-container {
+        text-align: center; /* Căn giữa nội dung của td */
+        vertical-align: middle; /* Căn giữa theo chiều dọc */
+        padding: 12px 0px !important;
+    }
+
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow-x: auto; /* Cho phép cuộn ngang khi cần thiết */
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    thead {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    th:first-child,
+    td:first-child {
+        left: 0;
+        background-color: #f2f2f2;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Promotion", "Admin")" style="text-decoration: none;">Khuyến mãi</a> / <a href="#" style="text-decoration: none;">Danh sách khuyến mãi</a></h3>
+<div class="container_Products">
+    <h2 style="display: flex; justify-content: center; margin-bottom: 24px;"><strong>Danh sách khuyến mãi</strong></h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <a href="@Url.Action("CreatePromotion", "Admin")" class="btn btn-success" style="margin-bottom: 12px;">
+                <i class="fa fa-plus"></i> Thêm chương trình khuyến mãi
+            </a>
+        </div>
+        @*<div class="col-md-6">
+            @using (Html.BeginForm("Admin_WarehouseImportList", "Admin", FormMethod.Get, new { @class = "form-inline" }))
+            {
+                <div style="float: right">
+                    <div class="form-group">
+                        <input type="text" name="searchName" placeholder="Tìm ..." style="width: 400px;" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Tìm" class="btn btn-primary">
+                    </div>
+                </div>
+            }
+        </div>*@
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Mã KM</th>
+                <th>Tên KM</th>
+                <th>Mô tả</th>
+                <th>Giảm giá (%)</th>
+                <th>Ngày bắt đầu</th>
+                <th>Ngày kết thúc</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.MaKhuyenMai</td>
+                    <td style="text-align: left;">@item.TenKhuyenMai</td>
+                    <td style="text-align: left;">@item.MoTa</td>
+                    <td>@item.PhanTramGiamGia</td>
+                    <td>@item.NgayBatDau.ToString("dd/MM/yyyy")</td>
+                    <td>@item.NgayKetThuc.ToString("dd/MM/yyyy")</td>
+                    <td></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @{
+        int PrevPage = ViewBag.Page - 1;
+        if (PrevPage <= 0)
+        {
+            PrevPage = ViewBag.NoOfPages;
+        }
+
+        int NextPage = ViewBag.Page + 1;
+        if (NextPage > ViewBag.NoOfPages)
+        {
+            NextPage = 1;
+        }
+    }
+
+    <div class="text-center">
+        <ul class="pagination pagination">
+            <li class=""><a href="@Url.Action("Promotion", "Admin", new {page=PrevPage})">«</a></li>
+            @for (int i = 0; i < ViewBag.NoOfPages; i++)
+            {
+                if (i + 1 == ViewBag.Page)
+                {
+                    <li class="page-item active">
+                        <a class="page-link" href="@Url.Action("Promotion", "Admin", new {page=i+1})">
+                            @(i+1)
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Promotion", "Admin", new {page=i+1})">
+                            @(i+1)
+                        </a>
+                    </li>
+                }
+            }
+            <li class="page-item active">
+                <a class="page-link" href="@Url.Action("Promotion", "Admin", new {page=NextPage})">
+                    »
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+﻿@using WebBanDienThoai.Models;
+@model SANPHAM
+@{
+    ViewBag.Title = "Thêm khuyến mãi";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow-x: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th {
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .text-weight {
+        font-weight: bold; /* In đậm chữ */
+        font-size: 16px; /* Cỡ chữ */
+    }
+
+    .container {
+        text-align: left;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP=ViewBag.CategoryID})" style="text-decoration: none;">Sản phẩm</a> / <a href="#">Thêm chương trình khuyến mãi</a></h3>
+
+@using (Html.BeginForm("ImportPromotion", "Admin", FormMethod.Post))
+{
+
+    <div class="container_Products">
+        <h3 class="text-center"><strong>@ViewBag.ProductName</strong></h3>
+        <hr />
+        <div class="container">
+            @Html.TextBoxFor(row => row.MaSP, new { style = "display: none" })
+            @{IEnumerable<WebBanDienThoai.Models.KHUYENMAI> lstNCC = ViewBag.ListPromition as IEnumerable<WebBanDienThoai.Models.KHUYENMAI>; }
+            <div class="form-group">
+                <label for="TenKhuyenMai">Chương trình khuyến mãi</label>
+                <select class="form-control" name="MaKhuyenMai" id="selectKhuyenMai">
+                    @foreach (var item in ViewBag.ListPromition)
+                    {
+                        <option value="@item.MaKhuyenMai" data-phantramgiamgia="@item.PhanTramGiamGia">@item.TenKhuyenMai</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="PhanTramGiamGia">Giảm giá</label>
+                <select class="form-control" name="PhanTramGiamGia" id="selectPhanTram" disabled>
+                    @foreach (var item in ViewBag.ListPromition)
+                    {
+                        <option value="@item.PhanTramGiamGia">@item.PhanTramGiamGia%</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group" style="margin-top: 12px;">
+                <a href="@Url.Action("Promotion", "Admin")" class="btn btn-danger">Trở lại</a>
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        </div>
+        <hr />
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        // Get references to the two dropdowns
+        var selectKhuyenMai = $("#selectKhuyenMai");
+        var selectPhanTram = $("#selectPhanTram");
+
+        // Listen for a change in the "Chương trình khuyến mãi" dropdown
+        selectKhuyenMai.on("change", function () {
+            var selectedKhuyenMai = selectKhuyenMai.val();
+
+            // Find the corresponding "PhanTramGiamGia" value in the data
+            var selectedPhanTram = $("#selectKhuyenMai option:selected").data("phantramgiamgia");
+
+            // Update the "PhanTramGiamGia" dropdown with the selected value
+            selectPhanTram.val(selectedPhanTram);
+        });
+    });
+</script>
+
+

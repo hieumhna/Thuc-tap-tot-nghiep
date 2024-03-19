@@ -1,0 +1,212 @@
+﻿@using WebBanDienThoai.Models;
+@model THANHVIEN
+
+@{
+    ViewBag.Title = "Thông tin khách hàng";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<style>
+    .btn-update {
+        padding: 10px;
+        border: none;
+        background-color: #1accfd;
+        color: #fff;
+        font-weight: bold;
+        width: 100%;
+    }
+
+        .btn-update:hover, .btn-update:focus, .btn-update:focus:active {
+            outline: none;
+            background-color: #FF5722;
+            color: #fff;
+        }
+
+        .btn-update:focus-visible {
+            outline: none;
+        }
+
+    .btn-changePass {
+        border: none;
+        background-color: #FF5722;
+        color: #fff;
+        font-weight: bold;
+    }
+
+        .btn-changePass:hover, .btn-changePass:focus, .btn-changePass:focus:active {
+            outline: none;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .btn-changePass:focus-visible {
+            outline: none;
+        }
+
+    .modal .btn-cancel:focus {
+        outline: none !important;
+        border-color: transparent !important;
+    }
+
+    .input-group-addon {
+        position: relative;
+    }
+
+    .custom-file-upload {
+        border: 1px solid #ccc;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+
+        .custom-file-upload:hover {
+            background: rgba(0,0,0,.02);
+        }
+
+    #avartar {
+        display: none;
+    }
+</style>
+
+<div class="ads-grid">
+    <div @*style="display:flex; justify-content: center"*@ class="container">
+        @Html.Action("SidebarMember", "Member")
+        <div class="agileinfo-ads-display col-md-9 w3l-rightpro mx-auto">
+            <div class="product-sec1">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title"><strong>Hồ Sơ Của Tôi</strong></h2>
+                        <p style="color: #000;">Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+                        <hr />
+                        @using (Html.BeginForm("UpdateInformation", "Member", FormMethod.Post, new { @style = "margin-top: 10px", @enctype = "multipart/form-data" }))
+                        {
+                            @Html.HiddenFor(model => model.MaTV)
+                            @Html.HiddenFor(model => model.MatKhau)
+
+                            <div style="text-align: center; margin-block: 20px">
+                                <img id="imgAvartar" src="@Url.Content("~/Content/Images/Members/" + Model.HinhDaiDien)" alt="Ảnh Đại Diện" style="width: 100px; max-height: 100px; display: block; margin: 0 auto; border-radius: 50%; margin-bottom: 10px" />
+                                <input type="file" class="form-control-file" id="avartar" name="avartar" style="display: none;">
+                                <label for="avartar" class="custom-file-upload">
+                                    Chọn ảnh
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <fieldset>
+                                    <label class="form-label mt-4" for="username">Tài khoản</label>
+                                    @Html.TextBoxFor(model => model.TaiKhoan, new { @class = "form-control", @id = "username", @type = "text", @readonly = "readonly", placeholder = "Tài khoản", @style = "background: #fff" })
+                                </fieldset>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-form-label mt-4" for="name">Họ và tên</label>
+                                @Html.TextBoxFor(model => model.HoTen, new { @class = "form-control", id = "name", @required = "", @type = "text" })
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-form-label mt-4" for="email">Email</label>
+                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", id = "email", @required = "", @type = "text", oninput = "validateEmail()" })
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-form-label mt-4" for="phone">Số điện thoại</label>
+                                @Html.TextBoxFor(model => model.SoDienThoai, new { @class = "form-control", id = "phone", @required = "", @type = "text", oninput = "checkPhoneNumberLength()" })
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address" class="form-label mt-4">Địa chỉ</label>
+                                @Html.TextAreaFor(model => model.DiaChi, new { @class = "form-control", id = "address", rows = 3, style = "resize: none;" })
+                            </div>
+
+                            <div class="form-group">
+                                <div style="text-align: center">
+                                    <button type="submit" class="btn btn-update">Cập nhật thông tin</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div style="background-color: #1accfd; border: none; color: #fff;" class="modal-header">
+                <h4 style="text-align: center; font-weight: bold" class="modal-title" id="confirmModalLabel">Thông báo</h4>
+            </div>
+            <div style="font-weight: bold" class="modal-body">
+                <p style="color: #000">Câp nhật thông tin thành công</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-cancel" id="confirmBtn" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function validateEmail() {
+        var emailField = document.getElementById('email');
+        var email = emailField.value;
+        var emailRegex = /^[A-Za-z0-9._%+-]+\@@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+
+        if (!emailRegex.test(email)) {
+            emailField.setCustomValidity('Địa chỉ Email không hợp lệ.');
+        } else {
+            emailField.setCustomValidity('');
+        }
+    }
+</script>
+
+<script>
+    function checkPhoneNumberLength() {
+        var phoneField = document.getElementById('phone');
+        var phoneNumber = phoneField.value.replace(/\D/g, ''); // Remove non-digit characters
+
+        if (phoneNumber.length < 10) {
+            phoneField.setCustomValidity('Số điện thoại phải chứa ít nhất 10 chữ số.');
+        } else {
+            phoneField.setCustomValidity('');
+        }
+    }
+</script>
+
+<script>
+    document.getElementById('btnChangePassword').addEventListener('click', function () {
+        var MaTV = @Model.MaTV;
+
+        window.location.href = '@Url.Action("ChangePassword", "Member")?memberId=' + MaTV;
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Check for the flag indicating successful update
+        var updateSuccess = @Html.Raw(Json.Encode(TempData["UpdateSuccess"]));
+
+        if (updateSuccess) {
+            // Show your modal using JavaScript/jQuery
+            $('#confirmModal').modal('show');
+        }
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#avartar').change(function (e) {
+            var input = e.target;
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgAvartar').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        });
+    });
+</script>

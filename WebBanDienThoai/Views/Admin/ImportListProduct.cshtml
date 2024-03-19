@@ -1,0 +1,315 @@
+﻿@using WebBanDienThoai.Models;
+@model PHIEUNHAP
+@{
+    ViewBag.Title = "Thêm phiếu nhập";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th {
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .text-weight {
+        font-weight: bold; /* In đậm chữ */
+        font-size: 16px; /* Cỡ chữ */
+    }
+
+    .container {
+        text-align: left;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_WarehouseImportList", "Admin")" style="text-decoration: none;">Nhập kho</a> / <a href="#" style="text-decoration: none;">Phiếu nhập kho</a></h3>
+@using (Html.BeginForm("ImportListProduct", "Admin", FormMethod.Post))
+{
+    <div class="container_Products">
+        @*Header*@
+        <h3 class="text-center"><strong>Nhập sản phẩm</strong></h3>
+        <hr />
+        <div class="container">
+            <table>
+                @{IEnumerable<NHACUNGCAP> lstNCC = ViewBag.ListNCC as IEnumerable<NHACUNGCAP>; }
+                <tr>
+                    <th style="width: 145px; max-width: 100% ">Nhà cung cấp:</th>
+                    <td>
+                        <select class="form-control" name="MaNCC" id="selectNCC">
+                            @foreach (var item in lstNCC)
+                            {
+                                <option value="@item.MaNCC">@item.TenNCC</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Ngày nhập hàng:</th>
+                    <td>
+                        @Html.TextBoxFor(row => row.NgayNhap, new { @class = "form-control", type = "date" })
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr />
+        @*End Header*@
+
+        @*Container*@
+        <div class="container">
+            <table class="table tblChiTietPhieuNhap">
+                @{IEnumerable<SANPHAM> lstSanPham = ViewBag.ListSanPham as IEnumerable<SANPHAM>; }
+                @*Tạo ra 1tr với nội dung nhập hàng*@
+                <tr class="trAppend" style="display: none">
+                    <td style="padding-top: 13px"></td>
+                    <td>
+                        <select class="ddlSanPham form-control" name="">
+                            @foreach (var item in lstSanPham)
+                            {                               
+                                <option value="@item.MaSP">@item.TenSP</option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <input name="" class="txtDonGia form-control" value="0" type="number" />
+                    </td>
+                    <td>
+                        <input name="" class="txtSoLuong form-control" value="0" type="number" />
+                    </td>
+                    <td>
+                        <input name="" class="btn btn-danger btnDelete" value="-" style="width: 40px; font-weight: bold" />
+                    </td>
+                </tr>
+
+                <tr class="trFirstChild" data-id="-1">
+                    <td class="text-weight">STT</td>
+                    <td class="text-weight">Sản phẩm</td>
+                    <td class="text-weight">Đơn giá nhập</td>
+                    <td class="text-weight">Số lượng nhập</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <input type="button" value="+" class="btn btn-success" id="btnAdd" />
+            <input type="submit" value="Nhập hàng" class="btn btn-primary" id="btnNhapHang" />
+        </div>
+        @*End Container*@
+
+    </div>
+}
+
+<script>
+    function kiemTraTrong(tr) {
+        var maSanPham = tr.find(".ddlSanPham").val();
+        var donGiaNhap = tr.find(".txtDonGia").val();
+        var soLuongNhap = tr.find(".txtSoLuong").val();
+        var ngayNhap = $("input[name='NgayNhap']").val();
+
+        if (maSanPham === "" || donGiaNhap === "" || soLuongNhap === "" || ngayNhap === "") {
+            alert("Vui lòng điền đầy đủ thông tin.");
+            return false;
+        }
+        if (donGiaNhap <= 0) {
+            alert("Đơn giá nhập không hợp lệ.");
+            return false;
+        }
+        if (soLuongNhap <= 0) {
+            alert("Số lượng nhập không hợp lệ.");
+            return false;
+        }
+        return true;
+    }
+
+    function kiemTraNgayNhap() {
+        var ngayNhap = $("input[name='NgayNhap']").val();
+        var ngayHienTai = new Date().toISOString().split('T')[0];
+
+        if (ngayNhap > ngayHienTai) {
+            alert("Ngày nhập không được lớn hơn ngày hiện tại.");
+            return false;
+        }
+
+        return true;
+    }
+    var stt = 1; // Khởi tạo biến đếm STT
+
+    //Sự kiện Add
+    $("#btnAdd").click(function () {
+        // Lấy dòng cuối cùng
+        var trCuoiCung = $(".tblChiTietPhieuNhap").find("tr:last-child");
+
+        // Kiểm tra dữ liệu trống trước khi thêm
+        if (kiemTraTrong(trCuoiCung) && kiemTraNgayNhap()) {
+            // Thêm dòng mới
+            var id_cuoi = trCuoiCung.attr("data-id");
+            i = parseInt(id_cuoi) + 1;
+            var tdnoidung = $(".trAppend").html();
+            var trnoidung = "<tr class=\"trAppended\" data-id=\"" + i + "\">" + tdnoidung + "</tr";
+            $(".tblChiTietPhieuNhap").append(trnoidung);
+            $(".tblChiTietPhieuNhap tr.trAppended:last td:first").text(stt);
+            stt++;
+            loadIdLenThe();
+            CapNhapSTT();
+        }
+    });
+
+    // Thêm kiểm tra ngày trước khi nhấn nút Nhập hàng
+    $("#btnNhapHang").click(function () {
+        if (!kiemTraTrong($(".tblChiTietPhieuNhap tr.trAppended:last")) || !kiemTraNgayNhap()) {
+            return false;
+        }
+        if (kiemtraDonGia() == false) {
+            return false;
+        }
+        if (kiemtraSoLuong() == false) {
+            return false;
+        }
+    });
+
+    $("#btnNhapHang").click(function () {
+        if (!kiemTraTrong($(".tblChiTietPhieuNhap tr.trAppended:last"))) {
+            return false;
+        }
+        if (kiemtraDonGia() == false) {
+            return false;
+        }
+        if (kiemtraSoLuong() == false) {
+            return false;
+        }
+    });
+
+
+    function loadIdLenThe() {
+        $(".trAppended").each(function () {
+            var id = $(this).attr("data-id");
+            var nameMaSanPham = "[" + id + "].MaSP";
+            var nameDonGiaNhap = "[" + id + "].DonGiaNhap";
+            var nameSoLuongNhap = "[" + id + "].SoLuongNhap";
+            $(this).find(".ddlSanPham").prop("name", nameMaSanPham); //Gán name cho dropdowmlist
+            $(this).find(".txtDonGia").attr("name", nameDonGiaNhap); //Gán name cho đơn giá nhập
+            $(this).find(".txtSoLuong").attr("name", nameSoLuongNhap); //Gán name cho số lượng nhập
+        });
+    };
+
+    function CapNhapId() {
+        //lấy lại id
+        var id_cuoi = $(".tblChiTietPhieuNhap").find(".trFirstChild").attr("data-id");//b4
+        i = parseInt(id_cuoi) + 1;
+
+        $(".trAppended").each(function () {
+            var id = i;
+            $(this).attr("data-id", i);
+            var id = $(this).attr("data-id");
+            var nameMaSanPham = "[" + id + "].MaSP";
+            var nameDonGiaNhap = "[" + id + "].DonGiaNhap";
+            var nameSoLuongNhap = "[" + id + "].SoLuongNhap";
+            $(this).find(".ddlSanPham").prop("name", nameMaSanPham); //Gán name cho dropdowmlist
+            $(this).find(".txtDonGia").attr("name", nameDonGiaNhap); //Gán name cho đơn giá nhập
+            $(this).find(".txtSoLuong").attr("name", nameSoLuongNhap); //Gán name cho số lượng nhập
+            i++;
+        });
+    }
+
+    //Xự kiện Delete
+    $("body").delegate(".btnDelete", "click", function () {
+        //Xóa
+        $(this).closest(".trAppended").remove();
+        CapNhapId();
+        CapNhapSTT();
+    });
+
+    function CapNhapSTT() {
+        var stt = 1;
+        $(".tblChiTietPhieuNhap tr.trAppended").each(function () {
+            $(this).find("td:first").text(stt);
+            stt++;
+        });
+    }
+
+    $("#btnNhapHang").click(function () {
+        if (kiemtraDonGia() == false) {
+            return false;
+        }
+        if (kiemtraSoLuong() == false) {
+            return false;
+        }
+    });
+
+    //Kiểm tra đơn giá
+    function kiemtraDonGia() {
+        var bl = true;
+        $(".txtDonGia").each(function () {
+            var giatri = $(this).val();
+            if (isNaN(giatri) == true || parseFloat(giatri) < 0) {
+                alert("Đơn giá không hợp lệ!");
+                bl = false;
+                return bl;
+            }
+        });
+        return bl;
+    }
+
+    //Kiểm tra số lượng
+    function kiemtraSoLuong() {
+        var bl = true;
+        $(".txtSoLuong").each(function () {
+            var giatri = $(this).val();
+            if (isNaN(giatri) == true || parseFloat(giatri) < 0) {
+                alert("Số lượng không hợp lệ!");
+                bl = false;
+                return bl;
+            }
+        });
+        return bl;
+    }
+
+    //Xử lý chọn nhà cung cấp
+    $(document).ready(function () {
+        $("#selectNCC").change(function () {
+            var selectedNCC = $(this).val();
+            if (selectedNCC) {
+                // Gửi yêu cầu AJAX để lấy danh sách sản phẩm tương ứng với Nhà cung cấp
+                $.ajax({
+                    url: "/Admin/GetProductsBySupplier", // Điều chỉnh URL dựa trên tên Action của bạn
+                    data: { maNCC: selectedNCC },
+                    type: "GET",
+                    success: function (data) {
+                        // Cập nhật dropdown Sản phẩm với danh sách sản phẩm mới
+                        var ddlSanPham = $(".ddlSanPham");
+                        ddlSanPham.empty();
+                        $.each(data, function (index, item) {
+                            ddlSanPham.append($("<option></option>").attr("value", item.MaSP).text(item.TenSP));
+                        });
+                    }
+                });
+            }
+        });
+    });
+</script>

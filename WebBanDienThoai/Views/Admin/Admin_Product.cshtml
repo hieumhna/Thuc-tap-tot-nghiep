@@ -1,0 +1,379 @@
+﻿@using WebBanDienThoai.Models;
+@model List<SANPHAM>
+
+@{
+    ViewBag.Title = "Sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+@{
+    string str;
+    List<string> describe = new List<string>();
+}
+
+<style>
+    .img-product {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .center-text {
+        text-align: justify;
+        text-indent: 16px;
+    }
+
+    .btn-content {
+        width: 90px; /* Độ rộng của nút */
+        margin: 4px;
+        font-size: 12px;
+        white-space: normal;
+    }
+
+    .btn-container {
+        text-align: center; /* Căn giữa nội dung của td */
+        vertical-align: middle; /* Căn giữa theo chiều dọc */
+        padding: 12px 0px !important;
+    }
+
+    .container_Products {
+        width: 1650px;
+        margin: 0 auto;
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow-x: auto; /* Cho phép cuộn ngang khi cần thiết */
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 9px;
+        text-align: center;
+    }
+
+    thead {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    th:first-child,
+    td:first-child {
+        left: 0;
+        background-color: #f2f2f2;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+@{
+    var isFirstColor = true;
+}
+
+<h3 class="title2"><a href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP=ViewBag.CategoryID})" style="text-decoration: none;">Sản phẩm</a> / <a href="#" style="text-decoration: none;">@ViewBag.CategoryName</a></h3>
+
+<div class="container_Products">
+    <h1>@ViewBag.CategoryName</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <a href="@Url.Action("CreatePhoneProducts", "Admin", new { MaLoaiSP = ViewBag.CategoryID })" class="btn btn-success">
+                <i class="fa fa-plus"></i> Thêm sản phẩm
+            </a>
+        </div>
+        <div class="col-md-6">
+            @using (Html.BeginForm("Admin_Product", "Admin", FormMethod.Get, new { @class = "form-inline" }))
+            {
+                <div style="float: right">
+                    <div class="form-group">
+                        @Html.TextBox("Search", ViewBag.Search as string, new { @class = "form-control", placeholder = "Tìm tên sản phẩm ...", style = "width: 400px" })
+                    </div>
+                    <div class="form-group">
+                        @Html.Hidden("MaLoaiSP", ViewBag.CategoryID as string)
+                        <input type="submit" value="Tìm" class="btn btn-primary" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Giá bán hiện tại</th>
+                <th>Khuyến mãi</th>
+                <th>Ngày cập nhật</th>
+                <th>Mô tả</th>
+                <th>Hình 1</th>
+                <th>Hình 2</th>
+                <th>Số lượng tồn</th>
+                @*<th>Lượt xem</th>
+                    <th>Lượt bình chọn</th>
+                    <th>Lượt bình luận</th>*@
+                <th>Mới</th>
+                <th>Đã xóa</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                decimal? deal = item.DonGia;
+                decimal percent = 0;
+                if (item.MaKhuyenMai != null)
+                {
+                    if (DateTime.Now >= item.KHUYENMAI.NgayBatDau && DateTime.Now <= item.KHUYENMAI.NgayKetThuc)
+                    {
+                        percent = item.KHUYENMAI.PhanTramGiamGia;
+                    }
+                }
+                decimal? price = deal - (deal * (percent / 100));
+                <tr>
+                    <th scope="row">@item.MaSP</th>
+                    <td><p style="width: 100px;">@item.TenSP</p></td>
+
+                    @if (item.DonGia != null)
+                    {
+                        <td>@string.Format("{0:N0}\u20ab", item.DonGia)</td>
+                    }
+                    else
+                    {
+                        <td><a href="@Url.Action("ImportProduct", "Admin", new {MaSP = item.MaSP})">Vui lòng nhập chi tiết phiếu nhập</a></td>
+                    }
+                    @if (price != null)
+                    {
+                        <td style="color: red">@string.Format("{0:N0}\u20ab", price)</td>
+                    }
+                    else
+                    {
+                        <td><a href="@Url.Action("ImportProduct", "Admin", new {MaSP = item.MaSP})">Vui lòng nhập chi tiết phiếu nhập</a></td>
+                    }
+                    @if (item.MaKhuyenMai != null && DateTime.Now >= item.KHUYENMAI.NgayBatDau && DateTime.Now <= item.KHUYENMAI.NgayKetThuc)
+                    {
+                        <td> @item.KHUYENMAI.PhanTramGiamGia%</td>
+                    }
+                    else
+                    {
+                        <td><a href="@Url.Action("ImportPromotion", "Admin", new {MaSP=item.MaSP})">Chương trình khuyến mãi</a></td>
+                    }
+
+                    <td>@item.NgayCapNhat.Value.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        @{
+                            str = item.MoTa;
+                            describe = str.Split('.').ToList();
+                            if (describe.Count == 0 || (describe.Count == 1))
+                            {
+                                <div class="center-text" style="width: 400px">- @item.MoTa.</div>
+                            }
+                            else
+                            {
+                                for (int i = 0; i < describe.Count - 1; i++)
+                                {
+                                    <div class="center-text" style="width: 400px ">- @describe[i].</div>
+                                }
+                            }
+                        }
+                    </td>
+                    @if (item.SANPHAM_MAU.Any())
+                    {
+                        foreach (var color in item.SANPHAM_MAU)
+                        {
+                            <td>
+                                <img class="img-product" src="@Url.Content("~/Content/Images/Products/" + (isFirstColor ? item.HinhAnh : item.HinhAnh2))" />
+                                <br />
+                                <p style="margin-top: 24px; font-size: 16px;">Màu @color.MAU.TenMau</p>
+                            </td>
+                            isFirstColor = !isFirstColor;
+                        }
+                    }
+                    else
+                    {
+                        <td>
+                            <img class="img-product" src="@Url.Content("~/Content/Images/Products/" + item.HinhAnh)" />
+                            <br />
+                            <p style="margin-top: 24px; font-size: 16px;">
+                                <a href="@Url.Action("CreateColorProduct", "Admin", new {id = item.MaSP})">Thêm màu</a>
+                            </p>
+                        </td>
+                        <td>
+                            <img class="img-product" src="@Url.Content("~/Content/Images/Products/" + item.HinhAnh2)" />
+                            <br />
+                            <p style="margin-top: 24px; font-size: 16px;">
+                                <a href="@Url.Action("CreateColorProduct", "Admin", new {id = item.MaSP})">Thêm màu</a>
+                            </p>
+                        </td>
+                    }
+
+                    <td>@item.SoLuongTon</td>
+                    @*@if (item.LuotXem != null)
+                        {
+                            <td>@item.LuotXem</td>
+                        }
+                        else
+                        {
+                            <td>0</td>
+                        }
+
+                        @if (item.LuotBinhChon != null)
+                        {
+                            <td>@item.LuotBinhChon</td>
+                        }
+                        else
+                        {
+                            <td>0</td>
+                        }
+                        @if (item.LuotBinhLuan != null)
+                        {
+                            <td>@item.LuotBinhLuan</td>
+                        }
+                        else
+                        {
+                            <td>0</td>
+                        }*@
+                    @if (item.Moi != true)
+                    {
+                        <td>Hàng mới</td>
+                    }
+                    else
+                    {
+                        <td>Hàng cũ</td>
+                    }
+                    @if (item.DaXoa != true)
+                    {
+                        <td>Còn hàng</td>
+                    }
+                    else
+                    {
+                        <td>Đã xóa</td>
+                    }
+
+                    <td class="btn-container">
+                        @if (item.LOAISANPHAM.MaLoaiSP == 1 || item.LOAISANPHAM.MaLoaiSP == 2 || item.LOAISANPHAM.MaLoaiSP == 3 || item.LOAISANPHAM.MaLoaiSP == 4 || item.LOAISANPHAM.MaLoaiSP == 5)
+                        {
+                            <a href="@Url.Action("CreatePhoneProductDetails", "Admin", new {MaSP=item.MaSP})" class="btn btn-success btn-content">
+                                <i class="fa fa-plus"></i> Thêm chi tiết
+                            </a>
+                        }
+                        else
+                        {
+                            if (item.LOAISANPHAM.MaLoaiSP == 6)
+                            {
+                                <a href="@Url.Action("CreateBackupchargerProductDetails", "Admin", new {MaSP=item.MaSP})" class="btn btn-success btn-content">
+                                    <i class="fa fa-plus"></i> Thêm chi tiết
+                                </a>
+                            }
+                            else
+                            {
+                                if (item.LOAISANPHAM.MaLoaiSP == 7)
+                                {
+                                    <a href="@Url.Action("CreateEarPhoneProductDetails", "Admin", new {MaSP=item.MaSP})" class="btn btn-success btn-content">
+                                        <i class="fa fa-plus"></i> Thêm chi tiết
+                                    </a>
+                                }
+                            }
+                        }
+                        <a href="@Url.Action("EditPhoneProducts", "Admin", new {MaSP = item.MaSP})" class="btn btn-primary btn-content">
+                            <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <a href="@Url.Action("DeletePhoneProducts", "Admin", new {MaSP = item.MaSP})" class="btn btn-danger btn-content">
+                            <i class="fa fa-trash"></i> Xóa
+                        </a>
+                        @if (item.LOAISANPHAM.MaLoaiSP == 1 || item.LOAISANPHAM.MaLoaiSP == 2 || item.LOAISANPHAM.MaLoaiSP == 3 || item.LOAISANPHAM.MaLoaiSP == 4 || item.LOAISANPHAM.MaLoaiSP == 5)
+                        {
+                            <a href="@Url.Action("Admin_ProductDetails", "Admin", new {MaSP = item.MaSP})" class="btn btn-info btn-content">
+                                <i class="fa fa-eye"></i> Xem
+                            </a>
+                        }
+                        else
+                        {
+                            if (item.LOAISANPHAM.MaLoaiSP == 6)
+                            {
+                                <a href="@Url.Action("Admin_ProductDetails", "Admin", new {MaSP = item.MaSP})" class="btn btn-info btn-content">
+                                    <i class="fa fa-eye"></i> Xem
+                                </a>
+                            }
+                            else
+                            {
+                                if (item.LOAISANPHAM.MaLoaiSP == 7)
+                                {
+                                    <a href="@Url.Action("Admin_ProductDetails", "Admin", new {MaSP = item.MaSP})" class="btn btn-info btn-content">
+                                        <i class="fa fa-eye"></i> Xem
+                                    </a>
+                                }
+                            }
+                        }
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @{
+        int PrevPage = ViewBag.Page - 1;
+        if (PrevPage <= 0)
+        {
+            PrevPage = ViewBag.NoOfPages;
+        }
+
+        int NextPage = ViewBag.Page + 1;
+        if (NextPage > ViewBag.NoOfPages)
+        {
+            NextPage = 1;
+        }
+    }
+
+    <div class="text-center">
+        <ul class="pagination pagination">
+            <li class=""><a href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP=ViewBag.CategoryID, page = PrevPage})">«</a></li>
+            @for (int i = 0; i < ViewBag.NoOfPages; i++)
+            {
+                if (i + 1 == ViewBag.Page)
+                {
+                    <li class="page-item active">
+                        <a class="page-link" href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP=ViewBag.CategoryID, page=i+1})">
+                            @(i+1)
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP=ViewBag.CategoryID, page=i+1})">
+                            @(i+1)
+                        </a>
+                    </li>
+                }
+            }
+            <li class="page-item active">
+                <a class="page-link" href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP=ViewBag.CategoryID, page = NextPage})">
+                    »
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>

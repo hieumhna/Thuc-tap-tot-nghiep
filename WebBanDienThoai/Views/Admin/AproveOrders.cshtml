@@ -1,0 +1,253 @@
+﻿@using WebBanDienThoai.Models;
+@model List<CHITIETDONDATHANG>
+@{
+    ViewBag.Title = "Duyệt đơn hàng";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .center-text {
+        text-align: justify;
+        text-indent: 16px;
+    }
+
+    .btn-content {
+        width: 80px;
+        text-align: center;
+        margin: 6px;
+    }
+
+    .btn-container {
+        text-align: center;
+        vertical-align: middle;
+        padding: 12px 0px !important;
+    }
+
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow-x: auto;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    thead {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    th:first-child,
+    td:first-child {
+        left: 0;
+        background-color: #f2f2f2;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+
+    /* New class for centering content within td elements */
+    .center-content {
+        text-align: center;
+    }
+
+    .scrollbar1 {
+        height: 640px;
+    }
+
+    .customer-info {
+        background-color: #e6f7ff;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px; /* Add margin to separate it from the table */
+    }
+
+        .customer-info h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #337ab7;
+        }
+
+        .customer-info p {
+            margin: 5px 0;
+        }
+
+        .customer-info strong {
+            color: #337ab7;
+            margin-right: 5px;
+        }
+
+    .totals {
+        text-align: right;
+        margin-top: 20px;
+    }
+
+        .totals p {
+            margin-bottom: 10px;
+        }
+
+    .customer-info select {
+        width: 10%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .date-container {
+        display: flex;
+        align-items: center;
+    }
+
+        .date-container label {
+            margin-right: 10px;
+        }
+
+        .date-container input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("BrowseOrders", "Admin")" style="text-decoration: none;">Thông tin đơn hàng</a> / <a href="#" style="text-decoration: none;">Duyệt đơn</a></h3>
+
+@using (Html.BeginForm("AproveOrders", "Admin", FormMethod.Post))
+{
+    <div class="container_Products">
+        <div id="content">
+            @Html.Hidden("MaDDH", Model)
+            <div class="order-info">
+                <div class="customer-info">
+                    <p><strong>Mã hóa đơn:</strong>@ViewBag.Infomation.MaDDH</p>
+                    <p><strong>Tên khách hàng:</strong>@ViewBag.Infomation.KHACHHANG.TenKH</p>
+                    <p><strong>Ngày đặt hàng:</strong>@ViewBag.Infomation.NgayDatHang</p>
+                    <div class="date-container">
+                        <label style="width: 130px;"><strong>Ngày giao:</strong></label>
+                        <input type="date" value="@ViewBag.Infomation.NgayGiao" name="NgayGiao" class="form-control" />
+                    </div>
+                    <p><strong>Trạng thái:</strong></p>
+                    <select id="ddlTinhTrang" name="TinhTrang" class="form-control">
+                        <option value="Chưa duyệt" @(ViewBag.Infomation.TinhTrang == "Chưa duyệt" ? "selected" : "")>Chưa duyệt</option>
+                        <option value="Đã duyệt" @(ViewBag.Infomation.TinhTrang == "Đã duyệt" ? "selected" : "")>Đã duyệt</option>
+                        <option value="Đã giao" @(ViewBag.Infomation.TinhTrang == "Đã giao" ? "selected" : "")>Đã giao</option>
+                    </select>
+                    <p><strong>Thanh toán:</strong></p>
+                    <select id="ddlThanhToan" name="DaThanhToan" class="form-control">
+                        <option value="true" @(ViewBag.Infomation.DaThanhToan == true ? "selected" : "")>Đã thanh toán</option>
+                        <option value="false" @(ViewBag.Infomation.DaThanhToan == false ? "selected" : "")>Chưa thanh toán</option>
+                    </select>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10px">Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lương</th>
+                        <th>Đơn giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MaSP</td>
+                            <td>@item.TenSP</td>
+                            <td>@item.SoLuong</td>
+                            <td>@string.Format("{0:N0}\u20ab", item.DonGia)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="totals">
+                <p><strong>Tổng số lượng: </strong> <span id="totalQuantity">@ViewBag.SumQuanlity</span> sản phẩm</p>
+                <p><strong>Tổng tiền:</strong> <span id="totalAmount">@string.Format("{0:N0}\u20ab", ViewBag.TotalPrice)</span></p>
+            </div>
+        </div>
+        <div class="btn-group" style="float: right">
+            <button type="submit" class="btn btn-success  ml-auto" id="btnSaveBill">Lưu đơn hàng</button>
+        </div>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $("#btnSaveBill").click(function () {
+            // Perform validation before submitting the form
+            if (!validateForm()) {
+                // If validation fails, prevent form submission
+                return false;
+            }
+        });
+
+        function validateForm() {
+            // Validate the date field
+            var ngayGiao = $("input[name='NgayGiao']").val();
+            if (ngayGiao === "") {
+                alert("Vui lòng chọn ngày giao hàng.");
+                return false;
+            }
+            var ngayDatHangString = "@(((DateTime)ViewBag.Infomation.NgayDatHang).ToString("yyyy-MM-dd"))";
+            var ngayDatHang = new Date(ngayDatHangString);
+            var ngayGiaoDate = new Date(ngayGiao);
+
+            if (ngayGiaoDate <= ngayDatHang) {
+                alert("Ngày nhận hàng phải lớn hơn ngày đặt hàng.");
+                return false;
+            }
+            return true;
+        }
+
+        $("#btnInBill").click(function () {
+            var content = $("#content").html();
+            InBill(content);
+        });
+
+        function InBill(content) {
+            var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<html><head><title>In Hóa Đơn</title>');
+            printWindow.document.write('<head><body>');
+            printWindow.document.write(content);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
+    });
+</script>
+
+

@@ -1,0 +1,514 @@
+﻿@using WebBanDienThoai.Models;
+@model CHITIETSANPHAM
+
+@*
+        z-index
+    1000: model
+    1001: background-close
+    1002: table
+*@
+
+<style>
+    .specification {
+        position: relative;
+        margin: auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        max-width: 700px;
+        width: 700px;
+        border-radius: 5px;
+        z-index: 1002;
+    }
+
+    .header-specification {
+        position: relative;
+        text-align: center;
+        color: #fff; /* Thay đổi màu tiêu đề container thành trắng */
+        position: sticky;
+        top: 0; /* Giữ tiêu đề ở vị trí trên cùng khi cuộn */
+        background-color: #1accfd; /* Màu nền của tiêu đề */
+        margin: 0;
+        padding: 10px 0;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 900;
+    }
+
+    .close-button {
+        position: absolute;
+        right: 10px;
+        top: 9px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .group-header {
+        background-color: #f2f2f2; /* Màu nền cho tiêu đề nhóm */
+        color: #000; /* Màu tiêu đề nhóm đổi thành đen */
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .table-container {
+        padding: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .table-specification {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table-specification,
+        .table-specification th,
+        .table-specification td {
+            border: 1px solid #ddd;
+        }
+
+            .table-specification th,
+            .table-specification td {
+                padding: 12px;
+                text-align: left;
+            }
+
+    .row-specification {
+        background-color: #ffffff; /* Màu xám cho hàng chẵn */
+    }
+</style>
+
+@{
+    string str;
+    List<string> feature = new List<string>();
+}
+
+<div style="width: 100vw; height: 100vh; z-index: 1001; position: fixed" class="background-close">
+
+</div>
+
+<div class="specification">
+    <h1 class="header-specification">
+        THÔNG SỐ KỸ THUẬT
+        <span class="close-button btn btn-danger">X</span>
+    </h1>
+    <div class="table-container">
+        <table class="table-specification">
+            @*Group Products Detail*@
+            @*Màn hình*@
+            <tr class="group-header">
+                <th colspan="2">Màn hình</th>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Kích thước màn hình</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.KICHTHUOCMANHINH;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Công nghệ màn hình</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.CONGNGHEMANHINH;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Độ phân giải</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.DOPHANGIAI;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Tính năng</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.TINHNANGMANGHINH;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Tần số quét</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.TANSOQUET;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+
+            @*Camera*@
+            <tr class="group-header">
+                <th colspan="2">Camera</th>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Camera sau</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.CAMERASAU;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Camera trước</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.CAMERATRUOC;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Quay phim</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.QUAYPHIM;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Tính năng</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.TINHNANGCAMERA;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+
+            @*Hệ điều hành & CPU*@
+            <tr class="group-header">
+                <th colspan="2">Hệ điều hành & CPU</th>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Hệ điều hành</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.HEDIEUHANH;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Chip xử lý (CPU)</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.CHIP;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Tốc độ CPU</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.TOCDOCPU;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Chip đồ họa (GPU)</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.CHIPDOHOA;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            @*Bộ nhớ & Lưu trữ*@
+            <tr class="group-header">
+                <th colspan="2">Bộ nhớ & Lưu trữ</th>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Ram</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.CHIPDOHOA;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Dung lượng</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.DUNGLUONG;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+
+            @*Kết nối*@
+            <tr class="group-header">
+                <th colspan="2">Kết nối</th>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Mạng di động</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.MANGDIDONG;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Sim</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.SIM;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Wifi</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.WIFI;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Cổng kết nối/sạc</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.CONGKETNOI;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+
+            @*Pin & Sạc*@
+            <tr class="group-header">
+                <th colspan="2">Pin & Sạc</th>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Mạng di động</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.DUNGLUONGPIN;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Loại pin</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.LOAIPIN;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Hỗ trợ sạc tối đa</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.HOTROSAC;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            @*Tiện ích*@
+            <tr class="group-header">
+                <th colspan="2">Tiện ích</th>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Bảo mật nâng cao</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.BAOMAT;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Tính năng đặc biệt</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.TINHNANGDACBIET;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Kháng nước, bụi</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.KHANGNUOC;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            @*Tiện ích*@
+            <tr class="group-header">
+                <th colspan="2">Thông tin chung</th>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Thiết kế</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.THIETKE;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Chất liệu</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.CHATLIEU;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Kích thước, khối lượng</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.KICHTHUOC;
+                        feature = str.Split('-').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+
+
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Bảo hành</td>
+                <td class="col-md-8">
+                    <div>+ @Model.BAOHANH tháng</div>
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Thời điểm ra mắt</td>
+                <td class="col-md-8">
+                    <div>+ @Model.RAMAT.Value.ToString("dd/MM/yyyy")</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

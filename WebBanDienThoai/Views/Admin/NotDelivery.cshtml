@@ -1,0 +1,86 @@
+﻿@using WebBanDienThoai.Models;
+@model List<DONDATHANG>
+
+<h1 style="margin-top: 12px;">Danh sách đơn hàng đã duyệt</h1>
+<table class="table mx-auto">
+    <thead>
+        <tr>
+            <th>Mã hóa đơn</th>
+            <th>Tên khách hàng</th>
+            <th>Ngày đặt hàng</th>
+            <th>Trạng thái giao hàng</th>
+            <th>Ngày nhận hàng</th>
+            <th>Thanh toán</th>
+            <th>Quà tặng</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.MaDDH</td>
+                <td>@order.KHACHHANG.TenKH</td>
+                <td>@order.NgayDatHang</td>
+                <td>@order.TinhTrang</td>
+                @if (order.NgayGiao.HasValue)
+                {
+                    <td>@order.NgayGiao.Value</td>
+                }
+                else
+                {
+                    <td>Trống</td>
+                }
+                <td class="status-@(order.DaThanhToan ? "true" : "false")">@(order.DaThanhToan ? "Đã thanh toán" : "Chưa thanh toán")</td>
+                <td>@order.QuaTang</td>
+                <td>
+                    <a href="@Url.Action("InBill", "Admin", new {MaDDH=order.MaDDH})" class="btn btn-primary">In hóa đơn</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+    int PrevPage = ViewBag.Page - 1;
+    if (PrevPage <= 0)
+    {
+        PrevPage = ViewBag.NoOfPages;
+    }
+
+    int NextPage = ViewBag.Page + 1;
+    if (NextPage > ViewBag.NoOfPages)
+    {
+        NextPage = 1;
+    }
+}
+
+<div class="text-center">
+    <ul class="pagination pagination">
+        <li class=""><a href="@Url.Action("BrowseOrders", "Admin", new {page=PrevPage})">«</a></li>
+        @for (int i = 0; i < ViewBag.NoOfPages; i++)
+        {
+            if (i + 1 == ViewBag.Page)
+            {
+                <li class="page-item active">
+                    <a class="page-link" href="@Url.Action("BrowseOrders", "Admin", new {page=i+1})">
+                        @(i+1)
+                    </a>
+                </li>
+            }
+            else
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("BrowseOrders", "Admin", new {page=i+1})">
+                        @(i+1)
+                    </a>
+                </li>
+            }
+        }
+        <li class="page-item active">
+            <a class="page-link" href="@Url.Action("BrowseOrders", "Admin", new {page=NextPage})">
+                »
+            </a>
+        </li>
+    </ul>
+</div>

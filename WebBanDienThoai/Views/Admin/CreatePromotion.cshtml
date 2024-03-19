@@ -1,0 +1,141 @@
+﻿@using WebBanDienThoai.Models;
+@model KHUYENMAI
+@{
+    ViewBag.Title = "Thêm khuyến mãi";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Promotion", "Admin")" style="text-decoration: none;">Khuyến mãi</a> / <a href="#" style="text-decoration: none;">Thêm</a></h3>
+<div class="container_Products">
+    <div class="container">
+        @using (Html.BeginForm("CreatePromotion", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <h2 style="display: flex; justify-content: center;"><strong>Chương trình khuyến mãi</strong></h2>
+            <div class="form-group">
+                <label for="TenKhuyenMai">Tên chương trình</label>
+                @Html.TextBoxFor(row => row.TenKhuyenMai, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <label for="MoTa">Mô tả</label>
+                @Html.TextBoxFor(row => row.MoTa, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <label for="PhanTramGiamGia">Phần trăm giảm giá</label>
+                @Html.TextBoxFor(row => row.PhanTramGiamGia, new { @class = "form-control", type = "number" })
+            </div>
+
+            <div class="form-group">
+                <label for="NgayBatDau">Ngày bắt đầu</label>
+                @Html.TextBoxFor(row => row.NgayBatDau, new { @class = "form-control", type = "date" })
+            </div>
+
+            <div class="form-group">
+                <label for="NgayKetThuc">Ngày kết thúc</label>
+                @Html.TextBoxFor(row => row.NgayKetThuc, new { @class = "form-control", type = "date" })
+            </div>
+
+            <div class="form-group">
+                <a href="@Url.Action("Promotion", "Admin")" class="btn btn-danger">Trở lại</a>
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Xử lý sự kiện khi biểu mẫu được gửi
+        $("form").submit(function (event) {
+            // Kiểm tra Tên chương trình không được để trống
+            var tenKhuyenMai = $("#TenKhuyenMai").val();
+            if (tenKhuyenMai.trim() === "") {
+                alert("Tên chương trình không được để trống.");
+                event.preventDefault(); // Ngăn chặn gửi biểu mẫu
+                return;
+            }
+
+            // Kiểm tra Tên chương trình không trùng với chương trình đang có
+            var isDuplicate = checkDuplicatePromotion(tenKhuyenMai);
+            if (isDuplicate) {
+                alert("Tên chương trình đã tồn tại. Vui lòng chọn một tên khác.");
+                event.preventDefault();
+                return;
+            }
+            // Hàm kiểm tra trùng lặp bằng Ajax
+            function checkDuplicatePromotion(tenKhuyenMai) {
+                var isDuplicate = false;
+                $.ajax({
+                    url: "@Url.Action("CheckDuplicatePromotion", "Admin")",
+                    type: "POST",
+                    data: { tenKhuyenMai: tenKhuyenMai },
+                    async: false, // Đảm bảo đợi cuộc gọi Ajax hoàn thành trước khi kiểm tra kết quả
+                    success: function (result) {
+                        isDuplicate = result;
+                    }
+                });
+                return isDuplicate;
+            }
+
+            // Kiểm tra Mô tả không được để trống
+            var moTa = $("#MoTa").val();
+            if (moTa.trim() === "") {
+                alert("Mô tả không được để trống.");
+                event.preventDefault();
+                return;
+            }
+
+            // Kiểm tra Phần trăm giảm giá từ 0 đến 100 và không để trống
+            var phanTramGiamGia = parseFloat($("#PhanTramGiamGia").val());
+            if (isNaN(phanTramGiamGia) || phanTramGiamGia < 0 || phanTramGiamGia > 100) {
+                alert("Phần trăm giảm giá phải nằm trong khoảng từ 0 đến 100.");
+                event.preventDefault();
+                return;
+            }
+
+            // Kiểm tra Ngày bắt đầu và Ngày kết thúc không được để trống
+            var ngayBatDau = $("#NgayBatDau").val();
+            if (ngayBatDau.trim() === "") {
+                alert("Ngày bắt đầu không được để trống.");
+                event.preventDefault();
+                return;
+            }
+
+            // Kiểm tra Ngày bắt đầu và Ngày kết thúc không được để trống
+            var ngayKetThuc = $("#NgayKetThuc").val();
+            if (ngayKetThuc.trim() === "") {
+                alert("Ngày kết thúc không được để trống.");
+                event.preventDefault();
+                return;
+            }
+
+            // Kiểm tra Ngày kết thúc lớn hơn Ngày bắt đầu
+            var ngayBatDau = new Date($("#NgayBatDau").val());
+            var ngayKetThuc = new Date($("#NgayKetThuc").val());
+            if (ngayKetThuc <= ngayBatDau) {
+                alert("Ngày kết thúc phải lớn hơn ngày bắt đầu.");
+                event.preventDefault();
+                return;
+            }
+        });
+    });
+</script>

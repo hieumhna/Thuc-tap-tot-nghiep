@@ -1,0 +1,111 @@
+﻿@model WebBanDienThoai.Models.SANPHAM
+
+@{
+    ViewBag.Title = "Xóa sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP = Model.LOAISANPHAM.MaLoaiSP})" style="text-decoration: none;">Sản phẩm</a> / <a href="#" style="text-decoration: none;">Xóa sản phẩm</a></h3>
+
+<div class="container_Products">
+    <div class="container">
+        @using (Html.BeginForm("DeletePhoneProducts", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <h2 style="display: flex; justify-content: center;"><strong>@Model.TenSP</strong></h2>
+            @Html.Hidden("MaSP", Model.MaSP)
+            <div class="form-group">
+                <label for="MaNCC">Nhà cung cấp</label>
+                @Html.DropDownList("MaNCC", null, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+
+            <div class="form-group">
+                <label for="MaNSX">Nhà sản xuất</label>
+                @Html.DropDownList("MaNSX", null, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+
+            <div class="form-group">
+                <label for="MaLoaiSP">Loại sản phẩm</label>
+                @Html.DropDownList("MaLoaiSP", null, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+
+            <div class="form-group">
+                <label for="TenSP">Tên sản phẩm:</label>
+                @Html.TextBoxFor(row => row.TenSP, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+
+            <div class="form-group">
+                <label for="DonGia">Đơn giá:</label>
+                @Html.TextBoxFor(row => row.DonGia, new { @class = "form-control", type = "number", @disabled = "disabled" })
+            </div>
+
+            <div class="form-group">
+                <label for="NgayCapNhat">Ngày cập nhật:</label>
+                @Html.TextBoxFor(row => row.NgayCapNhat, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", @disabled = "disabled" })
+            </div>
+
+            <div class="form-group">
+                <label for="MoTa">Mô tả sản phẩm:</label>
+                @Html.TextAreaFor(row => row.MoTa, new { @class = "form-control", style = "height: 100px", @disabled = "disabled" })
+            </div>
+
+            <div class="form-group">
+                <label for="HinhAnh">Hình ảnh 1:</label>
+                @Html.TextBoxFor(row => row.HinhAnh, new { @class = "form-control", @disabled = "disabled" })
+                <br />
+                <img src="@Url.Content("~/Content/Images/Products/" + Model.HinhAnh)" alt="Alternate Text" style="width:250px;height:auto;" />
+            </div>
+
+            <div class="form-group">
+                <label for="HinhAnh">Hình ảnh 2:</label>
+                @Html.TextBoxFor(row => row.HinhAnh2, new { @class = "form-control", @disabled = "disabled" })
+                <br />
+                <img src="@Url.Content("~/Content/Images/Products/" + Model.HinhAnh2)" alt="Alternate Text" style="width:250px;height:auto;" />
+            </div>
+
+            <div class="form-group">
+                <label for="HinhAnh">Hình ảnh 3:</label>
+                @Html.TextBoxFor(row => row.HinhAnh3, new { @class = "form-control", @disabled = "disabled" })
+                <br />
+                <img src="@Url.Content("~/Content/Images/Products/" + Model.HinhAnh3)" alt="Alternate Text" style="width:250px;height:auto;" />
+            </div>
+
+            <div class="form-group">
+                <label for="Moi">Tình trạng</label>
+                <select class="form-control" id="Moi" name="Moi" disabled>
+                    <option value="0">Mới</option>
+                    <option value="1">Cũ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Moi">Chọn trạng thái</label>
+                <select class="form-control" id="DaXoa" name="DaXoa" disabled>
+                    <option value="0">Chưa xóa</option>
+                    <option value="1">Đã Xóa</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <a href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP=ViewBag.CategoryID})" class="btn btn-danger">Trở lại</a>
+                <input type="submit" value="Xóa" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>

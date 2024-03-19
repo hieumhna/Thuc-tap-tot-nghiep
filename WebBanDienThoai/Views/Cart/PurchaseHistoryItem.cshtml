@@ -1,0 +1,89 @@
+﻿@using WebBanDienThoai.Models;
+@model List<CartItem>
+
+@{
+    int index = 1;
+}
+
+<style>
+    button#cancelOrder {
+        background-color: #e74c3c;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+        button#cancelOrder:hover {
+            background-color: #c0392b;
+        }
+
+    div.order-status {
+        font-weight: bold;
+        color: #3498db;
+    }
+
+        div.order-status.completed {
+            color: #27ae60;
+        }
+
+        div.order-status.cancelled {
+            color: #e74c3c;
+        }
+
+    .btn-order-status:focus {
+        outline: none !important;
+        border-color: transparent !important;
+    }
+</style>
+
+<div class="checkout-right">
+    <h4>
+        <span> <span class="cart-quantity-count">Đơn hàng đã được giao thành công</span></span>
+    </h4>
+    <div class="table-responsive">
+        <table class="timetable_sub">
+            <thead>
+                <tr>
+                    <th>Số thứ tự</th>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cart in Model)
+                {
+                    <tr class="rem">
+                        <td class="invert">@index</td>
+                        <td class="invert-image">
+                            <a href="@Url.Action("ProductDetails", "Products", new { MaSP = cart.MaSP })">
+                                <img style="width: 86px" src="@Url.Content("~/Content/Images/Products/" + cart.HinhAnh)" alt=" " class="img-responsive">
+                            </a>
+                        </td>
+                        <td class="invert">
+                            <div class="quantity">
+                                <div class="quantity-select">
+                                    <div class="entry value" data-quantity="@cart.SoLuong">
+                                        <span>@cart.SoLuong</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="invert">@cart.TenSP</td>
+                        <td class="invert">@string.Format("{0:N0} \u20ab", cart.DonGia)</td>
+                        <td class="invert product-total">@string.Format("{0:N0} \u20ab", cart.ThanhTien)</td>
+                    </tr>
+                    index++;
+                }
+                <tr>
+                    <td colspan="5" class="text-right"><strong>Tổng thành tiền:</strong></td>
+                    <td><strong class="total-amount">@string.Format("{0:N0} \u20ab", Model.Sum(cart => cart.ThanhTien))</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+﻿@*!-- banner -->*@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                    @*<h3>
+                        <span>Tiết kiệm</span>
+                        lớn
+                    </h3>
+                    <p>
+                        Nhận hoàn tiền
+                        <span>10%</span>
+                    </p>
+                    @Html.ActionLink("Mua ngay", "Products", "Products", new { MaLoaiSP = ViewBag.iPhone }, new { @class = "button2" })*@
+                </div>
+            </div>
+        </div>
+        <div class="item item2">
+            <div class="container">
+                <div class="carousel-caption">
+                    @*<h3>
+                        <span>Tiết kiệm</span>
+                        lành mạnh
+                    </h3>
+                    <p>
+                        Được giảm giá tới
+                        <span>30%</span>
+                    </p>
+                    @Html.ActionLink("Mua ngay", "Products", "Products", new { MaLoaiSP = ViewBag.Samsung }, new { @class = "button2" })*@
+                </div>
+            </div>
+        </div>
+        <div class="item item3">
+            <div class="container">
+                <div class="carousel-caption">
+                    @*<h3>
+                        <span>Ưu đãi</span>
+                        lớn
+                    </h3>
+                    <p>
+                        Nhận ưu đãi tốt nhất lên đến
+                        <span>20%</span>
+                    </p>
+                    @Html.ActionLink("Mua ngay", "Products", "Products", new { MaLoaiSP = ViewBag.Oppo }, new { @class = "button2" })*@
+                </div>
+            </div>
+        </div>
+        <div class="item item4">
+            <div class="container">
+                <div class="carousel-caption">
+                    @*<h3>
+                        <span>Giảm giá</span>
+                        hôm nay
+                    </h3>
+                    <p>
+                        Nhận ngay giảm giá
+                        <span>40%</span>
+                    </p>
+                    @Html.ActionLink("Mua ngay", "Products", "Products", new { MaLoaiSP = ViewBag.Headphone }, new { @class = "button2" })*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Trước</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Sau</span>
+    </a>
+</div>

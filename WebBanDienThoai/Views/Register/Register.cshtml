@@ -1,0 +1,288 @@
+﻿@using WebBanDienThoai.Models;
+@using CaptchaMvc.HtmlHelpers;
+@using CaptchaMvc;
+
+@model THANHVIEN
+
+@{
+    ViewBag.Title = "Đăng ký";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<style>
+    .brand-logo:hover {
+        color: #fff
+    }
+
+    .register-form .checkbox a:hover, .register-form .checkbox a:focus {
+        color: #1accfd;
+    }
+
+    .validation-summary-errors {
+        color: red;
+    }
+
+        .validation-summary-errors li {
+            margin-bottom: 4px;
+        }
+
+    .register-form .fields-grid label {
+        font-weight: bold;
+    }
+
+    .btn-cancel:focus {
+        outline: none !important;
+        border-color: transparent !important;
+    }
+</style>
+
+@{
+    Web_BanDienThoai_TCShopEntities db = new Web_BanDienThoai_TCShopEntities();
+}
+
+<div id="main-content" class="body-register">
+    <section class="register">
+        <div class="register-full">
+            <div class="register-left">
+                <div class="register-in">
+                    <h1 style="font-weight: bold; margin-bottom: 0em">
+                        @Html.ActionLink("Mai Nguyen", "Index", "Home", null, new { @class = "brand-logo", @style = "color: #fff" })
+                    </h1>
+                    <p style="color: #000; text-align: justify; text-indent: 20px">Xin chào mừng và hoan nghênh quý khách đến với Mai Nguyen - nơi tuyệt vời dành cho những người đam mê công nghệ và phong cách.</p>
+                    <p style="color: #000; text-align: justify; text-indent: 20px">Trang web của chúng tôi cam kết sẽ luôn đồng hành và hỗ trợ quý khách trong hành trình tìm kiếm các sản phẩm công nghệ phù hợp nhất với sở thích và nhu cầu của mình.</p>
+                    <div style="display: flex; justify-content: center;" class="link">
+                        @Html.ActionLink("Bạn đã có tài khoản", "Login", "Login")
+                    </div>
+                </div>
+            </div>
+            <div class="register-right">
+                <div class="register-in">
+                    <h2>ĐĂNG KÝ</h2>
+                    <div class="register-form">
+                        @using (Html.BeginForm("Register", "Register", FormMethod.Post, new { @id = "registerForm" }))
+                        {
+                            @Html.Hidden("HinhDaiDien", "default.png")
+                            <input type="text" value="2" name="MaLoaiTV" style="display: none" />
+                            @Html.AntiForgeryToken()
+                            <div class="fields-grid">
+                                <div class="styled-input agile-styled-input-top">
+                                    @Html.TextBoxFor(model => model.TaiKhoan, new { required = "" })
+                                    <label>
+                                        <i class="fa fa-user"></i> @Html.DisplayNameFor(model => model.TaiKhoan)
+                                    </label>
+                                    @*@Html.LabelFor(model => model.TaiKhoan, "Tài khoản")*@
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    @Html.TextBoxFor(model => model.HoTen, new { required = "" })
+                                    <label>
+                                        <i class="fa fa fa-address-card"></i> @Html.DisplayNameFor(model => model.HoTen)
+                                    </label>
+                                    @*@Html.LabelFor(model => model.HoTen, "Họ và tên")*@
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    @Html.TextBoxFor(model => model.Email, new { @id = "email", required = "", oninput = "validateEmail()" })
+                                    <label>
+                                        <i class="fa fa-envelope"></i> @Html.DisplayNameFor(model => model.Email)
+                                    </label>
+                                    @*@Html.LabelFor(model => model.Email, "Email")*@
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    @Html.PasswordFor(model => model.MatKhau, new { @id = "password", required = "", oninput = "checkPasswordLength();" })
+                                    <label>
+                                        <i class="fa fa-lock"></i> @Html.DisplayNameFor(model => model.MatKhau)
+                                    </label>
+                                    @*@Html.LabelFor(model => model.MatKhau, "Mật khẩu")*@
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    @Html.PasswordFor(model => model.MatKhau, new { @id = "confirmPassword", required = "", oninput = "checkPasswordMatch()" })
+                                    <label>
+                                        <i class="fa fa-lock"></i> Nhập lại mật khẩu
+                                    </label>
+                                    @*@Html.LabelFor(model => model.MatKhau, "Nhập lại mật khẩu")*@
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    @Html.TextBoxFor(model => model.SoDienThoai, new { @id = "phone", required = "", oninput = "checkPhoneNumberLength()" })
+                                    <label>
+                                        <i class="fa fa-phone"></i> @Html.DisplayNameFor(model => model.SoDienThoai)
+                                    </label>
+                                    @*@Html.LabelFor(model => model.SoDienThoai, "Số điện thoại")*@
+                                    <span></span>
+                                </div>
+                                <div class="clear"> </div>
+                                <div>
+                                    @Html.Captcha("Làm mới", "Nhập mã", 5)
+                                </div>
+                                <div class="clear"> </div>
+                                <label class="checkbox"><input id="agreeCheckbox" style="margin-left: 0px; -webkit-appearance: auto; position: relative " type="checkbox" name="checkbox"><i></i>Tôi đồng ý với các <a href="#">Điều khoản dịch vụ</a></label>
+                            </div>
+                            <p>
+                                @Html.ValidationSummary()
+                            </p>
+                            <div style="display: flex; justify-content: center">
+                                <input class=".register-button" type="submit" value="Đăng ký">
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </section>
+</div>
+
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div style="background-color: #1accfd; border: none; color: #fff;" class="modal-header">
+                <h4 style="text-align: center; font-weight: bold" class="modal-title" id="confirmModalLabel">Thông báo</h4>
+            </div>
+            <div style="font-weight: bold" class="modal-body">
+                <p style="color: #000" id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-cancel" id="confirmBtn" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('html, body').animate({
+            scrollTop: $('#main-content').offset().top
+        }, 1000);
+    });
+</script>
+
+<script>
+    function checkPasswordLength() {
+        var passwordField = document.getElementById('password');
+
+        if (passwordField.value.length < 6) {
+            passwordField.setCustomValidity('Mật khẩu phải có ít nhất 6 ký tự.');
+        } else {
+            passwordField.setCustomValidity('');
+        }
+    }
+</script>
+
+<script>
+    function checkPhoneNumberLength() {
+        var phoneField = document.getElementById('phone');
+        var phoneNumber = phoneField.value.replace(/\D/g, ''); // Remove non-digit characters
+
+        if (phoneNumber.length < 10) {
+            phoneField.setCustomValidity('Số điện thoại phải chứa ít nhất 10 chữ số.');
+        } else {
+            phoneField.setCustomValidity('');
+        }
+    }
+</script>
+
+<script>
+    function validateEmail() {
+        var emailField = document.getElementById('email');
+        var email = emailField.value;
+        var emailRegex = /^[A-Za-z0-9._%+-]+\@@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+
+        if (!emailRegex.test(email)) {
+            emailField.setCustomValidity('Địa chỉ Email không hợp lệ.');
+        } else {
+            emailField.setCustomValidity('');
+        }
+    }
+</script>
+
+<script>
+    function checkPasswordMatch() {
+        var passwordField = document.getElementById('password');
+        var confirmPasswordField = document.getElementById('confirmPassword');
+        var password = passwordField.value;
+        var confirmPassword = confirmPasswordField.value;
+
+        if (password !== confirmPassword) {
+            confirmPasswordField.setCustomValidity('Mật khẩu không trùng khớp.');
+        } else {
+            confirmPasswordField.setCustomValidity('');
+        }
+    }
+</script>
+
+<script>
+    function validateCheckbox() {
+        var agreeCheckbox = document.getElementById('agreeCheckbox');
+
+        if (!agreeCheckbox.checked) {
+            agreeCheckbox.setCustomValidity('Vui lòng đồng ý với các Điều khoản dịch vụ để tiếp tục đăng ký.');
+        } else {
+            agreeCheckbox.setCustomValidity('');
+        }
+    }
+
+    // Gọi hàm validateCheckbox() khi có sự kiện change cho checkbox
+    document.getElementById('agreeCheckbox').addEventListener('change', validateCheckbox);
+
+    // Hàm kiểm tra biểu mẫu trước khi gửi
+    function validateForm() {
+        validateCheckbox(); // Kiểm tra checkbox trước khi gửi
+        var form = document.querySelector('form');
+
+        if (!form.checkValidity()) {
+            // Biểu mẫu không hợp lệ, không gửi biểu mẫu
+            event.preventDefault(); // Ngăn chặn gửi biểu mẫu
+        }
+    }
+
+    // Gọi hàm validateForm() khi biểu mẫu được gửi đi
+    document.querySelector('form').addEventListener('submit', validateForm);
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#TaiKhoan").blur(function () {
+            var accountValue = $(this).val(); // Lấy giá trị từ textbox
+            if (accountValue) {
+                $.ajax({
+                    url: "/Register/CheckAccount", // Thay đổi đường dẫn và tên controller của bạn
+                    data: { username: accountValue },
+                    type: "GET",
+                    success: function (result) {
+                        if (result) {
+                            $("#modalMessage").text("Tên tài khoản đã tồn tại.");
+                            $("#confirmModal").modal("show");
+                            $("#TaiKhoan").val('');
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#email").blur(function () {
+            var emailValue = $(this).val(); // Lấy giá trị từ textbox
+            if (emailValue) {
+                $.ajax({
+                    url: "/Register/CheckEmail", // Thay đổi đường dẫn và tên controller của bạn
+                    data: { email: emailValue },
+                    type: "GET",
+                    success: function (result) {
+                        if (result) {
+                            $("#modalMessage").text("Email đã được đăng ký");
+                            $("#confirmModal").modal("show");
+                            $("#email").val('');
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>

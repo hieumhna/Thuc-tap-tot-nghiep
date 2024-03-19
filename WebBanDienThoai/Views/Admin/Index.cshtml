@@ -1,0 +1,228 @@
+﻿@using WebBanDienThoai.Models;
+@model List<DONDATHANG>
+
+@{
+    ViewBag.Title = "Thống kê";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .img-product {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .center-text {
+        text-align: justify;
+        text-indent: 16px;
+    }
+
+    .btn-content {
+        width: 120px; /* Độ rộng của nút */
+        text-align: center; /* Căn giữa nội dung của nút */
+        margin: 6px;
+    }
+
+    .btn-container {
+        text-align: center; /* Căn giữa nội dung của td */
+        vertical-align: middle; /* Căn giữa theo chiều dọc */
+        padding: 12px 0px !important;
+    }
+
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow-x: auto; /* Cho phép cuộn ngang khi cần thiết */
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    thead {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    th:first-child,
+    td:first-child {
+        left: 0;
+        background-color: #f2f2f2;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+<div class="main-page">
+    <div class="col_3">
+        <div class="col-md-3 widget widget1">
+            <div class="r3_counter_box">
+                <i class="pull-left fa fa-dollar icon-rounded"></i>
+                <div class="stats">
+                    <h5><strong>@string.Format("{0:N0}\u20ab", ViewBag.TotalRevenueStatistics)</strong></h5>
+                    <span>Tổng doanh thu</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 widget widget1">
+            <div class="r3_counter_box">
+                <i class="pull-left fa fa-laptop user1 icon-rounded"></i>
+                <div class="stats">
+                    <h5><strong>@ViewBag.StatisticBill</strong></h5>
+                    <span>Tổng đơn hàng</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 widget widget1">
+            <div class="r3_counter_box">
+                <i class="pull-left fa fa-money user2 icon-rounded"></i>
+                <div class="stats">
+                    <h5><strong>@string.Format("{0:N0}\u20ab", ViewBag.TotalRevenueStatisticsByMonthAndYear)</strong></h5>
+                    <span>Tổng doanh thu tháng @DateTime.Now.Month</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 widget widget1">
+            <div class="r3_counter_box">
+                <i class="pull-left fa fa-eye dollar1 icon-rounded"></i>
+                <div class="stats">
+                    <h5><strong>@ViewBag.NumberOfPeopleOnline</strong></h5>
+                    <span>Số người online</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 widget">
+            <div class="r3_counter_box">
+                <i class="pull-left fa fa-users dollar2 icon-rounded"></i>
+                <div class="stats">
+                    <h5><strong>@ViewBag.VisitorNumberPage</strong></h5>
+                    <span>Số người truy cập</span>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+
+    <div class="container_Products" style="margin-top: 18px;">
+        <h2 style="display: flex; justify-content: center; margin-bottom: 24px;"><strong>Danh sách đơn hàng</strong></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên khách hàng</th>
+                    <th>Ngày đặt hàng</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Tổng tiền</th>
+                    <th>Tổng tiền hóa đơn</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    double totalBill = 0;
+                    foreach (var detail in item.CHITIETDONDATHANG)
+                    {
+                        <tr>
+                            <td>@(detail == item.CHITIETDONDATHANG.First() ? item.KHACHHANG.TenKH : "")</td>
+                            <td>@(detail == item.CHITIETDONDATHANG.First() ? item.NgayDatHang.ToString("dd/MM/yyyy") : "")</td>
+                            <td>@detail.TenSP</td>
+                            <td>@detail.SoLuong</td>
+                            <td>@detail.DonGia</td>
+                            <td>@string.Format("{0:N0}\u20ab", detail.SoLuong * detail.DonGia)</td>
+                            <td>
+                                <!-- Nếu bạn muốn thêm nút hoặc hành động khác, bạn có thể thực hiện ở đây -->
+                            </td>
+                        </tr>
+                        totalBill += (double)detail.SoLuong * (double)detail.DonGia;
+                    }
+                    <tr>
+                        <!-- Cột rỗng cho các cột trước đó -->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                        <!-- Hiển thị tổng hóa đơn -->
+                        <td><strong style="color: red;">@string.Format("{0:N0}\u20ab", totalBill)</strong></td>
+                        <td></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    @{
+        int PrevPage = ViewBag.Page - 1;
+        if (PrevPage <= 0)
+        {
+            PrevPage = ViewBag.NoOfPages;
+        }
+
+        int NextPage = ViewBag.Page + 1;
+        if (NextPage > ViewBag.NoOfPages)
+        {
+            NextPage = 1;
+        }
+    }
+
+    <div class="text-center">
+        <ul class="pagination pagination">
+            <li class=""><a href="@Url.Action("Index", "Admin", new {page = PrevPage})">«</a></li>
+            @for (int i = 0; i < ViewBag.NoOfPages; i++)
+            {
+                if (i + 1 == ViewBag.Page)
+                {
+                    <li class="page-item active">
+                        <a class="page-link" href="@Url.Action("Index", "Admin", new {page=i+1})">
+                            @(i+1)
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", "Admin", new {page=i+1})">
+                            @(i+1)
+                        </a>
+                    </li>
+                }
+            }
+            <li class="page-item active">
+                <a class="page-link" href="@Url.Action("Index", "Admin", new {page = NextPage})">
+                    »
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>

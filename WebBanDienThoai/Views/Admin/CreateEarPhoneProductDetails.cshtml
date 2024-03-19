@@ -1,0 +1,135 @@
+﻿@using WebBanDienThoai.Models;
+@model CHITIETPHUKIENTAINGHE
+@{
+    ViewBag.Title = "Thêm chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 24px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = ViewBag.CategoryID })" style="text-decoration: none;">Sản phẩm</a> / <a href="#" style="text-decoration: none;">Thêm chi tiết</a></h3>
+
+@if (Model != null)
+{
+    <div class="container_Products">
+        <div>
+            <h3 style="display: flex; justify-content: center;"><strong>Sản phẩm @ViewBag.ProductsName đã có thông tin chi tiết</strong></h3>
+            <div style="display: flex; justify-content: center;">
+                <a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = ViewBag.CategoryID })" class="btn btn-danger" style="margin-top: 12px">
+                    Trở lại
+                </a>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container_Products">
+        <div class="container">
+            <h2 style="display: flex; justify-content: center;"><strong>@ViewBag.ProductsName</strong></h2>
+            @using (Html.BeginForm("CreateEarPhoneProductDetails", "Admin", FormMethod.Post, new { id = "myForm" }))
+            {
+                <div class="form-group">
+                    <label for="MaSP">Mã sản phẩm</label>
+                    <input type="text" id="MaSP" name="MaSP" class="form-control" value="@ViewBag.ProductsID">
+                </div>
+                <div class="form-group">
+                    <label for="DUNGLUONGPIN">Dung lượng pin</label>
+                    @Html.TextBoxFor(row => row.DUNGLUONGPIN, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="THOILUONGSAC">Thời lượng sạc</label>
+                    @Html.TextBoxFor(row => row.THOILUONGSAC, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="CONGSAC">Cổng sạc</label>
+                    @Html.TextBoxFor(row => row.CONGSAC, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="CONGNGHEAMTHANH">Công nghệ âm thanh</label>
+                    @Html.TextBoxFor(row => row.CONGNGHEAMTHANH, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="TIENICH">Tiện ích</label>
+                    @Html.TextBoxFor(row => row.TIENICH, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="TUONGTHICH">Tương thích</label>
+                    @Html.TextBoxFor(row => row.TUONGTHICH, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="CONGNGHEKETNOT">Cổng kết nối</label>
+                    @Html.TextBoxFor(row => row.CONGNGHEKETNOT, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="PHIMDIEUKHIEN">Phím điều khiển</label>
+                    @Html.TextBoxFor(row => row.PHIMDIEUKHIEN, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="KICHTHUOC">Kích thước</label>
+                    @Html.TextBoxFor(row => row.KICHTHUOC, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="BAOHANH">Bảo hành</label>
+                    @Html.TextBoxFor(row => row.BAOHANH, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="KHOILUONG">Khối lượng</label>
+                    @Html.TextBoxFor(row => row.KHOILUONG, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = 1 })" class="btn btn-danger">Trở lại</a>
+                    <input type="submit" value="Lưu" class="btn btn-primary" />
+                </div>
+            }
+        </div>
+    </div>
+}
+<script>
+    function kiemTraDuLieu() {
+        var maSP = document.getElementById("MaSP").value;
+        var dungLuongPin = document.getElementById("DUNGLUONGPIN").value;
+        var thoiLuongSac = document.getElementById("THOILUONGSAC").value;
+        var congSac = document.getElementById("CONGSAC").value;
+        var congNgheAmThanh = document.getElementById("CONGNGHEAMTHANH").value;
+        var tienIch = document.getElementById("TIENICH").value;
+        var tuongThich = document.getElementById("TUONGTHICH").value;
+        var congNgheKetNoi = document.getElementById("CONGNGHEKETNOT").value;
+        var phimDieuKhien = document.getElementById("PHIMDIEUKHIEN").value;
+        var kichThuoc = document.getElementById("KICHTHUOC").value;
+        var baoHanh = document.getElementById("BAOHANH").value;
+        var khoiLuong = document.getElementById("KHOILUONG").value;
+
+        if (maSP === "" || dungLuongPin === "" || thoiLuongSac === "" || congSac === "" || congNgheAmThanh === "" ||
+            tienIch === "" || tuongThich === "" || congNgheKetNoi === "" || phimDieuKhien === "" || kichThuoc === "" ||
+            baoHanh === "" || khoiLuong === "") {
+            alert("Vui lòng điền đầy đủ thông tin.");
+            return false; // Ngăn chặn việc gửi biểu mẫu nếu có trường để trống
+        }
+        return true; // Cho phép gửi biểu mẫu nếu tất cả các trường đã được điền đầy đủ
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Khi biểu mẫu được gửi, kiểm tra dữ liệu trước khi gửi.
+        document.getElementById("myForm").onsubmit = function() {
+            return kiemTraDuLieu();
+        };
+    });
+</script>

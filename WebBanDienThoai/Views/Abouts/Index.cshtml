@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "Thông tin";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@section Banner {
+    <!-- banner-2 -->
+    <div class="page-head_agile_info_w3l">
+
+    </div>
+}
+
+<style>
+    .about-text {
+        text-align: justify;
+        text-indent: 20px;
+        font-size: 16px;
+        padding-top: 20px;
+    }
+</style>
+
+<!-- page -->
+<div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+        <div class="container">
+            <ul class="w3_short">
+                <li>
+                    @Html.ActionLink("Trang chủ", "Index", "Home")
+                    <i>|</i>
+                </li>
+                <li>Thông tin</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- welcome -->
+<div class="welcome">
+    <div class="container">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l">
+            Mai Nguyen - Nơi Hội Tụ Công Nghệ và Phong Cách
+            <span class="heading-style">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </h3>
+        <!-- //tittle heading -->
+        <div class="w3l-welcome-info">
+            <div class="col-sm-6 col-xs-6 welcome-grids">
+                <div class="welcome-img">
+                    <img src="@Url.Content("~/Content/Images/Downloads/thongtin-1.jpg")" class="img-responsive zoom-img" alt="">
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-6 welcome-grids">
+                <div class="welcome-img">
+                    <img src="@Url.Content("~/Content/Images/Downloads/thongtin-2.jpg")" class="img-responsive zoom-img" alt="">
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="w3l-welcome-text">
+            <div class="agile-sometext" style="padding-top: 12px">
+                <div class="about-text">
+                    <p>
+                        Chào mừng bạn đến với Mai Nguyen, một điểm đến độc đáo cho những người đam mê công nghệ và phong cách. Tại Mai Nguyen, chúng tôi tự hào giới thiệu đến bạn một trải nghiệm mua sắm trực tuyến đỉnh cao, nơi bạn có thể khám phá và sở hữu những chiếc điện thoại di động và phụ kiện đẳng cấp từ các thương hiệu hàng đầu trên thị trường.
+                    </p>
+                </div>
+                <div class="about-text">
+                    <h4 style="font-weight: bold;">Điện thoại di động đa dạng</h4>
+                    <p style="font-size: 16px; margin-top:16px">
+                        Mai Nguyen tự hào mang đến cho bạn một bộ sưu tập đa dạng của các dòng điện thoại từ các thương hiệu uy tín như Apple, Samsung, Oppo, Xiaomi và nhiều hãng khác. Tại đây, bạn có thể dễ dàng tìm thấy những chiếc điện thoại mới nhất với hiệu suất mạnh mẽ, camera đỉnh cao, và thiết kế đẹp mắt.
+                    </p>
+                </div>
+                <div class="about-text">
+                    <h4 style="font-weight: bold;">Phụ kiện độc đáo</h4>
+                    <p style="font-size: 16px; margin-top:16px">
+                        Ngoài các sản phẩm điện thoại, Mai Nguyen còn cung cấp một loạt phụ kiện độc đáo để bạn có thể tùy chỉnh và bảo vệ chiếc điện thoại của mình. Từ ốp lưng, bao da, tai nghe chất lượng đến sạc dự phòng và nhiều sản phẩm khác, chúng tôi cam kết đáp ứng mọi nhu cầu của bạn.
+                    </p>
+                </div>
+                <div class="about-text">
+                    <h4 style="font-weight: bold;">Dịch vụ chuyên nghiệp</h4>
+                    <p style="font-size: 16px; margin-top: 16px">
+                        Tại Mai Nguyen, chúng tôi luôn đặt khách hàng lên hàng đầu. Dịch vụ chuyên nghiệp và hỗ trợ tận tâm sẽ giúp bạn có trải nghiệm mua sắm trực tuyến tuyệt vời nhất. Chúng tôi cam kết mang đến cho bạn sự hài lòng và sự tin tưởng trong mỗi giao dịch.
+                    </p>
+                </div>
+                <div class="about-text">
+                    <p style="font-size: 18px; font-style: italic; font-weight: bold; color: #000000">
+                        Hãy cùng Mai Nguyen khám phá sự kết hợp hoàn hảo giữa công nghệ và phong cách. Trang web của chúng tôi sẽ là người bạn đồng hành đáng tin cậy trong hành trình tìm kiếm các sản phẩm công nghệ ưng ý nhất.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //welcome -->

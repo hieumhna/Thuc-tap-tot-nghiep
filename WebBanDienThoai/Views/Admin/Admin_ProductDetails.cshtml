@@ -1,0 +1,595 @@
+﻿
+@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+<style>
+    body {
+        background-color: #f7f7f7;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        width: 110px;
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f7f7f7;
+    }
+
+    .title_Details {
+        text-align: center;
+        font-weight: bold;
+        padding: 12px;
+    }
+
+    .details {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-style: italic; /* Thêm kiểu in nghiêng */
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+@{
+    string str;
+    List<string> feature = new List<string>();
+}
+
+<h3 class="title2"><a href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP = ViewBag.CategoryID})" style="text-decoration: none;">Sản phẩm</a> / <a href="@Url.Action("Admin_ListProductDetails", "Admin", new {MaLoaiSP = ViewBag.CategoryID})" style="text-decoration: none;">Chi tiết sản phẩm</a></h3>
+
+<div class="container">
+
+    @if (ViewBag.CategoryID == 1 || ViewBag.CategoryID == 2 || ViewBag.CategoryID == 3 || ViewBag.CategoryID == 4 || ViewBag.CategoryID == 5)
+    {
+        <h3 class="title_Details">@ViewBag.ProductName</h3>
+        @*<a href="@Url.Action("Admin_Product", "Admin", new {id=ViewBag.CategoryID})" class="btn btn-danger">
+                <i class="fa fa-chevron-left"></i> Trở lại
+            </a>*@
+        <table>
+            <tr>
+                <th>Mã chi tiết sản phẩm</th>
+                <td>@ViewBag.Phone.MaChiTietSP</td>
+            </tr>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <td>@ViewBag.Phone.MaSP</td>
+            </tr>
+            <tr>
+                <th>Kích thước màn hình</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.KICHTHUOCMANHINH;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Công nghệ màn hình</th>
+                <td>@ViewBag.Phone.CONGNGHEMANHINH</td>
+            </tr>
+            <tr>
+                <th>Độ phân giải</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.DOPHANGIAI;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Tính năng màn hình</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.TINHNANGMANGHINH;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Tuần số quét</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.TANSOQUET;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Camera sau</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.CAMERASAU;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Quay phim</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.QUAYPHIM;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Camera trước</th>
+                <td>@ViewBag.Phone.CAMERATRUOC</td>
+            </tr>
+            <tr>
+                <th>Tính năng camera</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.TINHNANGCAMERA;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Hệ điều hành</th>
+                <td>@ViewBag.Phone.HEDIEUHANH</td>
+            </tr>
+            <tr>
+                <th>Chip xử lý (CPU)</th>
+                <td>@ViewBag.Phone.CHIP</td>
+            </tr>
+            <tr>
+                <th>Tốc độ CPU</th>
+                <td>@ViewBag.Phone.TOCDOCPU</td>
+            </tr>
+            <tr>
+                <th>Chip đồ họa (GPU)</th>
+                <td>@ViewBag.Phone.CHIPDOHOA</td>
+            </tr>
+            <tr>
+                <th>Ram</th>
+                <td>@ViewBag.Phone.RAM</td>
+            </tr>
+            <tr>
+                <th>Dung lượng</th>
+                <td>@ViewBag.Phone.DUNGLUONG</td>
+            </tr>
+            <tr>
+                <th>Mạng di động</th>
+                <td>@ViewBag.Phone.MANGDIDONG</td>
+            </tr>
+            <tr>
+                <th>Sim</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.SIM;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Wifi</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.WIFI;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Cổng kết nối/sạc</th>
+                <td>@ViewBag.Phone.CONGKETNOI</td>
+            </tr>
+            <tr>
+                <th>Dung lượng pin</th>
+                <td>@ViewBag.Phone.DUNGLUONGPIN</td>
+            </tr>
+            <tr>
+                <th>Loại pin</th>
+                <td>@ViewBag.Phone.LOAIPIN</td>
+            </tr>
+            <tr>
+                <th>Hỗ trợ sạc tối đa</th>
+                <td>@ViewBag.Phone.HOTROSAC</td>
+            </tr>
+            <tr>
+                <th>Bảo mật nâng cao</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.BAOMAT;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Tính năng đặc biệt</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.TINHNANGDACBIET;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Kháng nước, bụi</th>
+                <td>@ViewBag.Phone.KHANGNUOC</td>
+            </tr>
+            <tr>
+                <th>Thiết kế</th>
+                <td>@ViewBag.Phone.THIETKE</td>
+            </tr>
+            <tr>
+                <th>Chất liệu</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.CHATLIEU;
+                        feature = str.Split('&').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Kích thước, khối lượng</th>
+                <td>
+                    @{
+                        str = ViewBag.Phone.KICHTHUOC;
+                        feature = str.Split('-').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>@item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Bảo hành</th>
+                <td>@ViewBag.Phone.BAOHANH Tháng</td>
+            </tr>
+            <tr>
+                <th>Thời điểm ra mắt</th>
+                <td>@ViewBag.Phone.RAMAT.ToString("dd/MM/yyyy")</td>
+            </tr>
+        </table>      
+    }
+    else
+    {
+        if (ViewBag.CategoryID == 6)
+        {
+            <h3 class="title_Details">@ViewBag.ProductName</h3>
+            @*<a href="@Url.Action("Admin_Product", "Admin", new {id=ViewBag.CategoryID})" class="btn btn-danger">
+                    <i class="fa fa-chevron-left"></i> Trở lại
+                </a>*@
+            <table>
+                <tr>
+                    <th>Mã chi tiết phụ kiện</th>
+                    <td>@ViewBag.Backupcharger.MaCTPKSac</td>
+                </tr>
+                <tr>
+                    <th>Mã sản phẩm</th>
+                    <td>@ViewBag.Backupcharger.MaSP</td>
+                </tr>
+                <tr>
+                    <th>Hiệu suất sạc</th>
+                    <td>
+                        @{
+                            str = ViewBag.Backupcharger.HIEUSUAT;
+                            feature = str.Split(',').ToList();
+                            foreach (string item in feature)
+                            {
+                                <div>@item</div>
+                            }
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <th>Dung lượng pin</th>
+                    <td>@ViewBag.Backupcharger.DUNGLUONGPIN</td>
+                </tr>
+                <tr>
+                    <th>Thời gian sạc</th>
+                    <td>
+                        @{
+                            str = ViewBag.Backupcharger.THOIGIANSAC;
+                            feature = str.Split(',').ToList();
+                            foreach (string item in feature)
+                            {
+                                <div>@item</div>
+                            }
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <th>Nguồn vào</th>
+                    <td>
+                        @{
+                            str = ViewBag.Backupcharger.NGUONVAO;
+                            feature = str.Split(',').ToList();
+                            foreach (string item in feature)
+                            {
+                                <div>@item</div>
+                            }
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <th>Nguồn ra</th>
+                    <td>
+                        @{
+                            str = ViewBag.Backupcharger.NGUONRA;
+                            feature = str.Split(',').ToList();
+                            foreach (string item in feature)
+                            {
+                                <div>@item</div>
+                            }
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <th>Công nghệ/Tiện ích</th>
+                    <td>
+                        @{
+                            str = ViewBag.Backupcharger.CONGNGHE;
+                            feature = str.Split(',').ToList();
+                            foreach (string item in feature)
+                            {
+                                <div>@item</div>
+                            }
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <th>Kích thước</th>
+                    <td>
+                        @{
+                            str = ViewBag.Backupcharger.KICHTHUOC;
+                            feature = str.Split('-').ToList();
+                            foreach (string item in feature)
+                            {
+                                <div>@item</div>
+                            }
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <th>Bảo hành</th>
+                    <td>@ViewBag.Backupcharger.BAOHANH Tháng</td>
+                </tr>
+                <tr>
+                    <th>Khối lượng</th>
+                    <td>
+                        @{
+                            str = ViewBag.Backupcharger.KHOILUONG;
+                            feature = str.Split(',').ToList();
+                            foreach (string item in feature)
+                            {
+                                <div>@item</div>
+                            }
+                        }
+                    </td>
+                </tr>
+            </table>           
+        }
+        else
+        {
+            if (ViewBag.CategoryID == 7)
+            {
+                <h3 class="title_Details">@ViewBag.ProductName</h3>
+                @*<a href="@Url.Action("Admin_Product", "Admin", new {id=ViewBag.CategoryID})" class="btn btn-danger">
+                        <i class="fa fa-chevron-left"></i> Trở lại
+                    </a>*@
+                <table>
+                    <tr>
+                        <th>Mã chi tiết phụ kiện</th>
+                        <td>@ViewBag.Earphone.MaPKTaiNghe</td>
+                    </tr>
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <td>@ViewBag.Earphone.MaSP</td>
+                    </tr>
+                    <tr>
+                        <th>Thời lượng pin</th>
+                        <td>
+                            @{
+                                str = ViewBag.Earphone.DUNGLUONGPIN;
+                                feature = str.Split(',').ToList();
+                                foreach (string item in feature)
+                                {
+                                    <div>@item</div>
+                                }
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Thời lượng sạc</th>
+                        <td>@ViewBag.Earphone.DUNGLUONGPIN</td>
+                    </tr>
+                    <tr>
+                        <th>Cổng sạc</th>
+                        <td>
+                            @{
+                                str = ViewBag.Earphone.CONGSAC;
+                                feature = str.Split(',').ToList();
+                                foreach (string item in feature)
+                                {
+                                    <div>@item</div>
+                                }
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Công nghệ âm thanh</th>
+                        <td>
+                            @{
+                                str = ViewBag.Earphone.CONGNGHEAMTHANH;
+                                feature = str.Split(',').ToList();
+                                foreach (string item in feature)
+                                {
+                                    <div>@item</div>
+                                }
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Tiện ích</th>
+                        <td>
+                            @{
+                                str = ViewBag.Earphone.TIENICH;
+                                feature = str.Split(',').ToList();
+                                foreach (string item in feature)
+                                {
+                                    <div>@item</div>
+                                }
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Tương thích</th>
+                        <td>
+                            @{
+                                str = ViewBag.Earphone.TUONGTHICH;
+                                feature = str.Split(',').ToList();
+                                foreach (string item in feature)
+                                {
+                                    <div>@item</div>
+                                }
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Công nghệ kết nối</th>
+                        <td>
+                            @{
+                                str = ViewBag.Earphone.CONGNGHEKETNOT;
+                                feature = str.Split(',').ToList();
+                                foreach (string item in feature)
+                                {
+                                    <div>@item</div>
+                                }
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Phím điều khiển</th>
+                        <td>
+                            @{
+                                str = ViewBag.Earphone.PHIMDIEUKHIEN;
+                                feature = str.Split(',').ToList();
+                                foreach (string item in feature)
+                                {
+                                    <div>@item</div>
+                                }
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Kích thước</th>
+                        <td>
+                            @{
+                                str = ViewBag.Earphone.KICHTHUOC;
+                                feature = str.Split('-').ToList();
+                                foreach (string item in feature)
+                                {
+                                    <div>@item</div>
+                                }
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Bảo hành</th>
+                        <td>@ViewBag.Earphone.BAOHANH Tháng</td>
+                    </tr>
+                    <tr>
+                        <th>Khối lượng</th>
+                        <td>
+                            @{
+                                str = ViewBag.Earphone.KHOILUONG;
+                                feature = str.Split('&').ToList();
+                                foreach (string item in feature)
+                                {
+                                    <div>@item</div>
+                                }
+                            }
+                        </td>
+                    </tr>
+                </table>
+            }
+        }
+    }
+</div>

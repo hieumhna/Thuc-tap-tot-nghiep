@@ -1,0 +1,80 @@
+﻿@using WebBanDienThoai.Models
+
+<style>
+    /* CSS cho nút "Gửi" */
+    #submitBtn, .btn-info {
+        background-color: #1accfd; /* Màu nền nút */
+        color: #fff; /* Màu chữ nút */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        width: 100%;
+    }
+
+        #submitBtn:hover, .btn-info:hover {
+            background-color: #FF5722; /* Màu nền nút khi di chuột qua */
+        }
+
+    /* Canh giữa nút trong phần "Phạm vi giá" */
+    .range {
+        text-align: center;
+    }
+
+    /* Để nút hiển thị giữa theo chiều ngang, bạn có thể sử dụng margin: 0 auto; */
+    #submitBtn {
+        display: inline-block;
+        margin: 10px auto 0;
+    }
+</style>
+
+
+<div style="height: 100vh" class="side-bar col-md-3">
+
+    <div style="text-align: center; margin: 10px 0" class="sort-by-price">
+        <button class="btn-info" id="descBtn" onclick=" location.href='@Url.Action("Index", "Home")'">Trang chủ</button>
+    </div>
+
+    <hr />
+
+    <div style="text-align: center; margin: 10px 0" class="sort-by-price">
+        <h3 class="agileits-sear-head">Đơn hàng</h3>
+        <button class="btn-info" id="descBtn" onclick="location.href='@Url.Action("OrderStatus", "Cart")'">Tra cứu đơn hàng</button>
+    </div>
+
+    <div style="text-align: center; margin: 10px 0" class="sort-by-price">
+        <button class="btn-info" id="ascBtn" onclick="location.href='@Url.Action("PurchaseHistory", "Cart")'">Lịch sử mua hàng</button>
+    </div>
+
+    <hr />
+
+    <div style="text-align: center; margin: 10px 0" class="sort-by-price">
+        <h3 class="agileits-sear-head">Tài khoản của tôi</h3>
+        <button class="btn-info" id="descBtn" onclick="location.href='@Url.Action("ViewInformation", "Member")'">Hồ sơ</button>
+    </div>
+
+    <div style="text-align: center; margin: 10px 0" class="sort-by-price">
+        <button class="btn-info" id="ascBtn" onclick="location.href='@Url.Action("ChangePassword", "Member")'">Đổi mật khẩu</button>
+    </div>
+
+    <div style="text-align: center; margin: 10px 0" class="sort-by-price">
+        <button class="btn-info" id="ascBtn" onclick="location.href='@Url.Action("Logout", "Login")'">Đăng xuất</button>
+    </div>
+
+    <hr />
+
+    <div style="text-align: center; margin: 10px 0" class="sort-by-price">
+        <h3 class="agileits-sear-head">Hỗ trợ</h3>
+        <button class="btn-info" id="descBtn" onclick="location.href='@Url.Action("Index", "Helps")'">Giúp đỡ</button>
+    </div>
+
+    <div style="text-align: center; margin: 10px 0" class="sort-by-price">
+        <button class="btn-info" id="ascBtn" onclick="location.href='@Url.Action("Index", "Questions")'">Câu hỏi thường gặp</button>
+    </div>
+
+    <div style="text-align: center; margin: 10px 0" class="sort-by-price">
+        <button class="btn-info" id="ascBtn" onclick="location.href='@Url.Action("Index", "WarrantyPolicys")'">Chính sách bảo hành</button>
+    </div>
+</div>

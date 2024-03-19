@@ -1,0 +1,138 @@
+﻿@using WebBanDienThoai.Models; 
+@model THANHVIEN
+
+@{
+    ViewBag.Title = "Đăng nhập";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<style>
+    .brand-logo:hover {
+        color: #fff
+    }
+
+    .theme-button:hover {
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #000;
+    }
+
+    .theme-button:focus {
+        border: 1px solid #1accfd;
+        background-color: #1accfd;
+        color: #fff;
+        outline: none;
+    }
+
+    .validation-summary-errors {
+        color: red;
+    }
+
+        .validation-summary-errors li {
+            margin-bottom: 4px;
+        }
+
+    .form-input {
+        position: relative;
+    }
+
+    #password {
+        padding-right: 30px; /* Để tạo không gian cho biểu tượng con mắt */
+    }
+
+    .password-toggle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background-image: url('../../content/images/icons/close-eye.png');
+        background-size: cover;
+    }
+
+        .password-toggle.visible {
+            background-image: url('../../content/images/icons/eye.png');
+        }
+
+</style>
+
+<!-- login form -->
+<section id="main-content" class="w3l-login">
+    <div class="overlay">
+        <div class="wrapper">
+            <div class="logo">
+                @Html.ActionLink("Mai Nguyen", "Index", "Home", null, new { @class = "brand-logo", @style = "font-weight: bold" })
+            </div>
+            <div class="form-section">
+                <h3>Đăng nhập</h3>
+                <h6>Để tiếp tục với chúng tôi</h6>
+                @using (Ajax.BeginForm("Login", "Login", FormMethod.Post, new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "message" }, new { @class = "signin-form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-input">
+                        @Html.TextBoxFor(model => model.TaiKhoan, new
+                        {
+                            @placeholder = "Tài khoản",
+                            @required = ""
+                        })
+                    </div>
+                    <div class="form-input">
+                        @Html.PasswordFor(model => model.MatKhau, new
+                        {
+                            @id = "password",
+                       @placeholder = "Mật khẩu",
+                            required = "",
+                            oninput = "checkpasswordlength();"
+                        })
+                        <span class="password-toggle" onclick="togglePasswordVisibility()"></span>
+                    </div>
+                    <p id="message" style="font-size: 14px; font-weight: bold; color: red; text-align: left; "></p>
+                    <label class="check-remaind">
+                        <input id="RememberMe" name="RememberMe" type="checkbox" value="true">
+                        <span class="checkmark"></span>
+                        <p class="remember">Ghi nhớ tài khoản này</p>
+                    </label>
+                    <button type="submit" class="btn theme-button mt-4">Đăng nhập</button>
+                    <div class="new-signup">
+                        <a href="@Url.Action("ForgotPassword", "Login")" class="signuplink">Quên mật khẩu?</a>
+                    </div>
+                }
+                <p class="signup">Bạn chưa có tài khoản? <a href="@Url.Action("Register", "Register")" class="signuplink">Đăng ký</a></p>
+            </div>
+        </div>
+    </div>
+    @*<div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>*@
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('html, body').animate({
+            scrollTop: $('#main-content').offset().top
+        }, 1000);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('TaiKhoan').focus();
+    });
+</script>
+
+<script>
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var passwordToggle = document.querySelector(".password-toggle");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordToggle.classList.add("visible");
+        } else {
+            passwordInput.type = "password";
+            passwordToggle.classList.remove("visible");
+        }
+    }
+</script>

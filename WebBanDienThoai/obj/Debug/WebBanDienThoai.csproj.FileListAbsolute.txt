@@ -1,0 +1,1016 @@
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\csc.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\csc.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\csc.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\csi.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\csi.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\csi.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\vbc.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\vbc.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\vbc.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Helpers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Mvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Razor.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Webpages.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Razor.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Webpages.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Helpers.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\System.Web.Mvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CopyComplete
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\EntityFramework.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\EntityFramework.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\System.Memory.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Project-WebDienThoai\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\csc.exe
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\csc.exe.config
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\csc.rsp
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\csi.exe
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\csi.exe.config
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\csi.rsp
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\System.Memory.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe.config
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\vbc.rsp
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\EntityFramework.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Helpers.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Mvc.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Razor.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Webpages.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\EntityFramework.xml
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Razor.xml
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Webpages.xml
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Helpers.xml
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\System.Web.Mvc.xml
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CopyComplete
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\csc.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\csc.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\csc.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\csi.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\csi.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\csi.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\System.Memory.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\vbc.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\EntityFramework.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Helpers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Mvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Razor.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Webpages.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\EntityFramework.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Razor.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Webpages.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Helpers.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Mvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CopyComplete
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\CaptchaMvc.dll
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\CaptchaMvc.pdb
+D:\Study\HK5-2023-2024\DuAn\WebBanDienThoai\bin\CaptchaMvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\CaptchaMvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\CaptchaMvc.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\CaptchaMvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\PagedList.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\PagedList.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\PagedList.Mvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\PagedList.Mvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\WebBanDienThoai.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\csc.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\csc.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\csc.rsp
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\csi.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\csi.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\csi.rsp
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\System.Memory.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\vbc.rsp
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\CaptchaMvc.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\EntityFramework.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\PagedList.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\PagedList.Mvc.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Helpers.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Mvc.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Razor.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Webpages.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\CaptchaMvc.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\CaptchaMvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\EntityFramework.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\PagedList.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\PagedList.Mvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Razor.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Webpages.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Helpers.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\bin\System.Web.Mvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CopyComplete
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\csc.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\csc.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\csc.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\csi.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\csi.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\csi.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\System.Memory.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\vbc.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\CaptchaMvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\EntityFramework.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\PagedList.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\PagedList.Mvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Helpers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Mvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Razor.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Webpages.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\CaptchaMvc.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\CaptchaMvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\EntityFramework.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\PagedList.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\PagedList.Mvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Razor.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Webpages.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Helpers.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Mvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CopyComplete
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Buffers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Memory.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Http.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Buffers.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Memory.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Http.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Text.Json.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.ValueTuple.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.Text.Json.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn_CT\DuAn\WebBanDienThoai\bin\System.ValueTuple.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\WebBanDienThoai.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csc.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csc.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csc.rsp
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csi.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csi.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csi.rsp
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Memory.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\vbc.rsp
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\CaptchaMvc.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\EntityFramework.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\PagedList.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\PagedList.Mvc.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Buffers.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Memory.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Text.Json.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.ValueTuple.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Helpers.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Http.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Mvc.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Razor.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\CaptchaMvc.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\CaptchaMvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\EntityFramework.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\PagedList.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\PagedList.Mvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Buffers.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Memory.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Text.Json.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.ValueTuple.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Http.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Razor.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Helpers.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Mvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CopyComplete
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csc.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csc.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csc.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csi.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csi.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\csi.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Memory.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\vbc.rsp
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\CaptchaMvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\EntityFramework.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\PagedList.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\PagedList.Mvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Buffers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Memory.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Text.Json.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.ValueTuple.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Helpers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Http.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Mvc.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Razor.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\CaptchaMvc.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\CaptchaMvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\EntityFramework.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\PagedList.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\PagedList.Mvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Buffers.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Memory.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Text.Json.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.ValueTuple.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Http.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Razor.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Helpers.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\bin\System.Web.Mvc.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CopyComplete
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\Du_An\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\WebBanDienThoai.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\WebBanDienThoai.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\csc.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\csc.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\csc.rsp
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\csi.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\csi.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\csi.rsp
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\System.Memory.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\vbc.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\vbc.rsp
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\CaptchaMvc.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\EntityFramework.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\PagedList.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\PagedList.Mvc.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Buffers.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Memory.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Text.Json.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.ValueTuple.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Helpers.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Http.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Mvc.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Razor.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Webpages.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\CaptchaMvc.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\CaptchaMvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\EntityFramework.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.pdb
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\PagedList.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\PagedList.Mvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Buffers.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Memory.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Text.Json.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.ValueTuple.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Http.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Razor.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Webpages.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Helpers.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\bin\System.Web.Mvc.xml
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CopyComplete
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+E:\HK V (2023 - 2024)\Lap_Trinh_Web\New folder\DuAn\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Buffers.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Memory.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Text.Json.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.ValueTuple.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Http.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.dll
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.pdb
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\Newtonsoft.Json.Bson.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Buffers.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Memory.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Net.Http.Formatting.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Numerics.Vectors.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Text.Encodings.Web.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Text.Json.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.ValueTuple.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Http.xml
+D:\Study\HK5-2023-2024\LapTrinhWeb\DuAn\WebBanDienThoai\bin\System.Web.Http.WebHost.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\WebBanDienThoai.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\WebBanDienThoai.pdb
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csc.exe
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csc.exe.config
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csc.rsp
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csi.exe
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csi.exe.config
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csi.rsp
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Memory.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\vbc.exe
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\vbc.exe.config
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\vbc.rsp
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\CaptchaMvc.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.Bson.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.Mvc.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Buffers.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Memory.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Net.Http.Formatting.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Numerics.Vectors.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Encodings.Web.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Json.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.ValueTuple.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Helpers.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.WebHost.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Mvc.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Razor.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\CaptchaMvc.pdb
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\CaptchaMvc.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.Bson.pdb
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.Bson.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.Mvc.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Buffers.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Memory.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Net.Http.Formatting.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Numerics.Vectors.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Encodings.Web.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Json.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.ValueTuple.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.WebHost.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Razor.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Helpers.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Mvc.xml
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CopyComplete
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+B:\Downloadss\UDGame\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\WebBanDienThoai.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\WebBanDienThoai.pdb
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csc.exe
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csc.exe.config
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csc.rsp
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csi.exe
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csi.exe.config
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csi.rsp
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Memory.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\vbc.exe
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\vbc.rsp
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\CaptchaMvc.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.Bson.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.Mvc.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Buffers.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Memory.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Numerics.Vectors.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Encodings.Web.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Json.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.ValueTuple.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Helpers.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Mvc.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Razor.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\CaptchaMvc.pdb
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\CaptchaMvc.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.Bson.pdb
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.Bson.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.Mvc.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Buffers.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Memory.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Numerics.Vectors.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Encodings.Web.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Json.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.ValueTuple.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Razor.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Helpers.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Mvc.xml
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDi.E3FE64FE.Up2Date
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+C:\Users\Admin\Downloads\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\WebBanDienThoai.dll.config
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\WebBanDienThoai.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\WebBanDienThoai.pdb
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csc.exe
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csc.exe.config
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csc.rsp
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csi.exe
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csi.exe.config
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\csi.rsp
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.Managed.Core.targets
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Buffers.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Collections.Immutable.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Memory.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Numerics.Vectors.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Reflection.Metadata.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\vbc.exe
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\vbc.exe.config
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\vbc.rsp
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\roslyn\VBCSCompiler.exe.config
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\CaptchaMvc.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.SqlServer.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.Web.Infrastructure.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.Bson.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.Mvc.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Buffers.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Memory.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Net.Http.Formatting.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Numerics.Vectors.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Encodings.Web.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Json.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.ValueTuple.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Helpers.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.WebHost.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Mvc.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Razor.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Deployment.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Razor.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\CaptchaMvc.pdb
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\CaptchaMvc.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\EntityFramework.SqlServer.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Abstractions.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Logging.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Microsoft.IdentityModel.Tokens.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.Bson.pdb
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\Newtonsoft.Json.Bson.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\PagedList.Mvc.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Buffers.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Memory.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Net.Http.Formatting.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Numerics.Vectors.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Encodings.Web.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Text.Json.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Threading.Tasks.Extensions.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.ValueTuple.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Http.WebHost.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Razor.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Deployment.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Webpages.Razor.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Helpers.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\bin\System.Web.Mvc.xml
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.AssemblyReference.cache
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.csproj.CoreCompileInputs.cache
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDi.E3FE64FE.Up2Date
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.dll
+D:\hieu\DuAnThucTap-AspNet-MVC\WebBanDienThoai\obj\Debug\WebBanDienThoai.pdb

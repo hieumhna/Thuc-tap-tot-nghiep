@@ -1,0 +1,663 @@
+﻿
+@{
+    ViewBag.Title = "Thanh toán";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<style>
+    .truck-button {
+        --color: #fff;
+        --background: #ff5722;
+        --tick: #16bf78;
+        --base: #0d0f18;
+        --wheel: #2b3044;
+        --wheel-inner: #646b8c;
+        --wheel-dot: #fff;
+        --back: #6d58ff;
+        --back-inner: #362a89;
+        --back-inner-shadow: #2d246b;
+        --front: #a6accd;
+        --front-shadow: #535a79;
+        --front-light: #fff8b1;
+        --window: #2b3044;
+        --window-shadow: #404660;
+        --street: #ff5722;
+        --street-fill: #1accfd;
+        --box: #dcb97a;
+        --box-shadow: #b89b66;
+        padding: 12px 0;
+        width: 172px;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        border: none;
+        outline: none;
+        color: var(--color);
+        background: var(--background);
+        border-radius: var(--br, 5px);
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        transform-style: preserve-3d;
+        transform: rotateX(var(--rx, 0deg)) translateZ(0);
+        transition: transform .5s, border-radius .3s linear var(--br-d, 0s);
+    }
+
+        .truck-button:before,
+        .truck-button:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 6px;
+            display: block;
+            background: var(--b, var(--street));
+            transform-origin: 0 100%;
+            transform: rotateX(90deg) scaleX(var(--sy, 1));
+        }
+
+        .truck-button:after {
+            --sy: var(--progress, 0);
+            --b: var(--street-fill);
+        }
+
+        .truck-button .default,
+        .truck-button .success {
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            opacity: var(--o, 1);
+            transition: opacity .3s;
+        }
+
+        .truck-button .success {
+            --o: 0;
+            position: absolute;
+            top: 12px;
+            left: 0;
+            right: 0;
+        }
+
+            .truck-button .success svg {
+                width: 12px;
+                height: 10px;
+                display: inline-block;
+                vertical-align: top;
+                fill: none;
+                margin: 7px 0 0 4px;
+                stroke: var(--tick);
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-dasharray: 16px;
+                stroke-dashoffset: var(--offset, 16px);
+                transition: stroke-dashoffset .4s ease .45s;
+            }
+
+        .truck-button .truck {
+            position: absolute;
+            width: 72px;
+            height: 28px;
+            transform: rotateX(90deg) translate3d(var(--truck-x, 4px), calc(var(--truck-y-n, -26) * 1px), 12px);
+        }
+
+            .truck-button .truck:before,
+            .truck-button .truck:after {
+                content: '';
+                position: absolute;
+                bottom: -6px;
+                left: var(--l, 18px);
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                z-index: 2;
+                box-shadow: inset 0 0 0 2px var(--wheel), inset 0 0 0 4px var(--wheel-inner);
+                background: var(--wheel-dot);
+                transform: translateY(calc(var(--truck-y) * -1px)) translateZ(0);
+            }
+
+            .truck-button .truck:after {
+                --l: 54px;
+            }
+
+            .truck-button .truck .wheel,
+            .truck-button .truck .wheel:before {
+                position: absolute;
+                bottom: var(--b, -6px);
+                left: var(--l, 6px);
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: var(--wheel);
+                transform: translateZ(0);
+            }
+
+            .truck-button .truck .wheel {
+                transform: translateY(calc(var(--truck-y) * -1px)) translateZ(0);
+            }
+
+                .truck-button .truck .wheel:before {
+                    --l: 35px;
+                    --b: 0;
+                    content: '';
+                }
+
+            .truck-button .truck .front,
+            .truck-button .truck .back,
+            .truck-button .truck .box {
+                position: absolute;
+            }
+
+            .truck-button .truck .back {
+                left: 0;
+                bottom: 0;
+                z-index: 1;
+                width: 47px;
+                height: 28px;
+                border-radius: 1px 1px 0 0;
+                background: linear-gradient(68deg, var(--back-inner) 0%, var(--back-inner) 22%, var(--back-inner-shadow) 22.1%, var(--back-inner-shadow) 100%);
+            }
+
+                .truck-button .truck .back:before,
+                .truck-button .truck .back:after {
+                    content: '';
+                    position: absolute;
+                }
+
+                .truck-button .truck .back:before {
+                    left: 11px;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 2;
+                    border-radius: 0 1px 0 0;
+                    background: var(--back);
+                }
+
+                .truck-button .truck .back:after {
+                    border-radius: 1px;
+                    width: 73px;
+                    height: 2px;
+                    left: -1px;
+                    bottom: -2px;
+                    background: var(--base);
+                }
+
+            .truck-button .truck .front {
+                left: 47px;
+                bottom: -1px;
+                height: 22px;
+                width: 24px;
+                -webkit-clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
+                clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
+                background: linear-gradient(84deg, var(--front-shadow) 0%, var(--front-shadow) 10%, var(--front) 12%, var(--front) 100%);
+            }
+
+                .truck-button .truck .front:before,
+                .truck-button .truck .front:after {
+                    content: '';
+                    position: absolute;
+                }
+
+                .truck-button .truck .front:before {
+                    width: 7px;
+                    height: 8px;
+                    background: #fff;
+                    left: 7px;
+                    top: 2px;
+                    -webkit-clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+                    clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+                    background: linear-gradient(59deg, var(--window) 0%, var(--window) 57%, var(--window-shadow) 55%, var(--window-shadow) 100%);
+                }
+
+                .truck-button .truck .front:after {
+                    width: 3px;
+                    height: 2px;
+                    right: 0;
+                    bottom: 3px;
+                    background: var(--front-light);
+                }
+
+            .truck-button .truck .box {
+                width: 13px;
+                height: 13px;
+                right: 56px;
+                bottom: 0;
+                z-index: 1;
+                border-radius: 1px;
+                overflow: hidden;
+                transform: translate(calc(var(--box-x, -24) * 1px), calc(var(--box-y, -6) * 1px)) scale(var(--box-s, .5));
+                opacity: var(--box-o, 0);
+                background: linear-gradient(68deg, var(--box) 0%, var(--box) 50%, var(--box-shadow) 50.2%, var(--box-shadow) 100%);
+                background-size: 250% 100%;
+                background-position-x: calc(var(--bx, 0) * 1%);
+            }
+
+                .truck-button .truck .box:before,
+                .truck-button .truck .box:after {
+                    content: '';
+                    position: absolute;
+                }
+
+                .truck-button .truck .box:before {
+                    content: '';
+                    background: rgba(white, .2);
+                    left: 0;
+                    right: 0;
+                    top: 6px;
+                    height: 1px;
+                }
+
+                .truck-button .truck .box:after {
+                    width: 6px;
+                    left: 100%;
+                    top: 0;
+                    bottom: 0;
+                    background: var(--back);
+                    transform: translateX(calc(var(--hx, 0) * 1px));
+                }
+
+        .truck-button.animation {
+            --rx: -90deg;
+            --br: 0;
+        }
+
+            .truck-button.animation .default {
+                --o: 0;
+            }
+
+            .truck-button.animation.done {
+                --rx: 0deg;
+                --br: 5px;
+                --br-d: 0.2s;
+            }
+
+                .truck-button.animation.done .success {
+                    --o: 1;
+                    --offset: 0;
+                }
+</style>
+
+<!-- page -->
+<div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+        <div class="container">
+            <ul class="w3_short">
+                <li>
+                    @Html.ActionLink("Trang chủ", "Index", "Home")
+                    <i>|</i>
+                </li>
+                <li>Thanh toán</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- payment page-->
+<div class="privacy">
+    <div class="container">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l">
+            THANH TOÁN
+            <span class="heading-style">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </h3>
+        <div class="checkout-right">
+            <!--Horizontal Tab-->
+            <div id="parentHorizontalTab">
+                <ul class="resp-tabs-list hor_1">
+                    <li>Thanh toán khi nhận hàng</li>
+                    <li>Thẻ tín dụng hoặc Ghi nợ</li>
+                    <li>Ngân hàng</li>
+                    <li>Tài khoản Paypal</li>
+                </ul>
+                <div class="resp-tabs-container hor_1">
+                    <div>
+                        <div class="vertical_post check_box_agile">
+                            <h5>Thanh toán khi nhận hàng</h5>
+                            <div style="margin-bottom: 15px" class="checkbox">
+                                <div class="check_box_one cashon_delivery">
+                                    <label style="padding: 0px" class="anim">
+                                        <span>
+                                            Phí thu hộ: ₫0 VNĐ. Ưu đãi về phí vận chuyển (nếu có) áp dụng cả với phí thu hộ.
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            @Html.Action("TotalMoney", "Cart")
+                            <div style="margin-top: 25px" class="creditly-card-form">
+                                <button class="truck-button" @*onclick="redirectToOrderPage()"*@>
+                                    <span class="default">ĐẶT HÀNG</span>
+                                    <span class="success">
+                                        ĐÃ ĐẶT HÀNG
+                                        <svg viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </svg>
+                                    </span>
+                                    <div class="truck">
+                                        <div class="wheel"></div>
+                                        <div class="back"></div>
+                                        <div class="front"></div>
+                                        <div class="box"></div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form action="#" method="post" class="creditly-card-form agileinfo_form">
+                            <div class="creditly-wrapper wthree, w3_agileits_wrapper">
+                                <div class="credit-card-wrapper">
+                                    <div class="first-row form-group">
+                                        <div class="controls">
+                                            <label class="control-label">Tên trên thẻ</label>
+                                            <input class="billing-address-name form-control" type="text" name="name" placeholder="NGUYEN VAN A">
+                                        </div>
+                                        <div class="w3_agileits_card_number_grids">
+                                            <div class="w3_agileits_card_number_grid_left">
+                                                <div class="controls">
+                                                    <label class="control-label">Số thẻ</label>
+                                                    <input class="number credit-card-number form-control" type="text" name="number" inputmode="numeric" autocomplete="cc-number"
+                                                           autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
+                                                </div>
+                                            </div>
+                                            <div class="w3_agileits_card_number_grid_right">
+                                                <div class="controls">
+                                                    <label class="control-label">CVV</label>
+                                                    <input class="security-code form-control" Â· inputmode="numeric" type="text" name="security-code" placeholder="&#149;&#149;&#149;">
+                                                </div>
+                                            </div>
+                                            <div class="clear"> </div>
+                                        </div>
+                                        <div class="controls">
+                                            <label class="control-label">Ngày hết hạn</label>
+                                            <input class="expiration-month-and-year form-control" type="text" name="expiration-month-and-year" placeholder="MM / YY">
+                                        </div>
+                                    </div>
+                                    @Html.Action("TotalMoney", "Cart")
+                                    <button style=" margin-top: 15px" class="submit">
+                                        <span>THANH TOÁN</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="vertical_post">
+                            <form action="#" method="post">
+                                @*<h5>Các ngân hàng phổ biến</h5>
+                                    <div class="swit-radio">
+                                        <div class="check_box_one">
+                                            <div class="radio_one">
+                                                <label>
+                                                    <input type="radio" name="radio" checked="">
+                                                    <i></i>Ngân hàng TMCP Ngoại Thương Việt Nam (Vietcombank)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box_one">
+                                            <div class="radio_one">
+                                                <label>
+                                                    <input type="radio" name="radio">
+                                                    <i></i>Ngân hàng TMCP Công Thương Việt Nam (VietinBank)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box_one">
+                                            <div class="radio_one">
+                                                <label>
+                                                    <input type="radio" name="radio">
+                                                    <i></i>Ngân hàng TMCP Kỹ Thương Việt Nam (Techcombank)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box_one">
+                                            <div class="radio_one">
+                                                <label>
+                                                    <input type="radio" name="radio">
+                                                    <i></i>Ngân hàng TMCP Quân Đội (MB)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box_one">
+                                            <div class="radio_one">
+                                                <label>
+                                                    <input type="radio" name="radio">
+                                                    <i></i>Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>*@
+                                <h5>Chọn ngân hàng</h5>
+                                <div style=" margin-bottom: 35px;" class="section_room_pay">
+                                    <select style="color: #696969; width: 100%" id="bankSelect" class="year">
+                                        <option value="">=== Chọn ngân hàng ===</option>
+                                    </select>
+                                </div>
+                                @Html.Action("TotalMoney", "Cart")
+                                <input type="submit" value="THANH TOÁN NGAY">
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="tab4" class="tab-grid" style="display: block;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img class="pp-img" src="@Url.Content("~/Content/Images/Payments/paypal.png")" alt="Image Alternative text" title="Image Title">
+                                    <p>Lưu ý: Bạn sẽ được chuyển hướng đến trang web của PayPal để hoàn tất thanh toán một cách an toàn.</p>
+                                    <a class="btn btn-primary">Thanh toán qua Paypal</a>
+                                </div>
+                                <div class="col-md-6 number-paymk">
+                                    <form class="cc-form">
+                                        <div class="clearfix">
+                                            <div class="form-group form-group-cc-number">
+                                                <label>Số thẻ</label>
+                                                <input class="form-control" placeholder="xxxx xxxx xxxx xxxx" type="text">
+                                                <span class="cc-card-icon"></span>
+                                            </div>
+                                            <div class="form-group form-group-cc-cvc">
+                                                <label>CVV</label>
+                                                <input class="form-control" placeholder="xxxx" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="form-group form-group-cc-name">
+                                                <label>Tên chủ thẻ</label>
+                                                <input class="form-control" type="text">
+                                            </div>
+                                            <div class="form-group form-group-cc-date">
+                                                <label>Ngày hết hạn</label>
+                                                <input class="form-control" placeholder="mm/yy" type="text">
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 30px" class="checkbox checkbox-small">
+                                            <label>
+                                                <input class="i-check" type="checkbox" checked="">Thêm vào thẻ của tôi
+                                            </label>
+                                        </div>
+                                        @Html.Action("TotalMoney", "Cart")
+                                        <input type="submit" class="submit" value="TIẾN HÀNH THANH TOÁN">
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- easy-responsive-tabs -->
+<script>
+    $(document).ready(function () {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function (event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+
+<!-- credit-card -->
+<script>
+    $(function () {
+        var creditly = Creditly.initialize(
+            '.creditly-wrapper .expiration-month-and-year',
+            '.creditly-wrapper .credit-card-number',
+            '.creditly-wrapper .security-code',
+            '.creditly-wrapper .card-type');
+
+        $(".creditly-card-form .submit").click(function (e) {
+            e.preventDefault();
+            var output = creditly.validate();
+            if (output) {
+                // Your validated credit card output
+                console.log(output);
+            }
+        });
+    });
+</script>
+
+<script>
+    function redirectToOrderPage() {
+        //window.location.href = '@Url.Action("Order", "Cart")';
+    }
+</script>
+
+<script>
+    var apiUrl = "https://api.vietqr.io/v2/banks";
+
+    $.ajax({
+        url: apiUrl,
+        type: "GET",
+        success: function (data) {
+            if (data && data.data) {
+                $.each(data.data, function (index, bank) {
+                    $("#bankSelect").append('<option value="' + bank.code + '">' + bank.name + '</option>');
+                });
+            }
+        },
+        error: function (error) {
+            console.log("Error fetching data from the API:", error);
+        }
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.truck-button').forEach(button => {
+        button.addEventListener('click', e => {
+
+            e.preventDefault();
+
+            let box = button.querySelector('.box'),
+                truck = button.querySelector('.truck');
+
+            if (!button.classList.contains('done')) {
+
+                if (!button.classList.contains('animation')) {
+
+                    button.classList.add('animation');
+
+                    gsap.to(button, {
+                        '--box-s': 1,
+                        '--box-o': 1,
+                        duration: .3,
+                        delay: .5
+                    });
+
+                    gsap.to(box, {
+                        x: 0,
+                        duration: .4,
+                        delay: .7
+                    });
+
+                    gsap.to(button, {
+                        '--hx': -5,
+                        '--bx': 50,
+                        duration: .18,
+                        delay: .92
+                    });
+
+                    gsap.to(box, {
+                        y: 0,
+                        duration: .1,
+                        delay: 1.15
+                    });
+
+                    gsap.set(button, {
+                        '--truck-y': 0,
+                        '--truck-y-n': -26
+                    });
+
+                    gsap.to(button, {
+                        '--truck-y': 1,
+                        '--truck-y-n': -25,
+                        duration: .2,
+                        delay: 1.25,
+                        onComplete() {
+                            gsap.timeline({
+                                onComplete() {
+                                    button.classList.add('done');
+                                    window.location.href = '@Url.Action("Order", "Cart")';
+                                }
+                            }).to(truck, {
+                                x: 0,
+                                duration: .4
+                            }).to(truck, {
+                                x: 40,
+                                duration: 1
+                            }).to(truck, {
+                                x: 20,
+                                duration: .6
+                            }).to(truck, {
+                                x: 96,
+                                duration: .4
+                            });
+                            gsap.to(button, {
+                                '--progress': 1,
+                                duration: 2.4,
+                                ease: "power2.in"
+                            });
+                        }
+                    });
+
+                }
+
+            } else {
+                button.classList.remove('animation', 'done');
+                gsap.set(truck, {
+                    x: 4
+                });
+                gsap.set(button, {
+                    '--progress': 0,
+                    '--hx': 0,
+                    '--bx': 0,
+                    '--box-s': .5,
+                    '--box-o': 0,
+                    '--truck-y': 0,
+                    '--truck-y-n': -26
+                });
+                gsap.set(box, {
+                    x: -24,
+                    y: -6
+                });
+            }
+        });
+    });
+</script>

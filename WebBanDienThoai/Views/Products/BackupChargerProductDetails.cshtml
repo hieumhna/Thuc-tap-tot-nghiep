@@ -1,0 +1,197 @@
+﻿@using WebBanDienThoai.Models;
+@model CHITIETPHUKIENSACDUPHONG
+
+<style>
+    .specification {
+        position: relative;
+        margin: auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        max-width: 700px;
+        width: 700px;
+        border-radius: 5px;
+        z-index: 1002;
+    }
+
+    .header-specification {
+        position: relative;
+        text-align: center;
+        color: #fff; /* Thay đổi màu tiêu đề container thành trắng */
+        position: sticky;
+        top: 0; /* Giữ tiêu đề ở vị trí trên cùng khi cuộn */
+        background-color: #1accfd; /* Màu nền của tiêu đề */
+        margin: 0;
+        padding: 10px 0;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 900;
+    }
+
+    .close-button {
+        position: absolute;
+        right: 10px;
+        top: 9px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .group-header {
+        background-color: #f2f2f2; /* Màu nền cho tiêu đề nhóm */
+        color: #000; /* Màu tiêu đề nhóm đổi thành đen */
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .table-container {
+        padding: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .table-specification {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table-specification,
+        .table-specification th,
+        .table-specification td {
+            border: 1px solid #ddd;
+        }
+
+            .table-specification th,
+            .table-specification td {
+                padding: 12px;
+                text-align: left;
+            }
+
+    .row-specification {
+        background-color: #ffffff; /* Màu xám cho hàng chẵn */
+    }
+</style>
+
+@{
+    string str;
+    List<string> feature = new List<string>();
+}
+
+<div style="width: 100vw; height: 100vh; z-index: 1001; position: fixed" class="background-close">
+
+</div>
+
+<div class="specification">
+    <h1 class="header-specification">
+        THÔNG SỐ KỸ THUẬT
+        <span class="close-button btn btn-danger">X</span>
+    </h1>
+    <div class="table-container">
+        <table class="table-specification">
+            @*Group Products Detail Backup charger*@
+            <tr class="row-specification">
+                <td class="col-md-4">Hiệu suất sạc</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.HIEUSUAT;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Dung lượng pin</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.DUNGLUONGPIN;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Thời gian sạc</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.THOIGIANSAC;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Nguồn vào</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.NGUONVAO;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Nguồn ra</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.NGUONRA;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Công nghệ/Tiện ích</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.CONGNGHE;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Kích thước</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.KICHTHUOC;
+                        feature = str.Split('-').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr class="row-specification">
+                <td class="col-md-4">Khối lượng</td>
+                <td class="col-md-8">
+                    @{
+                        str = Model.KHOILUONG;
+                        feature = str.Split(',').ToList();
+                        foreach (string item in feature)
+                        {
+                            <div>+ @item</div>
+                        }
+                    }
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

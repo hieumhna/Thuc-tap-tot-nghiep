@@ -1,0 +1,39 @@
+﻿@using WebBanDienThoai.Models
+@model List<LOAISANPHAM>
+
+<div class="agileits-navi_search">
+    <form action="" method="post">
+        <select id="agileinfo-nav_search" name="agileinfo_search" required="">
+            <option value="" style="background-color: #007bff; color: white; font-weight: bold;">Danh mục</option>
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var group in Model.GroupBy(row => row.DANHMUC))
+                {
+                    if (group.Key != null)
+                    {
+                        <optgroup label="@group.Key.TenDanhMuc">
+                            @foreach (var item in group)
+                            {
+                                <option value="@item.MaLoaiSP">@item.TenLoaiSP</option>
+                            }
+                        </optgroup>
+                    }
+                }
+            }
+        </select>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var selectElement = document.getElementById("agileinfo-nav_search");
+
+        selectElement.addEventListener("change", function () {
+            var selectedOption = selectElement.options[selectElement.selectedIndex];
+            var maLoaiSP = selectedOption.value;
+
+            // Chuyển hướng đến Action Products trong Controller Products với tham số MaLoaiSP
+            window.location.href = "@Url.Action("Products", "Products")" + "?MaLoaiSP=" + maLoaiSP;
+        });
+    });
+</script>

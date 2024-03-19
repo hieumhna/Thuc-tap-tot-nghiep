@@ -1,0 +1,59 @@
+﻿@using WebBanDienThoai.Models;
+@model List<DONDATHANG>
+
+@{
+    ViewBag.Title = "Lịch sử mua hàng";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@section Banner {
+    <!-- banner-2 -->
+    <div class="page-head_agile_info_w3l">
+
+    </div>
+}
+
+<div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+        <div class="container">
+            <ul class="w3_short">
+                <li>
+                    @Html.ActionLink("Trang chủ", "Index", "Home")
+                    <i>|</i>
+                </li>
+                <li>Lịch sử mua hàng</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- checkout page -->
+<div class="privacy">
+    <div class="container">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l">
+            ĐƠN HÀNG
+            <span class="heading-style">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </h3>
+        @if (Model != null && Model.Count != 0)
+        {
+            foreach (var item in Model)
+            {
+
+                <div class="product-sec1">
+                    @Html.Action("PurchaseHistoryItem", "Cart", new { @order = item })
+                </div>
+            }
+        }
+        else
+        {
+            <h4 style="color: #FF5722; font-size: 27px; margin-bottom: 30px">
+                Hiện tại, bạn chưa mua bất kỳ mặt hàng nào.
+            </h4>
+        }
+    </div>
+</div>
+

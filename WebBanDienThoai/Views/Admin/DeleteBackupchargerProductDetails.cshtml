@@ -1,0 +1,81 @@
+﻿@using WebBanDienThoai.Models;
+@model CHITIETPHUKIENSACDUPHONG
+@{
+    ViewBag.Title = "Xóa chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_ListProductDetails", "Admin", new {MaLoaiSP = ViewBag.CategoryID})" style="text-decoration: none;">Chi tiết sản phẩm</a> / <a href="#">Xóa</a></h3>
+
+<div class="container_Products">
+    <div class="container">
+        @using (Html.BeginForm("DeleteBackupchargerProductDetails", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <h2 style="display: flex; justify-content: center;"><strong>@ViewBag.ProductName</strong></h2>
+            @Html.Hidden("MaCTPKSac", Model.MaCTPKSac)
+            <div class="form-group">
+                <label for="MaSP">Mã sản phẩm</label>
+                @Html.TextBoxFor(row => row.MaSP, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+            <div class="form-group">
+                <label for="HIEUSUAT">Hiệu xuất</label>
+                @Html.TextBoxFor(row => row.HIEUSUAT, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+            <div class="form-group">
+                <label for="DUNGLUONGPIN">Dung lượng pin</label>
+                @Html.TextBoxFor(row => row.DUNGLUONGPIN, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+            <div class="form-group">
+                <label for="THOIGIANSAC">Thời lượng sạc</label>
+                @Html.TextBoxFor(row => row.THOIGIANSAC, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+            <div class="form-group">
+                <label for="NGUONVAO">Nguồn vào</label>
+                @Html.TextBoxFor(row => row.NGUONVAO, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+            <div class="form-group">
+                <label for="NGUONRA">Nguồn ra</label>
+                @Html.TextBoxFor(row => row.NGUONRA, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+            <div class="form-group">
+                <label for="CONGNGHE">Công nghệ</label>
+                @Html.TextBoxFor(row => row.CONGNGHE, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+            <div class="form-group">
+                <label for="KICHTHUOC">Kích thước</label>
+                @Html.TextBoxFor(row => row.KICHTHUOC, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+            <div class="form-group">
+                <label for="BAOHANH">Bảo hành</label>
+                @Html.TextBoxFor(row => row.BAOHANH, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+            <div class="form-group">
+                <label for="KHOILUONG">Khối lượng</label>
+                @Html.TextBoxFor(row => row.KHOILUONG, new { @class = "form-control", @disabled = "disabled" })
+            </div>
+
+            <div style="padding-top: 12px;">
+                <a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = ViewBag.CategoryID})" class="btn btn-danger">Trở lại</a>
+                <button type="submit" class="btn btn-primary">Lưu chỉnh sửa</button>
+            </div>
+        }
+    </div>
+</div>

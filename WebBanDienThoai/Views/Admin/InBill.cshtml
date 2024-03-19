@@ -1,0 +1,194 @@
+﻿@using WebBanDienThoai.Models;
+@model List<CHITIETDONDATHANG>
+@{
+    ViewBag.Title = "In hóa đơn";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .center-text {
+        text-align: justify;
+        text-indent: 16px;
+    }
+
+    .btn-content {
+        width: 80px;
+        text-align: center;
+        margin: 6px;
+    }
+
+    .btn-container {
+        text-align: center;
+        vertical-align: middle;
+        padding: 12px 0px !important;
+    }
+
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow-x: auto;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    thead {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    th:first-child,
+    td:first-child {
+        left: 0;
+        background-color: #f2f2f2;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+
+    /* New class for centering content within td elements */
+    .center-content {
+        text-align: center;
+    }
+
+    .scrollbar1 {
+        height: 640px;
+    }
+
+    .customer-info {
+        background-color: #e6f7ff;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px; /* Add margin to separate it from the table */
+    }
+
+        .customer-info h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #337ab7;
+        }
+
+        .customer-info p {
+            margin: 5px 0;
+        }
+
+        .customer-info strong {
+            color: #337ab7;
+            margin-right: 5px;
+        }
+
+    .totals {
+        text-align: right;
+        margin-top: 20px;
+    }
+
+        .totals p {
+            margin-bottom: 10px;
+        }
+
+    .customer-info select {
+        width: 10%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("BrowseOrders", "Admin")" style="text-decoration: none;">Thông tin đơn hàng</a> / <a href="#" style="text-decoration: none;">In hóa đơn</a></h3>
+
+@using (Html.BeginForm("InBill", "Admin", FormMethod.Post))
+{
+    <div class="container_Products">
+        <div id="content">
+            @Html.Hidden("MaDDH", Model)
+            <div class="order-info">
+                <div class="customer-info">
+                    <h2>Thông tin khách hàng</h2>
+                    <p><strong>Mã hóa đơn:</strong>@ViewBag.Infomation.MaDDH</p>
+                    <p><strong>Tên khách hàng:</strong>@ViewBag.Infomation.KHACHHANG.TenKH</p>
+                    <p><strong>Ngày đặt hàng:</strong>@ViewBag.Infomation.NgayDatHang</p>
+                    <p><strong>Ngày giao:</strong>@ViewBag.Infomation.NgayGiao</p>
+                    <input type="text" value="Đã giao" name="TinhTrang" class="form-control" style="display: none"/>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 100px">Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lương</th>
+                        <th>Đơn giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MaSP</td>
+                            <td>@item.TenSP</td>
+                            <td>@item.SoLuong</td>
+                            <td>@string.Format("{0:N0}\u20ab", item.DonGia)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="totals">
+                <p><strong>Tổng số lượng: </strong> <span id="totalQuantity">@ViewBag.SumQuanlity</span> sản phẩm</p>
+                <p><strong>Tổng tiền:</strong> <span id="totalAmount">@string.Format("{0:N0}\u20ab", ViewBag.TotalPrice)</span></p>
+            </div>
+        </div>
+        <div class="btn-group" style="float: right;">
+            <button type="submit" class="btn btn-danger" id="btnInBill">In</button>
+        </div>
+    </div>
+}
+
+<script>
+    $("#btnInBill").click(function () {
+        var content = $("#content").html();
+        InBill(content);
+    });
+
+    function InBill(content) {
+        var printWindow = window.open('', '', 'height=400,width=800');
+        printWindow.document.write('<html><head><title>In Hóa Đơn</title>');
+        printWindow.document.write('<head><body>');
+        printWindow.document.write(content);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+</script>

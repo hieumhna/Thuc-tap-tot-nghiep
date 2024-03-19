@@ -1,0 +1,140 @@
+﻿@using WebBanDienThoai.Models;
+@model KHACHHANG
+
+<div class="checkout-left">
+    <div class="address_form_agile">
+        <h4>Thông tin khách hàng</h4>
+        @using (Html.BeginForm("SelectPayment", "Cart", FormMethod.Post, new { @class = "creditly-card-form agileinfo_form" }))
+        {
+            <div style="color: #75758b" class="creditly-wrapper wthree, w3_agileits_wrapper">
+                <div class="information-wrapper">
+                    <div class="first-row">
+                        <div class="controls">
+                            @Html.EditorFor(model => model.TenKH, new { htmlAttributes = new { @class = "billing-address-name", placeholder = "Họ và tên", required = "required" } })
+                        </div>
+                        <div class="w3_agileits_card_number_grids">
+                            <div class="w3_agileits_card_number_grid_left">
+                                <div class="controls">
+                                    @Html.EditorFor(model => model.SoDienThoai, new { htmlAttributes = new { placeholder = "Số điện thoại", required = "required" } })
+                                </div>
+                            </div>
+                            <div class="w3_agileits_card_number_grid_right">
+                                <div class="controls">
+                                    @Html.Editor("specificAddress", new { htmlAttributes = new { placeholder = "Địa chỉ cụ thể", required = "required" } })
+                                </div>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="controls" id="cities-container">
+                            <select name="city" id="city" class="option-w3ls">
+                                <option value="">-- Chọn thành phố --</option>
+                                @foreach (var city in ViewBag.ListCites as List<City>)
+                                {
+                                    <option value="@city.Code">@city.Name</option>
+                                }
+                            </select>
+                            <input type="hidden" name="selectedCityName" id="selectedCityName" />
+                        </div>
+                        <div class="controls" id="districts-container">
+                            <select name="district" id="district" class="option-w3ls" disabled>
+                                <option value="">-- Chọn quận/huyện --</option>
+                            </select>
+                            <input type="hidden" name="selectedDistrictName" id="selectedDistrictName" />
+                        </div>
+                        <div class="controls" id="wards-container">
+                            <select name="ward" id="ward" class="option-w3ls" disabled>
+                                <option value="">-- Chọn phường/xã --</option>
+                            </select>
+                            <input type="hidden" name="selectedWardName" id="selectedWardName" />
+                        </div>
+                        <div class="controls">
+                            <select name="addressStyle" class="option-w3ls">
+                                <option value="Khách hàng không cung cấp">Loại địa chỉ</option>
+                                <option value="Văn phòng">Văn phòng</option>
+                                <option value="Nhà riêng">Nhà riêng</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="submit check_out">Đặt hàng</button>
+                </div>
+            </div>
+        }
+        @*<div class="checkout-right-basket">
+                <a href="#">
+                    Thanh toán
+                    <span class="fa fa-hand-o-right" aria-hidden="true"></span>
+                </a>
+            </div>*@
+    </div>
+    <div class="clearfix"> </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#city').change(function () {
+            var selectedCityCode = $(this).val();
+            var selectedCityName = $("#city option:selected").text();
+            $("#selectedCityName").val(selectedCityName);
+            if (selectedCityCode !== '') {
+                $.ajax({
+                    url: '@Url.Action("GetDistrictsByCity", "Cart")',
+                    type: 'GET',
+                    data: { cityCode: selectedCityCode },
+                    success: function (data) {
+                        $('#district').empty();
+                        $('#district').append($('<option>', {
+                            value: '',
+                            text: 'Chọn quận/huyện'
+                        }));
+                        $.each(data, function (index, district) {
+                            $('#district').append($('<option>', {
+                                value: district.Code,
+                                text: district.Name
+                            }));
+                        });
+                        $('#district').prop('disabled', false);
+                        $('#ward').prop('disabled', true);
+                    }
+                });
+            } else {
+                $('#district').prop('disabled', true);
+                $('#ward').prop('disabled', true);
+            }
+        });
+
+        $('#district').change(function () {
+            var selectedDistrictCode = $(this).val();
+            var selectedDistrictName = $("#district option:selected").text();
+            $("#selectedDistrictName").val(selectedDistrictName);
+            if (selectedDistrictCode !== '') {
+                $.ajax({
+                    url: '@Url.Action("GetWardsByDistrict", "Cart")',
+                    type: 'GET',
+                    data: { districtCode: selectedDistrictCode },
+                    success: function (data) {
+                        $('#ward').empty();
+                        $('#ward').append($('<option>', {
+                            value: '',
+                            text: 'Chọn phường/xã'
+                        }));
+                        $.each(data, function (index, ward) {
+                            $('#ward').append($('<option>', {
+                                value: ward.Code,
+                                text: ward.Name
+                            }));
+                        });
+                        $('#ward').prop('disabled', false);
+                    }
+                });
+            } else {
+                $('#ward').prop('disabled', true);
+            }
+        });
+
+        $('#ward').change(function () {
+            var selectedWardName = $("#ward option:selected").text();
+            $("#selectedWardName").val(selectedWardName);
+        });
+    });
+</script>
+

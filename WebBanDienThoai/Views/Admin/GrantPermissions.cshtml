@@ -1,0 +1,84 @@
+﻿@using WebBanDienThoai.Models;
+@model List<THANHVIEN>
+@{
+    ViewBag.Title = "Cấp quyền";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+
+<style>
+    .container_Products {
+        max-width: 800px; /* Giảm kích thước container để giữ nó hợp lý */
+        margin: 0 auto;
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        position: relative;
+    }
+
+    h3.title2 {
+        color: #337ab7;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .customer-info {
+        background-color: #e6f7ff;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px; /* Add margin to separate it from the table */
+    }
+
+        .customer-info h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #337ab7;
+        }
+
+        .customer-info p {
+            margin: 5px 0;
+        }
+
+        .customer-info strong {
+            color: #337ab7;
+            margin-right: 5px;
+        }
+
+        .customer-info input[type="radio"] {
+            margin-right: 5px;
+        }
+
+    .btn-group {
+        text-align: right;
+    }
+
+        .btn-group button {
+            margin-left: 5px;
+        }
+</style>
+
+<h3 class="title2">
+    <a href="@Url.Action("Member", "Admin")" style="text-decoration: none;">Phân quyền</a> /
+    <a href="#" style="text-decoration: none;">Cấp quyền</a>
+</h3>
+
+@using (Html.BeginForm("GrantPermissions", "Admin", FormMethod.Post))
+{
+    @Html.Hidden("MaTV", Model)
+    <div class="container_Products">
+        <div class="order-info">
+            <div class="customer-info">
+                <p><strong>Mã thành viên:</strong> @ViewBag.Member.MaTV</p>
+                <p><strong>Tên tài khoản:</strong> @ViewBag.Member.TaiKhoan</p>
+                <p><strong>Quản trị viên</strong> <input type="radio" id="radAdmin" name="MaLoaiTV" value="1" @(ViewBag.Member.MaLoaiTV == 1 ? "checked" : "")></p>
+                <p><strong>Khách hàng</strong> <input type="radio" id="radNhanVien" name="MaLoaiTV" value="2" @(ViewBag.Member.MaLoaiTV == 2 ? "checked" : "")></p>
+            </div>
+        </div>
+        <div class="btn-group" style="float: right">
+            <button type="submit" class="btn btn-success" id="btnSaveBill">Lưu</button>
+        </div>
+    </div>
+}

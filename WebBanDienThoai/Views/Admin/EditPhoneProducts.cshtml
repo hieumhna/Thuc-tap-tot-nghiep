@@ -1,0 +1,165 @@
+﻿@using WebBanDienThoai.Models
+@model SANPHAM
+
+@{
+    ViewBag.Title = "Sửa sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage_Admin.cshtml";
+}
+<style>
+    .tables {
+        overflow-x: auto;
+    }
+
+    .container_Products {
+        max-width: 1640px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto; /* Ẩn cuộn ngang */
+        position: relative;
+    }
+
+    .title2 {
+        color: #337ab7;
+        padding-bottom: 12px;
+        font-size: 20px;
+    }
+</style>
+
+<h3 class="title2"><a href="@Url.Action("Admin_Product", "Admin", new {MaLoaiSP = Model.LOAISANPHAM.MaLoaiSP})" style="text-decoration: none;">Sản phẩm</a> / <a href="#" style="text-decoration: none;">Sửa sản phẩm</a></h3>
+
+<div class="container_Products">
+    <div class="container">
+        @using (Html.BeginForm("EditPhoneProducts", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <h2 style="display: flex; justify-content: center;"><strong>@Model.TenSP</strong></h2>
+            @Html.Hidden("MaSP", Model.MaSP)
+            <div class="form-group">
+                <label for="MaNCC">Nhà cung cấp:</label>
+                @Html.DropDownList("MaNCC", null, new { @class = "form-control" })
+                @*<select class="form-control" id="MaNCC" name="MaNCC" required>
+                        <option value="@Model.NHACUNGCAP.MaNCC">@Model.NHACUNGCAP.TenNCC</option>
+                        @for (int i = 0; i < ViewBag.SupplierName.Count; i++)
+                        {
+                            if (ViewBag.SupplierName[i].TenNCC != Model.NHACUNGCAP.TenNCC)
+                            {
+                                <option value="@ViewBag.SupplierName[i].MaNCC">@ViewBag.SupplierName[i].TenNCC</option>
+                            }
+                        }
+                    </select>*@
+            </div>
+            <div class="form-group">
+                <label for="MaNSX">Nhà sản xuất:</label>
+                @Html.DropDownList("MaNSX", null, new { @class = "form-control" })
+                @*<select class="form-control" id="MaNSX" name="MaNSX" required>
+                        <option value="@Model.NHASANXUAT.MaNSX">@Model.NHASANXUAT.TenNSX</option>
+                        @for (int i = 0; i < ViewBag.CategoryName.Count; i++)
+                        {
+                            if (ViewBag.ProducerName[i].TenNSX != Model.NHASANXUAT.TenNSX)
+                            {
+                                <option value="@ViewBag.ProducerName[i].MaNSX">@ViewBag.ProducerName[i].TenNSX</option>
+                            }
+                        }
+                    </select>*@
+            </div>
+            <div class="form-group">
+                <label for="MaLoaiSP">Loại sản phẩm:</label>
+                @Html.DropDownList("MaLoaiSP", null, new { @class = "form-control" })
+                @*<select class="form-control" id="MaLoaiSP" name="MaLoaiSP" required>
+                        <option value="@Model.LOAISANPHAM.MaLoaiSP">@Model.LOAISANPHAM.TenLoaiSP</option>
+                        @for (int i = 0; i < ViewBag.CategoryName.Count; i++)
+                        {
+                            if (ViewBag.CategoryName[i].TenLoaiSP != Model.LOAISANPHAM.TenLoaiSP)
+                            {
+                                <option value="@ViewBag.CategoryName[i].MaLoaiSP">@ViewBag.CategoryName[i].TenLoaiSP</option>
+                            }
+                        }
+                    </select>*@
+            </div>
+            <div class="form-group">
+                <label for="TenSP">Tên sản phẩm:</label>
+                @Html.TextBoxFor(row => row.TenSP, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="NgayCapNhat">Ngày cập nhật:</label>
+                @Html.TextBoxFor(row => row.NgayCapNhat, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+            </div>
+            <div class="form-group">
+                <label for="MoTa">Mô tả sản phẩm:</label>
+                @Html.TextAreaFor(row => row.MoTa, new { @class = "form-control", style = "height: 100px" })
+            </div>
+            <div class="form-group">
+                <label for="HinhAnh">Hình ảnh 1:</label>
+                <input type="file" class="form-control-file" id="HinhAnh" name="HinhAnh">
+                <span style="color: red;">@ViewBag.Upload</span>
+                <br />
+                <img src="@Url.Content("~/Content/Images/Products/" + Model.HinhAnh)" alt="Alternate Text" style="width:250px;height:auto;" />
+            </div>
+            <div class="form-group">
+                <label for="HinhAnh">Hình ảnh 2:</label>
+                <input type="file" class="form-control-file" id="HinhAnh" name="HinhAnh2">
+                <span style="color: red;">@ViewBag.Upload</span>
+                <br />
+                <img src="@Url.Content("~/Content/Images/Products/" + Model.HinhAnh2)" alt="Alternate Text" style="width:250px;height:auto;" />
+            </div>
+            <div class="form-group">
+                <label for="HinhAnh">Hình ảnh 3:</label>
+                <input type="file" class="form-control-file" id="HinhAnh" name="HinhAnh3">
+                <span style="color: red;">@ViewBag.Upload</span>
+                <br />
+                <img src="@Url.Content("~/Content/Images/Products/" + Model.HinhAnh3)" alt="Alternate Text" style="width:250px;height:auto;" />
+            </div>
+            <div class="form-group">
+                <label for="SoLuongTon">Số lượng tồn:</label>
+                @Html.TextBoxFor(row => row.SoLuongTon, new { @class = "form-control", type = "number" })
+            </div>
+            <div class="form-group">
+                <label for="Moi">Tình trạng</label>
+                <select class="form-control" id="Moi" name="Moi">
+                    <option value="0">Mới</option>
+                    <option value="1">Cũ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Moi">Chọn trạng thái</label>
+                <select class="form-control" id="DaXoa" name="DaXoa">
+                    <option value="0">Chưa xóa</option>
+                    <option value="1">Đã Xóa</option>
+                </select>
+            </div>
+
+            <div style="padding-top: 12px;">
+                <a href="@Url.Action("Admin_Product", "Admin", new { MaLoaiSP = ViewBag.CategoryID})" class="btn btn-danger">Trở lại</a>
+                <button type="submit" class="btn btn-primary">Lưu chỉnh sửa</button>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("form").submit(function (event) {
+            var requiredFields = [
+                "MaNCC", "MaNSX", "MaLoaiSP", "TenSP", "DonGia", "NgayCapNhat", "MoTa", "SoLuongTon"
+            ];
+
+            var hasEmptyFields = false;
+
+            for (var i = 0; i < requiredFields.length; i++) {
+                var field = requiredFields[i];
+                var value = $("#" + field).val();
+
+                if (value.trim() === '') {
+                    hasEmptyFields = true;
+                    break;
+                }
+            }
+
+            if (hasEmptyFields) {
+                alert("Vui lòng điền đầy đủ thông tin.");
+                event.preventDefault();
+            }
+        });
+    });
+</script>

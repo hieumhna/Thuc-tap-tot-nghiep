@@ -1,0 +1,42 @@
+﻿<style>
+    /* CSS */
+    .cart-item-count {
+        color: #fff; /* Màu chữ của số lượng sản phẩm */
+        border-radius: 50%; /* Tạo hình tròn cho số lượng sản phẩm */
+        padding: 5px 10px; /* Kích thước và khoảng cách xung quanh số lượng sản phẩm */
+        position: absolute; /* Đặt vị trí tuyệt đối */
+        bottom: 60%;
+        background: #1accfd;
+        font-weight: bold;
+        font-size: 14px; /* Kích thước chữ của số lượng sản phẩm */
+    }
+</style>
+
+<!-- cart details -->
+<div class="top_nav_right">
+    <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+        @if (Session["member"] != null && Session["member"].ToString() != "")
+        {
+            using (Html.BeginForm("ViewCart", "Cart", FormMethod.Post, new { @class = "last" }))
+            {
+                <button style="position: relative" class="w3view-cart" type="submit" name="submit" value="">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <span class="cart-item-count cart-quantity-count">@ViewBag.Count</span>
+                </button>
+            }
+        }
+        else
+        {
+            <button style="position: relative" class="w3view-cart" type="button" onclick="redirectToLoginPage()">
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                <span class="cart-item-count cart-quantity-count">@ViewBag.Count</span>
+            </button>
+        }
+    </div>
+</div>
+
+<script>
+    function redirectToLoginPage() {
+        window.location.href = '@Url.Action("Login", "Login")'; // Chuyển hướng đến trang đăng nhập
+    }
+</script>
